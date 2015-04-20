@@ -907,22 +907,15 @@
 
                         <div class="section row">
                             <label for="names" class="field-label col-md-3">Upload Agreement</label>
-                            <div class="col-md-9 pl25 pr25">
-                              <div class="tray-bin pl10 mb10 bg-light" >
-                                <form action="/file-upload" class="dropzone dropzone-sm dz-clickable" id="dropZone">
-                                 <div class="dz-default dz-message">
-                                    <span><i class="fa fa-cloud-upload fs18"></i> 
-                                      <span class="main-text">
-                                          <b> Click</b> to upload Files
-                                      </span> 
-                                      <br>          
-                                    </span>
-                                  </div>
-                                  <div class="fallback mt10">
-                                    <input name="file" type="file" multiple />
-                                  </div>   
-                                </form>
-                             </div>
+                            <div class="col-md-9">
+                              <label class="field prepend-icon file">
+                                <span class="button btn-success btn-rounded">Choose File</span>
+                                <input type="file" class="gui-file" name="file2" id="file2" onchange="document.getElementById('uploader2').value = this.value;">
+                                <input type="text" class="gui-input" id="uploader2" placeholder="Please Select A File">
+                                <label class="field-icon">
+                                  <i class="fa fa-upload"></i>
+                                </label>
+                              </label>
                             </div>
                         </div>
                         <!-- end section -->
@@ -1361,22 +1354,6 @@
                       </div>
                       <!-- .section-divider -->
 
-                      <div class="section mb10">
-                        <p class="small-text text-muted">Please choose a preferred method of payment below</p>
-                      </div>
-                      <!-- end section -->
-
-                      <div class="section mb25">
-                        <label class="option">
-                          <input type="radio" name="payment" checked="">
-                          <span class="radio"></span>Bank Transfer</label>
-                        <label class="option">
-                          <input type="radio" name="payment">
-                          <span class="radio"></span>Paypal</label>
-                        <label class="option">
-                          <input type="radio" name="payment">
-                          <span class="radio"></span>Check</label>
-                      </div>
                       <!-- end section -->
                       <div class="section row">
                         <div class="col-md-12">
