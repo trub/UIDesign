@@ -909,7 +909,7 @@
                             <label for="names" class="field-label col-md-3">Upload Agreement</label>
                             <div class="col-md-9">
                               <label class="field prepend-icon file">
-                                <span class="button btn-success btn-rounded">Choose File</span>
+                                <span class="button btn-default btn-rounded">Choose File</span>
                                 <input type="file" class="gui-file" name="file2" id="file2" onchange="document.getElementById('uploader2').value = this.value;">
                                 <input type="text" class="gui-input" id="uploader2" placeholder="Please Select A File">
                                 <label class="field-icon">
@@ -926,20 +926,7 @@
                 <!-- Wizard step 4 -->
                 <h4 class="wizard-section-title">
                    4.BILLING </h4>
-                   <!-- BILLING DETAILS 
-                  =========================   -->
-                  <!-- BillingContactPerson: dropdown list of sales reps -->
-                  <!-- BillingEmail: valid email -->
-                  <!-- BillingPhone: 333-333-3333 -->
-                  <!-- BillingAddress: 3709 Tidewater Dr -->
-                  <!-- BillingContactDetails -->
-                  <!-- ACH Billing info
-                       -Routing number
-                       -Rounting number confirmation
-                       -Bank Acount Numer
-                   -->
-                  <!-- ISO CERT -Mastercard -->
-                  <!-- ISO CERT -Visa -->
+           
                 <section class="wizard-section">
 
                   <div class="panel-body p25">
@@ -948,73 +935,19 @@
                       </div>
                       <!-- .section-divider -->
 
-                      <div class="section row hidden">
-                        <div class="col-md-6">
-                          <div class="section">
-                            <div class="price-box">
-                              <h4><sup>$</sup>29
-                                <span class="per-month">/month</span>
-                              </h4>
-                              <h5>Starter</h5>
-                              <div class="spacer mt20 mb20"></div>
-                              <p>For those looking for something simple to get started.</p>
-                              <div class="spacer mt20 mb20"></div>
-                              <a href="#" class="button block pushed expand"> Learn more </a>
-                            </div>
-                            <!-- end .colm-box section -->
-                          </div>
-                          <!-- end .section section -->
-
-                          <div class="section align-center">
-                            <label class="switch">
-                              <input type="radio" name="order" id="order1">
-                              <label for="order1" data-on="YES" data-off="NO"></label>
-                              <span>Select</span>
-                            </label>
-                          </div>
-                          <!-- end  .tc section -->
-
-                        </div>
-                        <!-- end .colm section -->
-
-                        <div class="col-md-6">
-                          <div class="section">
-                            <div class="price-box selected-box">
-                              <div class="ribbon-large">
-                                <div class="ribbon-inner">POPULAR</div>
-                              </div>
-                              <h4><sup>$</sup>179
-                                <span class="per-month">/month</span>
-                              </h4>
-                              <h5>Professional</h5>
-                              <div class="spacer mt20 mb20"></div>
-                              <p>For large enterprises selling over one million plus a year.</p>
-                              <div class="spacer mt20 mb20"></div>
-                              <a href="#" class="button btn-primary block pushed expand"> Learn more </a>
-                            </div>
-                            <!-- end .colm-box section -->
-                          </div>
-                          <!-- end .section section -->
-
-                          <div class="section align-center">
-                            <label class="switch">
-                              <input type="radio" name="order2" id="orderid2" checked="">
-                              <label for="orderid2" data-on="YES" data-off="NO"></label>
-                              <span>Select</span>
-                            </label>
-                          </div>
-                          <!-- end  .tc section -->
-
-                        </div>
-                        <!-- end section -->
-
-                      </div>
-                      <!-- end section row section -->
-
                       <div class="section row">
                         <div class="col-md-6">
                           <label for="pname" class="field prepend-icon">
-                            <input type="text" name="pname" id="pname" class="gui-input" placeholder="Your names...">
+                            <input type="text" name="pname" id="pname" class="gui-input" placeholder="First Name">
+                            <label for="pname" class="field-icon">
+                              <i class="fa fa-user"></i>
+                            </label>
+                          </label>
+                        </div>
+                        <!-- end section -->
+                        <div class="col-md-6">
+                          <label for="pname" class="field prepend-icon">
+                            <input type="text" name="pname" id="pname" class="gui-input" placeholder="Last Name">
                             <label for="pname" class="field-icon">
                               <i class="fa fa-user"></i>
                             </label>
@@ -1022,7 +955,11 @@
                         </div>
                         <!-- end section -->
 
-                        <div class="col-md-6">
+                      </div>
+                      <!-- end section row section -->
+
+                      <div class="section row">
+                         <div class="col-md-12">
                           <label for="email" class="field prepend-icon">
                             <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
                             <label for="email" class="field-icon">
@@ -1031,11 +968,7 @@
                           </label>
                         </div>
                         <!-- end section -->
-
-
-
                       </div>
-                      <!-- end section row section -->
 
                       <div class="section row">
                         <div class="col-md-6">
