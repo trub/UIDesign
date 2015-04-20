@@ -18229,6 +18229,12 @@ li.dropdown-border-hover:hover,
   border: 1px dashed #CCC;
   background: #eee;
 }
+.tray-upload {
+  padding: 7px;
+  margin: 0 -15px 15px;
+  border: 1px dashed #CCC;
+  background: #eee;
+}
 .tray-bin.stretch {
   border-left: 0;
   border-right: 0;
