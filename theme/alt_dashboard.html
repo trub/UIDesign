@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+  <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="blank-page">
+
+  <!-- Start: Theme Preview Pane -->
+  <div id="skin-toolbox">
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="panel-icon">
+          <i class="fa fa-gear text-primary"></i>
+        </span>
+        <span class="panel-title"> Theme Options</span>
+      </div>
+      <div class="panel-body pn">
+
+        <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
+          <li class="active">
+            <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
+          </li>
+          <li>
+            <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
+          </li>
+          <li>
+            <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
+          </li>
+        </ul>
+
+        <div class="tab-content p20 ptn pb15">
+          <div role="tabpanel" class="tab-pane active" id="toolbox-header">
+            <form id="toolbox-header-skin">
+              <h4 class="mv20">Header Skins</h4>
+
+              <div class="skin-toolbox-swatches">
+                <div class="checkbox-custom checkbox-disabled fill mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin8" checked value="bg-light">
+                  <label for="headerSkin8">Light</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-primary mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
+                  <label for="headerSkin1">Primary</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-info mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
+                  <label for="headerSkin3">Info</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-warning mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
+                  <label for="headerSkin4">Warning</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-danger mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
+                  <label for="headerSkin5">Danger</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-alert mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
+                  <label for="headerSkin6">Alert</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-system mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
+                  <label for="headerSkin7">System</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-success mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
+                  <label for="headerSkin2">Success</label>
+                </div>
+                <div class="checkbox-custom fill mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
+                  <label for="headerSkin9">Dark</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
+            <form id="toolbox-sidebar-skin">
+
+              <h4 class="mv20">Sidebar Skins</h4>
+              <div class="skin-toolbox-swatches">
+                <div class="checkbox-custom fill mb5">
+                  <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
+                  <label for="sidebarSkin3">Dark</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-disabled mb5">
+                  <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
+                  <label for="sidebarSkin1">Light</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-light mb5">
+                  <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
+                  <label for="sidebarSkin2">Lighter</label>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="toolbox-settings">
+            <form id="toolbox-settings-misc">
+              <h4 class="mv20 mtn">Layout Options</h4>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" checked="" id="header-option">
+                  <label for="header-option">Fixed Header</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" checked="" id="sidebar-option">
+                  <label for="sidebar-option">Fixed Sidebar</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" id="breadcrumb-option">
+                  <label for="breadcrumb-option">Fixed Breadcrumbs</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" id="breadcrumb-hidden">
+                  <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+                </div>
+              </div>
+              <h4 class="mv20">Layout Options</h4>
+              <div class="form-group">
+                <div class="radio-custom mb5">
+                  <input type="radio" id="fullwidth-option" checked name="layout-option">
+                  <label for="fullwidth-option">Fullwidth Layout</label>
+                </div>
+              </div>
+              <div class="form-group mb20">
+                <div class="radio-custom radio-disabled mb5">
+                  <input type="radio" id="boxed-option" name="layout-option" disabled>
+                  <label for="boxed-option">Boxed Layout
+                    <b class="text-muted">(Coming Soon)</b>
+                  </label>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="form-group mn br-t p15">
+          <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End: Theme Preview Pane -->
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top bg-light">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <b>PAAY</b>ADMIN
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+        <!-- hide dashboard ui options
+        <li>
+          <a class="sidebar-menu-toggle" href="#">
+            <span class="ad ad-ruby fs18"></span>
+          </a>
+        </li> 
+        <li>
+          <a class="topbar-menu-toggle" href="#">
+            <span class="ad ad-wand fs16"></span>
+          </a> -->
+        <!-- hide full screen mode
+        <li class="hidden-xs">
+          <a class="request-fullscreen toggle-active" href="#">
+            <span class="ad ad-screen-full fs18"></span>
+          </a>
+        </li>
+      -->
+      </ul>
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- hide notifications 
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="ad ad-radio-tower fs18"></span>
+          </a>
+          <ul class="dropdown-menu media-list w350 animated animated-shorter fadeIn" role="menu">
+            <li class="dropdown-header">
+              <span class="dropdown-title"> Notifications</span>
+              <span class="label label-warning">12</span>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#"> <img src="assets/img/avatars/5.jpg" class="mw40" alt="avatar"> </a>
+              <div class="media-body">
+                <h5 class="media-heading">Article
+                  <small class="text-muted">- 08/16/22</small>
+                </h5> Last Updated 36 days ago by
+                <a class="text-system" href="#"> Max </a>
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#"> <img src="assets/img/avatars/2.jpg" class="mw40" alt="avatar"> </a>
+              <div class="media-body">
+                <h5 class="media-heading mv5">Article
+                  <small> - 08/16/22</small>
+                </h5>
+                Last Updated 36 days ago by
+                <a class="text-system" href="#"> Max </a>
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#"> <img src="assets/img/avatars/3.jpg" class="mw40" alt="avatar"> </a>
+              <div class="media-body">
+                <h5 class="media-heading">Article
+                  <small class="text-muted">- 08/16/22</small>
+                </h5> Last Updated 36 days ago by
+                <a class="text-system" href="#"> Max </a>
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#"> <img src="assets/img/avatars/4.jpg" class="mw40" alt="avatar"> </a>
+              <div class="media-body">
+                <h5 class="media-heading mv5">Article
+                  <small class="text-muted">- 08/16/22</small>
+                </h5> Last Updated 36 days ago by
+                <a class="text-system" href="#"> Max </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        -->
+        <!-- hide languages 
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="flag-xs flag-us"></span> US
+          </a>
+          <ul class="dropdown-menu pv5 animated animated-short flipInX" role="menu">
+            <li>
+              <a href="javascript:void(0);">
+                <span class="flag-xs flag-in mr10"></span> Hindu </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="flag-xs flag-tr mr10"></span> Turkish </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="flag-xs flag-es mr10"></span> Spanish </a>
+            </li>
+          </ul>
+        </li>
+        -->
+        <!-- status of profile (active / inactive)
+        <li class="menu-divider hidden-xs">
+          <i class="fa fa-circle"></i>
+        </li>
+        -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John Smith
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+            <li class="dropdown-header clearfix">   
+              <div class="pull-right mr10">
+                <select id="user-role">
+                  <optgroup label="Logged in As:">
+                    <option value="1-1">Iso</option>
+                    <option value="1-2">Merchant</option>
+                    <option value="1-3" selected="selected">Admin</option>
+                  </optgroup>
+                </select>
+              </div>
+
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-envelope"></span> Messages
+                <span class="label label-warning">2</span>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-power-off"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+        <!-- Start: Sidebar Header -->
+        <header class="sidebar-header">
+          <div class="user-menu">
+            <div class="row text-center mbn">
+              <div class="col-xs-4">
+                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="Dashboard">
+                  <span class="glyphicon glyphicon-home"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_messages.html" class="text-info" data-toggle="tooltip" data-placement="top" title="Messages">
+                  <span class="glyphicon glyphicon-inbox"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-alert" data-toggle="tooltip" data-placement="top" title="Tasks">
+                  <span class="glyphicon glyphicon-bell"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_timeline.html" class="text-system" data-toggle="tooltip" data-placement="top" title="Activity">
+                  <span class="fa fa-desktop"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-danger" data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="fa fa-gears"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_gallery.html" class="text-warning" data-toggle="tooltip" data-placement="top" title="Cron Jobs">
+                  <span class="fa fa-flask"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- End: Sidebar Header -->
+
+        <!-- Start: Sidebar Menu -->
+        <ul class="nav sidebar-menu">
+          <li class="sidebar-label pt20">Menu</li>
+            <li class="active">
+            <a class="accordion-toggle" href="onboard.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Home</span>
+              <span class="caret"></span>
+      
+            <ul class="nav sub-nav">
+              <li>
+                <a href="onboard.html">
+                  <span class="glyphicon glyphicon-shopping-cart"></span> Admin
+                  <span class="label label-xs bg-primary">New</span>
+                </a>
+              </li>
+              <li>
+                <a href="ecommerce_products.html">
+                  <span class="glyphicon glyphicon-tags"></span> Products </a>
+              </li>
+              <li>
+                <a href="ecommerce_orders.html">
+                  <span class="fa fa-money"></span> Orders </a>
+              </li>
+              <li>
+                <a href="ecommerce_customers.html">
+                  <span class="fa fa-users"></span> Customers </a>
+              </li>
+              <li>
+                <a href="ecommerce_settings.html">
+                  <span class="fa fa-gears"></span> Store Settings </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="accordion-toggle" href="#">
+              <span class="glyphicon glyphicon-usd"></span>
+              <span class="sidebar-title">Billing</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="admin_forms-elements.html">
+                  <span class="glyphicon glyphicon-edit"></span> Admin Elements </a>
+              </li>
+              <li>
+                <a href="admin_forms-widgets.html">
+                  <span class="glyphicon glyphicon-calendar"></span> Admin Widgets </a>
+              </li>
+              <li>
+                <a href="admin_forms-validation.html">
+                  <span class="glyphicon glyphicon-check"></span> Admin Validation </a>
+              </li>
+              <li>
+                <a href="admin_forms-layouts.html">
+                  <span class="fa fa-desktop"></span> Admin Layouts </a>
+              </li>
+            </ul>
+          </li>
+
+   
+
+          
+          <li class="sidebar-label pt15">Exclusive Tools</li>
+          <li>
+            <a class="accordion-toggle" href="#">
+              <span class="fa fa-gears"></span>
+              <span class="sidebar-title"> Plugins</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="admin_plugins-panels.html">
+                  <span class="glyphicon glyphicon-book"></span> Admin Panels </a>
+              </li>
+              <li>
+                <a href="admin_plugins-modals.html">
+                  <span class="glyphicon glyphicon-modal-window"></span> Admin Modals </a>
+              </li>
+              <li>
+                <a href="admin_plugins-dock.html">
+                  <span class="glyphicon glyphicon-equalizer"></span> Admin Dock </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a class="accordion-toggle" href="#">
+              <span class="glyphicon glyphicon-tower"></span>
+              <span class="sidebar-title">Plugins</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="glyphicon glyphicon-globe"></span> Maps
+                </a>
+              </li>
+              <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="fa fa-area-chart"></span> Charts
+                </a>
+              </li>
+              <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="fa fa-table"></span> Tables
+                </a>
+              </li>
+              <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="fa fa-flask"></span> Misc
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- End: Sidebar Menu -->
+
+        <!-- Start: Sidebar Collapse Button -->
+        <div class="sidebar-toggle-mini">
+          <a href="#">
+            Logout
+            <span class="fa fa-sign-out"></span>
+          </a>
+        </div>
+        <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+      <!-- Start: Topbar-Dropdown -->
+      <div id="topbar-dropmenu">
+        <div class="topbar-menu row">
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-inbox"></span>
+              <p class="metro-title">Messages</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-user"></span>
+              <p class="metro-title">Users</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-headphones"></span>
+              <p class="metro-title">Support</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon fa fa-gears"></span>
+              <p class="metro-title">Settings</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-facetime-video"></span>
+              <p class="metro-title">Videos</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-picture"></span>
+              <p class="metro-title">Pictures</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End: Topbar-Dropdown -->
+
+      <!-- Start: Topbar -->
+      <header id="topbar" class="ph10">
+        <div class="topbar-left">
+          <ul class="nav nav-list nav-list-topbar pull-left">
+            <li class="active">
+              <a href="onboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a href="alt_dashboard.html">Alt Dashboard</a>
+            </li>
+            <li>
+              <a href="#">Orders</a>
+            </li>
+            <li>
+              <a href="#">Customers</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="topbar-right hidden-xs hidden-sm">
+          <a href="#" class="btn btn-default btn-sm light fw600 ml10 tour-tour-element tour-tour-0-element" id="tour-item1" data-original-title="" title="" aria-describedby="popover463103">
+            <span class="fa fa-plus pr5"></span> Add Iso</a>
+          <a href="#" class="btn btn-default btn-sm light fw600 ml10">
+            <span class="fa fa-user pr5"></span> Add Merchant</a>
+        </div>
+      </header>
+      <!-- End: Topbar -->
+
+      <!-- Begin: Content -->
+     <section id="content" class="table-layout">
+
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center">
+
+          <!-- dashboard tiles -->
+          <div class="row">
+            <div class="col-sm-4 col-xl-3">
+              <div class="panel panel-tile text-center br-a br-grey">
+                <div class="panel-body">
+                  <h1 class="fs30 mt5 mbn">1,426</h1>
+                  <h6 class="text-system">NEW ORDERS</h6>
+                </div>
+                <div class="panel-footer br-t p12">
+                  <span class="fs11">
+                    <i class="fa fa-arrow-up pr5"></i> 3% INCREASE
+                    <b>1W AGO</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xl-3">
+              <div class="panel panel-tile text-center br-a br-grey">
+                <div class="panel-body">
+                  <h1 class="fs30 mt5 mbn">63,262</h1>
+                  <h6 class="text-success">TOTAL SALES GROSS</h6>
+                </div>
+                <div class="panel-footer br-t p12">
+                  <span class="fs11">
+                    <i class="fa fa-arrow-up pr5"></i> 2.7% INCREASE
+                    <b>1W AGO</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xl-3">
+              <div class="panel panel-tile text-center br-a br-grey">
+                <div class="panel-body">
+                  <h1 class="fs30 mt5 mbn">248</h1>
+                  <h6 class="text-warning">PENDING SHIPMENTS</h6>
+                </div>
+                <div class="panel-footer br-t p12">
+                  <span class="fs11">
+                    <i class="fa fa-arrow-up pr5 text-success"></i> 1% INCREASE
+                    <b>1W AGO</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xl-3 visible-xl">
+              <div class="panel panel-tile text-center br-a br-grey">
+                <div class="panel-body">
+                  <h1 class="fs30 mt5 mbn">6,718</h1>
+                  <h6 class="text-danger">UNIQUE VISITS</h6>
+                </div>
+                <div class="panel-footer br-t p12">
+                  <span class="fs11">
+                    <i class="fa fa-arrow-down pr5 text-danger"></i> 6% DECREASE
+                    <b>1W AGO</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dashboard metric chart -->
+          <div class="panel">
+            <div class="panel-heading">
+              <span class="panel-title"> Revenue</span>
+            </div>
+            <div class="panel-body pn">
+              <div id="ecommerce_chart1" style="height: 300px;" data-highcharts-chart="0"><div class="highcharts-container br-r" id="highcharts-0" style="position: relative; overflow: hidden; width: 787px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="787" height="300"><desc>Created with Highcharts 4.0.4</desc><defs><clipPath id="highcharts-1"><rect x="0" y="0" width="747" height="219"></rect></clipPath></defs><rect x="0" y="0" width="787" height="300" strokeWidth="0" fill="transparent" class=" highcharts-background"></rect><g class="highcharts-grid" zIndex="1"></g><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 39 44.5 L 786 44.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 76.5 L 786 76.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 108.5 L 786 108.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 139.5 L 786 139.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 170.5 L 786 170.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 201.5 L 786 201.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 233.5 L 786 233.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 39 264.5 L 786 264.5" stroke="#EEE" stroke-width="1" zIndex="1" opacity="1"></path></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 163.5 264 L 163.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 225.5 264 L 225.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 287.5 264 L 287.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 349.5 264 L 349.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 412.5 264 L 412.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 474.5 264 L 474.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 536.5 264 L 536.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 598.5 264 L 598.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 661.5 264 L 661.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 723.5 264 L 723.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 786.5 264 L 786.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 100.5 264 L 100.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 38.5 264 L 38.5 274" stroke="#EEE" stroke-width="1" opacity="1"></path><path fill="none" d="M 39 264.5 L 786 264.5" stroke="#EEE" stroke-width="1" zIndex="7" visibility="visible"></path></g><g class="highcharts-axis" zIndex="2"></g><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 31.125 187.71428571428572 L 93.375 162.68571428571428 L 155.625 112.62857142857143 L 217.875 81.34285714285716 L 280.125 100.11428571428571 L 342.375 147.04285714285714 L 404.625 186.46285714285713 L 466.875 159.55714285714285 L 529.125 148.2942857142857 L 591.375 123.26571428571428 L 653.625 94.48285714285716 L 715.875 65.07428571428571" stroke="#37bc9b" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 21.125 187.71428571428572 L 31.125 187.71428571428572 L 93.375 162.68571428571428 L 155.625 112.62857142857143 L 217.875 81.34285714285716 L 280.125 100.11428571428571 L 342.375 147.04285714285714 L 404.625 186.46285714285713 L 466.875 159.55714285714285 L 529.125 148.2942857142857 L 591.375 123.26571428571428 L 653.625 94.48285714285716 L 715.875 65.07428571428571 L 725.875 65.07428571428571" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="none" style=""><path fill="#37bc9b" d="M 715 61.07428571428571 C 720.328 61.07428571428571 720.328 69.07428571428571 715 69.07428571428571 C 709.672 69.07428571428571 709.672 61.07428571428571 715 61.07428571428571 Z"></path><path fill="#37bc9b" d="M 653 90.48285714285716 C 658.328 90.48285714285716 658.328 98.48285714285716 653 98.48285714285716 C 647.672 98.48285714285716 647.672 90.48285714285716 653 90.48285714285716 Z"></path><path fill="#37bc9b" d="M 591 119.26571428571428 C 596.328 119.26571428571428 596.328 127.26571428571428 591 127.26571428571428 C 585.672 127.26571428571428 585.672 119.26571428571428 591 119.26571428571428 Z"></path><path fill="#37bc9b" d="M 529 144.2942857142857 C 534.328 144.2942857142857 534.328 152.2942857142857 529 152.2942857142857 C 523.672 152.2942857142857 523.672 144.2942857142857 529 144.2942857142857 Z"></path><path fill="#37bc9b" d="M 466 155.55714285714285 C 471.328 155.55714285714285 471.328 163.55714285714285 466 163.55714285714285 C 460.672 163.55714285714285 460.672 155.55714285714285 466 155.55714285714285 Z"></path><path fill="#37bc9b" d="M 404 182.46285714285713 C 409.328 182.46285714285713 409.328 190.46285714285713 404 190.46285714285713 C 398.672 190.46285714285713 398.672 182.46285714285713 404 182.46285714285713 Z"></path><path fill="#37bc9b" d="M 342 143.04285714285714 C 347.328 143.04285714285714 347.328 151.04285714285714 342 151.04285714285714 C 336.672 151.04285714285714 336.672 143.04285714285714 342 143.04285714285714 Z"></path><path fill="#37bc9b" d="M 280 96.11428571428571 C 285.328 96.11428571428571 285.328 104.11428571428571 280 104.11428571428571 C 274.672 104.11428571428571 274.672 96.11428571428571 280 96.11428571428571 Z"></path><path fill="#37bc9b" d="M 217 77.34285714285716 C 222.328 77.34285714285716 222.328 85.34285714285716 217 85.34285714285716 C 211.672 85.34285714285716 211.672 77.34285714285716 217 77.34285714285716 Z"></path><path fill="#37bc9b" d="M 155 108.62857142857143 C 160.328 108.62857142857143 160.328 116.62857142857143 155 116.62857142857143 C 149.672 116.62857142857143 149.672 108.62857142857143 155 108.62857142857143 Z"></path><path fill="#37bc9b" d="M 93 158.68571428571428 C 98.328 158.68571428571428 98.328 166.68571428571428 93 166.68571428571428 C 87.672 166.68571428571428 87.672 158.68571428571428 93 158.68571428571428 Z"></path><path fill="#37bc9b" d="M 31 183.71428571428572 C 36.328 183.71428571428572 36.328 191.71428571428572 31 191.71428571428572 C 25.672 191.71428571428572 25.672 183.71428571428572 31 183.71428571428572 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 31.125 200.8542857142857 L 93.375 198.97714285714287 L 155.625 189.59142857142857 L 217.875 184.5857142857143 L 280.125 163.31142857142856 L 342.375 142.66285714285715 L 404.625 112.62857142857143 L 466.875 115.13142857142856 L 529.125 130.14857142857142 L 591.375 154.55142857142857 L 653.625 177.70285714285714 L 715.875 188.96571428571428" stroke="#70ca63" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 21.125 200.8542857142857 L 31.125 200.8542857142857 L 93.375 198.97714285714287 L 155.625 189.59142857142857 L 217.875 184.5857142857143 L 280.125 163.31142857142856 L 342.375 142.66285714285715 L 404.625 112.62857142857143 L 466.875 115.13142857142856 L 529.125 130.14857142857142 L 591.375 154.55142857142857 L 653.625 177.70285714285714 L 715.875 188.96571428571428 L 725.875 188.96571428571428" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="none" style=""><path fill="#70ca63" d="M 715 184.96571428571428 L 719 188.96571428571428 715 192.96571428571428 711 188.96571428571428 Z"></path><path fill="#70ca63" d="M 653 173.70285714285714 L 657 177.70285714285714 653 181.70285714285714 649 177.70285714285714 Z"></path><path fill="#70ca63" d="M 591 150.55142857142857 L 595 154.55142857142857 591 158.55142857142857 587 154.55142857142857 Z"></path><path fill="#70ca63" d="M 529 126.14857142857142 L 533 130.14857142857142 529 134.14857142857142 525 130.14857142857142 Z"></path><path fill="#70ca63" d="M 466 111.13142857142856 L 470 115.13142857142856 466 119.13142857142856 462 115.13142857142856 Z"></path><path fill="#70ca63" d="M 404 108.62857142857143 L 408 112.62857142857143 404 116.62857142857143 400 112.62857142857143 Z"></path><path fill="#70ca63" d="M 342 138.66285714285715 L 346 142.66285714285715 342 146.66285714285715 338 142.66285714285715 Z"></path><path fill="#70ca63" d="M 280 159.31142857142856 L 284 163.31142857142856 280 167.31142857142856 276 163.31142857142856 Z"></path><path fill="#70ca63" d="M 217 180.5857142857143 L 221 184.5857142857143 217 188.5857142857143 213 184.5857142857143 Z"></path><path fill="#70ca63" d="M 155 185.59142857142857 L 159 189.59142857142857 155 193.59142857142857 151 189.59142857142857 Z"></path><path fill="#70ca63" d="M 93 194.97714285714287 L 97 198.97714285714287 93 202.97714285714287 89 198.97714285714287 Z"></path><path fill="#70ca63" d="M 31 196.8542857142857 L 35 200.8542857142857 31 204.8542857142857 27 200.8542857142857 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 31.125 125.14285714285714 L 93.375 100.11428571428571 L 155.625 76.96285714285716 L 217.875 35.66571428571427 L 280.125 81.34285714285716 L 342.375 112.62857142857143 L 404.625 70.07999999999998 L 466.875 99.48857142857142 L 529.125 80.71714285714285 L 591.375 130.77428571428572 L 653.625 146.41714285714286 L 715.875 172.07142857142856" stroke="#f6bb42" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 21.125 125.14285714285714 L 31.125 125.14285714285714 L 93.375 100.11428571428571 L 155.625 76.96285714285716 L 217.875 35.66571428571427 L 280.125 81.34285714285716 L 342.375 112.62857142857143 L 404.625 70.07999999999998 L 466.875 99.48857142857142 L 529.125 80.71714285714285 L 591.375 130.77428571428572 L 653.625 146.41714285714286 L 715.875 172.07142857142856 L 725.875 172.07142857142856" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="none" style=""><path fill="#f6bb42" d="M 711 168.07142857142856 L 719 168.07142857142856 719 176.07142857142856 711 176.07142857142856 Z"></path><path fill="#f6bb42" d="M 649 142.41714285714286 L 657 142.41714285714286 657 150.41714285714286 649 150.41714285714286 Z"></path><path fill="#f6bb42" d="M 587 126.77428571428572 L 595 126.77428571428572 595 134.77428571428572 587 134.77428571428572 Z"></path><path fill="#f6bb42" d="M 525 76.71714285714285 L 533 76.71714285714285 533 84.71714285714285 525 84.71714285714285 Z"></path><path fill="#f6bb42" d="M 462 95.48857142857142 L 470 95.48857142857142 470 103.48857142857142 462 103.48857142857142 Z"></path><path fill="#f6bb42" d="M 400 66.07999999999998 L 408 66.07999999999998 408 74.07999999999998 400 74.07999999999998 Z"></path><path fill="#f6bb42" d="M 338 108.62857142857143 L 346 108.62857142857143 346 116.62857142857143 338 116.62857142857143 Z"></path><path fill="#f6bb42" d="M 276 77.34285714285716 L 284 77.34285714285716 284 85.34285714285716 276 85.34285714285716 Z"></path><path fill="#f6bb42" d="M 213 31.665714285714273 L 221 31.665714285714273 221 39.66571428571427 213 39.66571428571427 Z"></path><path fill="#f6bb42" d="M 151 72.96285714285716 L 159 72.96285714285716 159 80.96285714285716 151 80.96285714285716 Z"></path><path fill="#f6bb42" d="M 89 96.11428571428571 L 97 96.11428571428571 97 104.11428571428571 89 104.11428571428571 Z"></path><path fill="#f6bb42" d="M 27 121.14285714285714 L 35 121.14285714285714 35 129.14285714285714 27 129.14285714285714 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 31.125 150.17142857142858 L 93.375 181.45714285714286 L 155.625 187.71428571428572 L 217.875 125.14285714285714 L 280.125 112.62857142857143 L 342.375 81.34285714285716 L 404.625 26.28 L 466.875 68.20285714285714 L 529.125 130.77428571428572 L 591.375 149.54571428571427 L 653.625 158.93142857142857 L 715.875 178.32857142857142" stroke="#4a89dc" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 21.125 150.17142857142858 L 31.125 150.17142857142858 L 93.375 181.45714285714286 L 155.625 187.71428571428572 L 217.875 125.14285714285714 L 280.125 112.62857142857143 L 342.375 81.34285714285716 L 404.625 26.28 L 466.875 68.20285714285714 L 529.125 130.77428571428572 L 591.375 149.54571428571427 L 653.625 158.93142857142857 L 715.875 178.32857142857142 L 725.875 178.32857142857142" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(39,45) scale(1 1)" clip-path="none" style=""><path fill="#4a89dc" d="M 715 174.32857142857142 L 719 182.32857142857142 711 182.32857142857142 Z"></path><path fill="#4a89dc" d="M 653 154.93142857142857 L 657 162.93142857142857 649 162.93142857142857 Z"></path><path fill="#4a89dc" d="M 591 145.54571428571427 L 595 153.54571428571427 587 153.54571428571427 Z"></path><path fill="#4a89dc" d="M 529 126.77428571428572 L 533 134.77428571428572 525 134.77428571428572 Z"></path><path fill="#4a89dc" d="M 466 64.20285714285714 L 470 72.20285714285714 462 72.20285714285714 Z"></path><path fill="#4a89dc" d="M 404 22.28 L 408 30.28 400 30.28 Z"></path><path fill="#4a89dc" d="M 342 77.34285714285716 L 346 85.34285714285716 338 85.34285714285716 Z"></path><path fill="#4a89dc" d="M 280 108.62857142857143 L 284 116.62857142857143 276 116.62857142857143 Z"></path><path fill="#4a89dc" d="M 217 121.14285714285714 L 221 129.14285714285714 213 129.14285714285714 Z"></path><path fill="#4a89dc" d="M 155 183.71428571428572 L 159 191.71428571428572 151 191.71428571428572 Z"></path><path fill="#4a89dc" d="M 93 177.45714285714286 L 97 185.45714285714286 89 185.45714285714286 Z"></path><path fill="#4a89dc" d="M 31 146.17142857142858 L 35 154.17142857142858 27 154.17142857142858 Z"></path></g></g><g class="highcharts-legend" zIndex="7" transform="translate(371,10)"><g zIndex="1"><g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)"><path fill="none" d="M 0 11 L 16 11" stroke="#37bc9b" stroke-width="2"></path><path fill="#37bc9b" d="M 8 7 C 13.328 7 13.328 15 8 15 C 2.6719999999999997 15 2.6719999999999997 7 8 7 Z"></path><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2" y="15">Phones</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(93.609375,3)"><path fill="none" d="M 0 11 L 16 11" stroke="#70ca63" stroke-width="2"></path><path fill="#70ca63" d="M 8 7 L 12 11 8 15 4 11 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">Notebooks</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(201.0625,3)"><path fill="none" d="M 0 11 L 16 11" stroke="#f6bb42" stroke-width="2"></path><path fill="#f6bb42" d="M 4 7 L 12 7 12 15 4 15 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">Desktops</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(300.265625,3)"><path fill="none" d="M 0 11 L 16 11" stroke="#4a89dc" stroke-width="2"></path><path fill="#4a89dc" d="M 8 7 L 12 15 4 15 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2"><tspan>Music Players</tspan></text></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"><text x="70.125" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Jan</text><text x="132.375" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Feb</text><text x="194.625" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Mar</text><text x="256.875" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Apr</text><text x="319.125" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">May</text><text x="381.375" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Jun</text><text x="443.625" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Jul</text><text x="505.875" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Aug</text><text x="568.125" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Sep</text><text x="630.375" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Oct</text><text x="692.625" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Nov</text><text x="754.875" text-anchor="middle" style="width:42px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="284" opacity="1">Dec</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="269.5" opacity="1">0</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="238.21428571428572" opacity="1">5</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="206.92857142857144" opacity="1">10</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="175.64285714285714" opacity="1">15</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="144.35714285714286" opacity="1">20</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="113.07142857142858" opacity="1">25</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="81.78571428571428" opacity="1">30</text><text x="24" text-anchor="end" style="width:240px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="50.5" opacity="1">35</text></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(0,-9999)"><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(249, 249, 249, .85)" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21"></text></g></svg></div></div>
+            </div>
+          </div>
+
+          <!-- recent activity table -->
+          <div class="panel">
+            <div class="panel-heading">
+              <span class="panel-title hidden-xs"> Recent Activity</span>
+              <ul class="nav panel-tabs panel-tabs-merge">
+                <li class="active">
+                  <a href="#tab1_1" data-toggle="tab"> Top Sellers</a>
+                </li>
+                <li>
+                  <a href="#tab1_2" data-toggle="tab"> Most Viewed</a>
+                </li>
+                <li>
+                  <a href="#tab1_3" class="hidden-xs" data-toggle="tab"> New Customers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="panel-body pn">
+              <div class="table-responsive">
+                <table class="table admin-form theme-warning tc-checkbox-1 fs13">
+                  <thead>
+                    <tr class="bg-light">
+                      <th class="">Image</th>
+                      <th class="">Product Title</th>
+                      <th class="">SKU</th>
+                      <th class="">Price</th>
+                      <th class="">Stock</th>
+                      <th class="text-right">Status</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="w100">
+                        <img class="img-responsive mw20 ib mr10" title="user" src="assets/img/stock/products/thumb_1.jpg">
+                      </td>
+                      <td class="">Apple Ipod 4G - Silver</td>
+                      <td class="">#21362</td>
+                      <td class="">$215</td>
+                      <td class="">1,400</td>
+                      <td class="text-right">
+                        <div class="btn-group text-right">
+                          <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Active
+                            <span class="caret ml5"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li>
+                              <a href="#">Edit</a>
+                            </li>
+                            <li>
+                              <a href="#">Delete</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                              <a href="#">Complete</a>
+                            </li>
+                            <li class="active">
+                              <a href="#">Pending</a>
+                            </li>
+                            <li>
+                              <a href="#">Canceled</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w100">
+                        <img class="img-responsive mw20 ib mr10" title="user" src="assets/img/stock/products/thumb_2.jpg">
+                      </td>
+                      <td class="">Apple Smart Watch - 1G</td>
+                      <td class="">#15262</td>
+                      <td class="">$455</td>
+                      <td class="">2,100</td>
+                      <td class="text-right">
+                        <div class="btn-group text-right">
+                          <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Active
+                            <span class="caret ml5"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li>
+                              <a href="#">Edit</a>
+                            </li>
+                            <li>
+                              <a href="#">Delete</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                              <a href="#">Complete</a>
+                            </li>
+                            <li class="active">
+                              <a href="#">Pending</a>
+                            </li>
+                            <li>
+                              <a href="#">Canceled</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w100">
+                        <img class="img-responsive mw20 ib mr10" title="user" src="assets/img/stock/products/thumb_6.jpg">
+                      </td>
+                      <td class="">Apple Macbook 4th Gen - Silver</td>
+                      <td class="">#66362</td>
+                      <td class="">$1699</td>
+                      <td class="">6,100</td>
+                      <td class="text-right">
+                        <div class="btn-group text-right">
+                          <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Active
+                            <span class="caret ml5"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li>
+                              <a href="#">Edit</a>
+                            </li>
+                            <li>
+                              <a href="#">Delete</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                              <a href="#">Complete</a>
+                            </li>
+                            <li class="active">
+                              <a href="#">Pending</a>
+                            </li>
+                            <li>
+                              <a href="#">Canceled</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w100">
+                        <img class="img-responsive mw20 ib mr10" title="user" src="assets/img/stock/products/thumb_7.jpg">
+                      </td>
+                      <td class="">Apple Iphone 16GB - Silver</td>
+                      <td class="">#51362</td>
+                      <td class="">$1299</td>
+                      <td class="">5,200</td>
+                      <td class="text-right">
+                        <div class="btn-group text-right">
+                          <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Active
+                            <span class="caret ml5"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li>
+                              <a href="#">Edit</a>
+                            </li>
+                            <li>
+                              <a href="#">Delete</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                              <a href="#">Complete</a>
+                            </li>
+                            <li class="active">
+                              <a href="#">Pending</a>
+                            </li>
+                            <li>
+                              <a href="#">Canceled</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- info traffic panels -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel">
+                <div class="panel-heading">
+                  <span class="panel-title">Top Geographic Sources</span>
+                </div>
+                <div class="panel-body pn">
+                  <table class="table mbn tc-med-1 tc-bold-last">
+                    <thead>
+                      <tr class="hidden">
+                        <th>#</th>
+                        <th>First Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="flag-xs flag-us mr5 va-b"></span>United States</td>
+                        <td>28%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="flag-xs flag-de mr5 va-b"></span>Germany</td>
+                        <td>25%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="flag-xs flag-fr mr5 va-b"></span>France</td>
+                        <td>21%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="flag-xs flag-tr mr5 va-b"></span>Spain</td>
+                        <td>18%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="flag-xs flag-es mr5 va-b"></span>Turkey</td>
+                        <td>10%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Search List -->
+              <div class="panel">
+                <div class="panel-heading">
+                  <span class="panel-title">Top Referals</span>
+                </div>
+                <div class="panel-body pn">
+                  <table class="table mbn tc-med-1 tc-bold-last">
+                    <thead>
+                      <tr class="hidden">
+                        <th>#</th>
+                        <th>First Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="favicons google va-t mr10"></span>http://madeupurl.com/pictures/doors</td>
+                        <td>28%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="favicons google va-t mr10"></span>http://secondulr.com/article/14</td>
+                        <td>25%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="favicons yahoo va-t mr10"></span>http://urlthird.com/infogram/ten</td>
+                        <td>21%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="favicons google va-t mr10"></span>http://fourthlink.com/boats/glass</td>
+                        <td>18%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="favicons bing va-t mr10"></span>http://lastlink.com/thebest/ever</td>
+                        <td>10%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end: .tray-center -->
+
+        <!-- begin: .tray-right -->
+        <aside class="tray tray-right tray290 pn" data-tray-height="match" style="height: 951px;">
+
+          <!-- store activity timeline -->
+          <ol class="timeline-list pl5 mt5">
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Michael</b> Added a new item to his store:
+                <a href="#">Ipod</a>
+              </div>
+              <div class="timeline-date">1:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Sara</b> Added a new item to his store:
+                <a href="#">Notebook</a>
+              </div>
+              <div class="timeline-date">3:05am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-success">
+                <span class="fa fa-usd"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Admin</b> created a new invoice for:
+                <a href="#">Software</a>
+              </div>
+              <div class="timeline-date">4:15am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-warning">
+                <span class="fa fa-pencil"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Laura</b> edited her work experience</div>
+              <div class="timeline-date">5:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-success">
+                <span class="fa fa-usd"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Admin</b> created a new invoice for:
+                <a href="#">Apple Inc.</a>
+              </div>
+              <div class="timeline-date">7:45am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Michael</b> Added a new item to his store:
+                <a href="#">Ipod</a>
+              </div>
+              <div class="timeline-date">8:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Sara</b> Added a new item to his store:
+                <a href="#">Watch</a>
+              </div>
+              <div class="timeline-date">9:35am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-system">
+                <span class="fa fa-fire"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Admin</b> created a new invoice for:
+                <a href="#">Software</a>
+              </div>
+              <div class="timeline-date">4:15am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-warning">
+                <span class="fa fa-pencil"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Laura</b> edited her work experience</div>
+              <div class="timeline-date">5:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-success">
+                <span class="fa fa-usd"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Admin</b> created a new invoice for:
+                <a href="#">Software</a>
+              </div>
+              <div class="timeline-date">4:15am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-warning">
+                <span class="fa fa-pencil"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Laura</b> edited her work experience</div>
+              <div class="timeline-date">5:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-success">
+                <span class="fa fa-usd"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Admin</b> created a new invoice for:
+                <a href="#">Apple Inc.</a>
+              </div>
+              <div class="timeline-date">7:45am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Michael</b> Added a new item to his store:
+                <a href="#">Ipod</a>
+              </div>
+              <div class="timeline-date">8:25am</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-icon bg-dark light">
+                <span class="fa fa-tags"></span>
+              </div>
+              <div class="timeline-desc">
+                <b>Sara</b> Added a new item to his store:
+                <a href="#">Watch</a>
+              </div>
+              <div class="timeline-date">9:35am</div>
+            </li>
+          </ol>
+
+        </aside>
+        <!-- end: .tray-right -->
+
+      </section>
+      <!-- End: Content -->
+
+    </section>
+
+    <!-- Start: Right Sidebar -->
+    <aside id="sidebar_right" class="nano affix">
+
+      <!-- Start: Sidebar Right Content -->
+      <div class="sidebar-right-content nano-content">
+
+        <div class="tab-block sidebar-block br-n">
+          <ul class="nav nav-tabs tabs-border nav-justified hidden">
+            <li class="active">
+              <a href="#sidebar-right-tab1" data-toggle="tab">Tab 1</a>
+            </li>
+            <li>
+              <a href="#sidebar-right-tab2" data-toggle="tab">Tab 2</a>
+            </li>
+            <li>
+              <a href="#sidebar-right-tab3" data-toggle="tab">Tab 3</a>
+            </li>
+          </ul>
+          <div class="tab-content br-n">
+            <div id="sidebar-right-tab1" class="tab-pane active">
+
+              <h5 class="title-divider text-muted mb20"> Server Statistics
+                <span class="pull-right"> 2013
+                  <i class="fa fa-caret-down ml5"></i>
+                </span>
+              </h5>
+              <div class="progress mh5">
+                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 44%">
+                  <span class="fs11">DB Request</span>
+                </div>
+              </div>
+              <div class="progress mh5">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 84%">
+                  <span class="fs11 text-left">Server Load</span>
+                </div>
+              </div>
+              <div class="progress mh5">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 61%">
+                  <span class="fs11 text-left">Server Connections</span>
+                </div>
+              </div>
+
+              <h5 class="title-divider text-muted mt30 mb10">Traffic Margins</h5>
+              <div class="row">
+                <div class="col-xs-5">
+                  <h3 class="text-primary mn pl5">132</h3>
+                </div>
+                <div class="col-xs-7 text-right">
+                  <h3 class="text-success-dark mn">
+                    <i class="fa fa-caret-up"></i> 13.2% </h3>
+                </div>
+              </div>
+
+              <h5 class="title-divider text-muted mt25 mb10">Database Request</h5>
+              <div class="row">
+                <div class="col-xs-5">
+                  <h3 class="text-primary mn pl5">212</h3>
+                </div>
+                <div class="col-xs-7 text-right">
+                  <h3 class="text-success-dark mn">
+                    <i class="fa fa-caret-up"></i> 25.6% </h3>
+                </div>
+              </div>
+
+              <h5 class="title-divider text-muted mt25 mb10">Server Response</h5>
+              <div class="row">
+                <div class="col-xs-5">
+                  <h3 class="text-primary mn pl5">82.5</h3>
+                </div>
+                <div class="col-xs-7 text-right">
+                  <h3 class="text-danger mn">
+                    <i class="fa fa-caret-down"></i> 17.9% </h3>
+                </div>
+              </div>
+
+              <h5 class="title-divider text-muted mt40 mb20"> Server Statistics
+                <span class="pull-right text-primary fw600">USA</span>
+              </h5>
+
+
+            </div>
+            <div id="sidebar-right-tab2" class="tab-pane"></div>
+            <div id="sidebar-right-tab3" class="tab-pane"></div>
+          </div>
+          <!-- end: .tab-content -->
+        </div>
+      </div>
+    </aside>
+    <!-- End: Right Sidebar -->
+
+  </div>
+  <!-- End: Main -->
+
+style>
+  /*page demo styles*/
+  .wizard .steps .fa,
+  .wizard .steps .glyphicon,
+  .wizard .steps .glyphicon {
+    display: none;
+  }
+  </style>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Page Plugins -->
+  <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+  <script src="assets/admin-tools/admin-forms/js/jquery.steps.min.js"></script>
+
+    <!-- Bootstrap Tour Plugin -->
+  <script src="vendor/plugins/bstour/bootstrap-tour.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS     
+    Demo.init();
+
+    // Form Wizard 
+    var form = $("#form-wizard");
+    form.validate({
+      errorPlacement: function errorPlacement(error, element) {
+        element.before(error);
+      },
+      rules: {
+        confirm: {
+          equalTo: "#password"
+        }
+      }
+    });
+    form.children(".wizard").steps({
+      headerTag: ".wizard-section-title",
+      bodyTag: ".wizard-section",
+      onStepChanging: function(event, currentIndex, newIndex) {
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+      },
+      onFinishing: function(event, currentIndex) {
+        form.validate().settings.ignore = ":disabled";
+        return form.valid();
+      },
+      onFinished: function(event, currentIndex) {
+        alert("Submitted!");
+      }
+    });
+
+    // Demo Wizard Functionality
+    var formWizard = $('.wizard');
+    var formSteps = formWizard.find('.steps');
+
+    $('.wizard-options .holder-style').on('click', function(e) {
+      e.preventDefault();
+
+      var stepStyle = $(this).data('steps-style');
+
+      var stepRight = $('.holder-style[data-steps-style="steps-right"');
+      var stepLeft = $('.holder-style[data-steps-style="steps-left"');
+      var stepJustified = $('.holder-style[data-steps-style="steps-justified"');
+
+      if (stepStyle === "steps-left") {
+        stepRight.removeClass('holder-active');
+        stepJustified.removeClass('holder-active');
+        formWizard.removeClass('steps-right steps-justified');
+      }
+      if (stepStyle === "steps-right") {
+        stepLeft.removeClass('holder-active');
+        stepJustified.removeClass('holder-active');
+        formWizard.removeClass('steps-left steps-justified');
+      }
+      if (stepStyle === "steps-justified") {
+        stepLeft.removeClass('holder-active');
+        stepRight.removeClass('holder-active');
+        formWizard.removeClass('steps-left steps-right');
+      }
+
+      // Assign new style 
+      if ($(this).hasClass('holder-active')) {
+        formWizard.removeClass(stepStyle);
+      } else {
+        formWizard.addClass(stepStyle);
+      }
+
+      // Assign new active holder
+      $(this).toggleClass('holder-active');
+    });
+
+    // Define Bootstrap Tour steps
+        var tour = new Tour({
+          backdrop: false, // can mask content in a modal
+          storage: false, // can use localstorage
+          onEnd: function(tour) { // On Tour Complete
+            alert('You have completed the tour. This is an "onEnd" callback');
+          },
+          steps: [{
+            element: "#tour-item1",
+            title: "Click 'Next' to continue",
+            content: "You can tour any element which has a valid selector",
+            placement: 'top'
+          }, {
+            element: "#tour-item2",
+            title: "Navigate forward or backwards!",
+            content: "This is step 2. I'm a google map",
+            placement: 'top'
+          }, {
+            element: "#tour-item3",
+            title: "Tour moves the page for you",
+            content: "It will also scroll using an easing animation",
+            placement: 'top'
+          }, {
+            element: "#tour-item4",
+            title: "Optional Modal Mode",
+            content: "Visit any step with or without a convenient modal",
+            placement: 'top',
+            backdrop: true
+          }, {
+            element: "#tour-item1",
+            title: "Left Aligned Popup",
+            content: "Simply configure the step with placement: 'left'",
+            placement: 'left',
+            backdrop: true
+          }, {
+            element: "#tour-item1",
+            title: "Bottom Aligned Popup",
+            content: "Simply configure the step with placement: 'bottom'",
+            placement: 'bottom',
+            backdrop: true
+          }, {
+            element: "#tour-item5",
+            title: "Right Aligned Popup",
+            content: "Simply configure the step with placement: 'right'",
+            placement: 'right',
+            backdrop: true
+          }]
+        });
+
+        // Init the tour
+        tour.init();
+
+        // Start tour on click
+        $('#tour_start').on('click', function() {
+          tour.restart();
+        });
+
+
+
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
+
+
