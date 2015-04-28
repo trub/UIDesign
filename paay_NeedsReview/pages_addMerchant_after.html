@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>Paay -- A Responsive HTML5 Admin UI Framework</title>
+  <meta name="keywords" content="Paay" />
+  <meta name="description" content="Paay ">
+  <meta name="author" content="Paay">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+
+  <!-- Dropzone CSS -->
+  <link rel="stylesheet" href="vendor/plugins/dropzone/css/dropzone.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="blank-page">
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top bg-light">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <b>PAAY</b>ADMIN
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+      </ul>
+      <!-- Start: searchbar -->
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+      <!-- Start: User Account (image, name) -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John Smith
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+            <li class="dropdown-header clearfix">   
+              <div class="pull-right mr10">
+                <select id="user-role">
+                  <optgroup label="Logged in As:">
+                    <option value="1-1">Iso</option>
+                    <option value="1-2">Merchant</option>
+                    <option value="1-3" selected="selected">Admin</option>
+                  </optgroup>
+                </select>
+              </div>
+
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-envelope"></span> Messages
+                <span class="label label-warning">2</span>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-power-off"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+     
+        <!-- Start: Sidebar Menu -->
+
+            <!-- Start: Sidebar Menu -->
+        <ul class="nav sidebar-menu">
+          <li class="sidebar-label pt20">GENERAL</li>
+          <li class="active">
+            <a href="dashboard.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Dashboard</span>
+            </a>
+          </li>
+           <li>
+            <a href="dashboard.html">
+              <span class="fa fa-money"></span>
+              <span class="sidebar-title">Billing</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt15">USERS</li>
+          </li>
+          <li>
+            <a class="accordion-toggle menu-open" href="#">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">Merchants</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="pages_Merchants.html">
+                  <span class="fa fa-desktop"></span> Merchants </a>
+              </li>
+              <li class="active">
+                <a href="pages_addMerchant.html">
+                  <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
+              </li>
+            </ul>
+          </li>     
+          <li class="sidebar-label pt15"> Tools</li>
+          <li>
+            <a href="admin_plugins-paay.html">
+              <span class="fa fa-gears"></span>
+              <span class="sidebar-title"> Plugins</span>
+            </a>
+          </li>
+          
+        </ul>
+        <!-- End: Sidebar Menu -->
+
+
+	      <!-- Start: Sidebar Collapse Button -->
+	      <div class="sidebar-toggle-mini">
+	        <a href="#">
+            Logout
+	          <span class="fa fa-sign-out"></span>
+	        </a>
+	      </div>
+	      <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+    
+      <section id="content" class="table-layout">
+
+        <!-- begin: .tray-center -->
+        <div class="tray">
+          <div class="">
+
+            <!-- Begin: Content Header -->
+
+            <div class="tab-content mw900 mt30 center-block center-children">
+
+             <!-- Form Wizard -->
+
+              <!-- NOTE!!!!!!!!!!!!!!
+                      ========================================
+                      NOTE!!! 
+                      - this form needs validation
+                      - the validation rules that exist can be found in the scripts
+                      section at the bottom of this page
+                      - i haven't had time to add in the correct ids on most
+                      of the form fields
+                      - i assume there will probably still need to be custom validation 
+                      written 
+                      - if you need any overview of this theme's validation rules please
+                      see /themes/admin_forms-validation.html or view the /README/index.html
+                      - i also want to add in a notification so that when you complete the form
+                      it gives a notification vs. the current JS pop-up
+                      -->
+              <div class="admin-form theme-success tab-pane mw800 active" id="register2" role="tabpanel">
+                <div class="panel panel-success heading-border">
+                  <div class="panel-heading">
+                    <span class="panel-title">
+                      <i class="fa fa-pencil-square"></i>Register A Merchant
+                    </span>
+                  </div>
+                  <!-- end .form-header section -->
+
+     
+                <form method="post" action="/" id="form-wizard" style="width: 800px !important; margin: 0 auto;" class="form-horizaontal">
+                  <div class="wizard steps-bg steps-justified steps-show-icons steps-tabs ">
+
+                    <!-- Wizard step 1 -->
+                    <h4 class="wizard-section-title">
+                     1. MERCHANT DETAILS</h4>
+
+                    <section class="wizard-section">
+
+                      <div class="panel-body p25">
+                          <div class="section-divider mt20 mb40">
+                            <span>Add the following Merchant Details </span>
+                          </div>
+                  
+                          <div class="section row">
+                              <label for="names" class="field-label col-md-3">Merchant Name</label>
+                              <div class="col-md-9">
+                                <label for="names" class="field prepend-icon">
+                                  <input type="text" name="names" id="names" class="gui-input" placeholder="Add the merchant's name here...">
+                                  <label for="names" class="field-icon">
+                                    <i class="fa fa-user"></i>
+                                  </label>
+                                </label>
+                              </div>
+                            </div>
+                          <!-- end section -->
+
+                          <div class="section row">
+                              <label for="names" class="field-label col-md-3">MID</label>
+                              <div class="col-md-9">
+                                <label for="names" class="field prepend-icon">
+                                  <input type="text" name="names" id="names" class="gui-input" placeholder="Enter MID...">
+                                  <label for="names" class="field-icon">
+                                    <i class="fa fa-user"></i>
+                                  </label>
+                                </label>
+                              </div>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section-divider mt40 mb40">
+                            <span>Create A Merchant Account </span>
+                            <span class="glyphicon glyphicon-info-sign"></span> 
+                          </div>
+
+
+                            <div class="section row">
+                                <label for="names" class="field-label col-md-3">Username</label>
+                                <div class="col-md-9">
+                                  <label for="email" class="field prepend-icon">
+                                    <input type="email" name="email" id="email" class="gui-input" placeholder="Assign the merchant a username">
+                                    <label for="email" class="field-icon">
+                                      <i class="fa fa-envelope"></i>
+                                    </label>
+                                  </label>
+                                </div>
+                                <!-- end section -->
+                              </div>
+
+                            <div class="section row">
+
+                                <label for="names" class="field-label col-md-3">Password</label>
+                                <div class="col-md-9">
+
+                                  <label for="password" class="field prepend-icon">
+                                    <input type="password" name="password" id="password" class="gui-input" placeholder="Add a temporary password">
+                                    <b class="tooltip tip-left-top"><em>Don't worry. We'll ask the merchant to reset their password. </em></b>
+                                    <label for="password" class="field-icon">
+                                      <i class="fa fa-lock"></i>
+                                    </label>
+                                  </label>
+
+                                </div>
+                                <!-- end section -->
+                            </div>  
+
+                       
+                      </div>
+
+                    </section>
+
+                    <!-- Wizard step 2 -->
+                    <h4 class="wizard-section-title">
+                       2. CONTACT DETAILS</h4>
+
+                    <section class="wizard-section">
+
+                      <div class="panel-body p25">
+                          
+
+                          <div class="section-divider mt20 mb40">
+                            <span>Add the Merchant's Contact Details</span>
+                          </div>
+                          <!-- .section-divider -->
+
+                          <div class="section row">
+                            <div class="col-md-6">
+                              <label for="pname" class="field prepend-icon">
+                                <input type="text" name="pname" id="pname" class="gui-input" placeholder="First Name">
+                                <label for="pname" class="field-icon">
+                                  <i class="fa fa-user"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+                            <div class="col-md-6">
+                              <label for="pname" class="field prepend-icon">
+                                <input type="text" name="pname" id="pname" class="gui-input" placeholder="Last Name">
+                                <label for="pname" class="field-icon">
+                                  <i class="fa fa-user"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+
+                          </div>
+                          <!-- end section row section -->
+
+                          <div class="section row">
+                             <div class="col-md-6">
+                              <label for="email" class="field prepend-icon">
+                                <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
+                                <label for="email" class="field-icon">
+                                  <i class="fa fa-envelope"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+                            <div class="col-md-6">
+                              <label for="mobile" class="field prepend-icon">
+                                <input type="tel" name="mobile" id="mobile" class="gui-input" placeholder="Tel / moble">
+                                <label for="mobile" class="field-icon">
+                                  <i class="fa fa-phone-square"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+                          </div>
+
+                          <div class="section row">
+                              <div class="col-md-6">
+                              <label for="firstaddr" class="field prepend-icon">
+                                <input type="text" name="firstaddr" id="firstaddr" class="gui-input" placeholder="Street address">
+                                <label for="firstaddr" class="field-icon">
+                                  <i class="fa fa-map-marker"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                              <label for="firstaddr" class="field prepend-icon">
+                                <input type="text" name="firstaddr" id="firstaddr" class="gui-input" placeholder="Apt, Bldg, etc">
+                                <label for="firstaddr" class="field-icon">
+                                  <i class="fa fa-map-marker"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+                          </div>
+                          <!-- end section row section -->
+
+                          <div class="section row">
+                            <div class="col-md-6">
+                              <label for="zip" class="field prepend-icon">
+                                <input type="text" name="zip" id="zip" class="gui-input" placeholder="Zip">
+                                <label for="zip" class="field-icon">
+                                  <i class="fa fa-certificate"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                              <label for="city" class="field prepend-icon">
+                                <input type="text" name="city" id="city" class="gui-input" placeholder="City">
+                                <label for="city" class="field-icon">
+                                  <i class="fa fa-building-o"></i>
+                                </label>
+                              </label>
+                            </div>
+                            <!-- end section -->
+
+                          </div>
+                          <!-- end section row section -->
+
+                          <div class="section row">
+                            <div class="col-md-6">
+                              <label class="field select">
+                                <select id="location" name="location">
+                                  <option value="">Select country...</option>
+                                  <option value="AL">Albania</option>
+                                  <option value="DZ">Algeria</option>
+                                  <option value="AD">Andorra</option>
+                                  <option value="AO">Angola</option>
+                                  <option value="AI">Anguilla</option>
+                                  <option value="AG">Antigua and Barbuda</option>
+                                  <option value="AR">Argentina</option>
+                                  <option value="AM">Armenia</option>
+                                  <option value="AW">Aruba</option>
+                                  <option value="AU">Australia</option>
+                                  <option value="AT">Austria</option>
+                                  <option value="AZ">Azerbaijan Republic</option>
+                                  <option value="BS">Bahamas</option>
+                                  <option value="BH">Bahrain</option>
+                                  <option value="BB">Barbados</option>
+                                  <option value="BE">Belgium</option>
+                                  <option value="BZ">Belize</option>
+                                  <option value="BJ">Benin</option>
+                                  <option value="BM">Bermuda</option>
+                                  <option value="BT">Bhutan</option>
+                                  <option value="BO">Bolivia</option>
+                                  <option value="BA">Bosnia and Herzegovina</option>
+                                  <option value="BW">Botswana</option>
+                                  <option value="BR">Brazil</option>
+                                  <option value="BN">Brunei</option>
+                                  <option value="BG">Bulgaria</option>
+                                  <option value="BF">Burkina Faso</option>
+                                  <option value="BI">Burundi</option>
+                                  <option value="KH">Cambodia</option>
+                                  <option value="CA">Canada</option>
+                                  <option value="CV">Cape Verde</option>
+                                  <option value="KY">Cayman Islands</option>
+                                  <option value="TD">Chad</option>
+                                  <option value="CL">Chile</option>
+                                  <option value="C2">China Worldwide</option>
+                                  <option value="CO">Colombia</option>
+                                  <option value="KM">Comoros</option>
+                                  <option value="CK">Cook Islands</option>
+                                  <option value="CR">Costa Rica</option>
+                                  <option value="HR">Croatia</option>
+                                  <option value="CY">Cyprus</option>
+                                  <option value="CZ">Czech Republic</option>
+                                  <option value="CD">Democratic Republic of the Congo</option>
+                                  <option value="DK">Denmark</option>
+                                  <option value="DJ">Djibouti</option>
+                                  <option value="DM">Dominica</option>
+                                  <option value="DO">Dominican Republic</option>
+                                  <option value="EC">Ecuador</option>
+                                  <option value="EG">Egypt</option>
+                                  <option value="SV">El Salvador</option>
+                                  <option value="ER">Eritrea</option>
+                                  <option value="EE">Estonia</option>
+                                  <option value="ET">Ethiopia</option>
+                                  <option value="FK">Falkland Islands</option>
+                                  <option value="FO">Faroe Islands</option>
+                                  <option value="FJ">Fiji</option>
+                                  <option value="FI">Finland</option>
+                                  <option value="FR">France</option>
+                                  <option value="GF">French Guiana</option>
+                                  <option value="PF">French Polynesia</option>
+                                  <option value="GA">Gabon Republic</option>
+                                  <option value="GM">Gambia</option>
+                                  <option value="GE">Georgia</option>
+                                  <option value="DE">Germany</option>
+                                  <option value="GI">Gibraltar</option>
+                                  <option value="GR">Greece</option>
+                                  <option value="GL">Greenland</option>
+                                  <option value="GD">Grenada</option>
+                                  <option value="GP">Guadeloupe</option>
+                                  <option value="GT">Guatemala</option>
+                                  <option value="GN">Guinea</option>
+                                  <option value="GW">Guinea Bissau</option>
+                                  <option value="GY">Guyana</option>
+                                  <option value="HN">Honduras</option>
+                                  <option value="HK">Hong Kong</option>
+                                  <option value="HU">Hungary</option>
+                                  <option value="IS">Iceland</option>
+                                  <option value="IN">India</option>
+                                  <option value="ID">Indonesia</option>
+                                  <option value="IE">Ireland</option>
+                                  <option value="IL">Israel</option>
+                                  <option value="IT">Italy</option>
+                                  <option value="JM">Jamaica</option>
+                                  <option value="JP">Japan</option>
+                                  <option value="JO">Jordan</option>
+                                  <option value="KZ">Kazakhstan</option>
+                                  <option value="KE">Kenya</option>
+                                  <option value="KI">Kiribati</option>
+                                  <option value="KW">Kuwait</option>
+                                  <option value="KG">Kyrgyzstan</option>
+                                  <option value="LA">Laos</option>
+                                  <option value="LV">Latvia</option>
+                                  <option value="LS">Lesotho</option>
+                                  <option value="LI">Liechtenstein</option>
+                                  <option value="LT">Lithuania</option>
+                                  <option value="LU">Luxembourg</option>
+                                  <option value="MG">Madagascar</option>
+                                  <option value="MW">Malawi</option>
+                                  <option value="MY">Malaysia</option>
+                                  <option value="MV">Maldives</option>
+                                  <option value="ML">Mali</option>
+                                  <option value="MT">Malta</option>
+                                  <option value="MH">Marshall Islands</option>
+                                  <option value="MQ">Martinique</option>
+                                  <option value="MR">Mauritania</option>
+                                  <option value="MU">Mauritius</option>
+                                  <option value="YT">Mayotte</option>
+                                  <option value="MX">Mexico</option>
+                                  <option value="FM">Micronesia</option>
+                                  <option value="MN">Mongolia</option>
+                                  <option value="MS">Montserrat</option>
+                                  <option value="MA">Morocco</option>
+                                  <option value="MZ">Mozambique</option>
+                                  <option value="NA">Namibia</option>
+                                  <option value="NR">Nauru</option>
+                                  <option value="NP">Nepal</option>
+                                  <option value="NL">Netherlands</option>
+                                  <option value="AN">Netherlands Antilles</option>
+                                  <option value="NC">New Caledonia</option>
+                                  <option value="NZ">New Zealand</option>
+                                  <option value="NI">Nicaragua</option>
+                                  <option value="NE">Niger</option>
+                                  <option value="NU">Niue</option>
+                                  <option value="NF">Norfolk Island</option>
+                                  <option value="NO">Norway</option>
+                                  <option value="OM">Oman</option>
+                                  <option value="PW">Palau</option>
+                                  <option value="PA">Panama</option>
+                                  <option value="PG">Papua New Guinea</option>
+                                  <option value="PE">Peru</option>
+                                  <option value="PH">Philippines</option>
+                                  <option value="PN">Pitcairn Islands</option>
+                                  <option value="PL">Poland</option>
+                                  <option value="PT">Portugal</option>
+                                  <option value="QA">Qatar</option>
+                                  <option value="CG">Republic of the Congo</option>
+                                  <option value="RE">Reunion</option>
+                                  <option value="RO">Romania</option>
+                                  <option value="RU">Russia</option>
+                                  <option value="RW">Rwanda</option>
+                                  <option value="KN">Saint Kitts and Nevis Anguilla</option>
+                                  <option value="PM">Saint Pierre and Miquelon</option>
+                                  <option value="VC">Saint Vincent and Grenadines</option>
+                                  <option value="WS">Samoa</option>
+                                  <option value="SM">San Marino</option>
+                                  <option value="ST">São Tomé and Príncipe</option>
+                                  <option value="SA">Saudi Arabia</option>
+                                  <option value="SN">Senegal</option>
+                                  <option value="RS">Serbia</option>
+                                  <option value="SC">Seychelles</option>
+                                  <option value="SL">Sierra Leone</option>
+                                  <option value="SG">Singapore</option>
+                                  <option value="SK">Slovakia</option>
+                                  <option value="SI">Slovenia</option>
+                                  <option value="SB">Solomon Islands</option>
+                                  <option value="SO">Somalia</option>
+                                  <option value="ZA">South Africa</option>
+                                  <option value="KR">South Korea</option>
+                                  <option value="ES">Spain</option>
+                                  <option value="LK">Sri Lanka</option>
+                                  <option value="SH">St. Helena</option>
+                                  <option value="LC">St. Lucia</option>
+                                  <option value="SR">Suriname</option>
+                                  <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                  <option value="SZ">Swaziland</option>
+                                  <option value="SE">Sweden</option>
+                                  <option value="CH">Switzerland</option>
+                                  <option value="TW">Taiwan</option>
+                                  <option value="TJ">Tajikistan</option>
+                                  <option value="TZ">Tanzania</option>
+                                  <option value="TH">Thailand</option>
+                                  <option value="TG">Togo</option>
+                                  <option value="TO">Tonga</option>
+                                  <option value="TT">Trinidad and Tobago</option>
+                                  <option value="TN">Tunisia</option>
+                                  <option value="TR">Turkey</option>
+                                  <option value="TM">Turkmenistan</option>
+                                  <option value="TC">Turks and Caicos Islands</option>
+                                  <option value="TV">Tuvalu</option>
+                                  <option value="UG">Uganda</option>
+                                  <option value="UA">Ukraine</option>
+                                  <option value="AE">United Arab Emirates</option>
+                                  <option value="GB">United Kingdom</option>
+                                  <option value="US">United States</option>
+                                  <option value="UY">Uruguay</option>
+                                  <option value="VU">Vanuatu</option>
+                                  <option value="VA">Vatican City State</option>
+                                  <option value="VE">Venezuela</option>
+                                  <option value="VN">Vietnam</option>
+                                  <option value="VG">Virgin Islands (British)</option>
+                                  <option value="WF">Wallis and Futuna Islands</option>
+                                  <option value="YE">Yemen</option>
+                                  <option value="ZM">Zambia</option>
+                                </select>
+                                <i class="arrow double"></i>
+                              </label>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                              <label for="states" class="field select">
+                                <select id="states" name="states">
+                                  <option value="">Choose state</option>
+                                  <option value="AL">Alabama</option>
+                                  <option value="AK">Alaska</option>
+                                  <option value="AZ">Arizona</option>
+                                  <option value="AR">Arkansas</option>
+                                  <option value="CA">California</option>
+                                  <option value="CO">Colorado</option>
+                                  <option value="CT">Connecticut</option>
+                                  <option value="DE">Delaware</option>
+                                  <option value="DC">District Of Columbia</option>
+                                  <option value="FL">Florida</option>
+                                  <option value="GA">Georgia</option>
+                                  <option value="HI">Hawaii</option>
+                                  <option value="ID">Idaho</option>
+                                  <option value="IL">Illinois</option>
+                                  <option value="IN">Indiana</option>
+                                  <option value="IA">Iowa</option>
+                                  <option value="KS">Kansas</option>
+                                  <option value="KY">Kentucky</option>
+                                  <option value="LA">Louisiana</option>
+                                  <option value="ME">Maine</option>
+                                  <option value="MD">Maryland</option>
+                                  <option value="MA">Massachusetts</option>
+                                  <option value="MI">Michigan</option>
+                                  <option value="MN">Minnesota</option>
+                                  <option value="MS">Mississippi</option>
+                                  <option value="MO">Missouri</option>
+                                  <option value="MT">Montana</option>
+                                  <option value="NE">Nebraska</option>
+                                  <option value="NV">Nevada</option>
+                                  <option value="NH">New Hampshire</option>
+                                  <option value="NJ">New Jersey</option>
+                                  <option value="NM">New Mexico</option>
+                                  <option value="NY">New York</option>
+                                  <option value="NC">North Carolina</option>
+                                  <option value="ND">North Dakota</option>
+                                  <option value="OH">Ohio</option>
+                                  <option value="OK">Oklahoma</option>
+                                  <option value="OR">Oregon</option>
+                                  <option value="PA">Pennsylvania</option>
+                                  <option value="RI">Rhode Island</option>
+                                  <option value="SC">South Carolina</option>
+                                  <option value="SD">South Dakota</option>
+                                  <option value="TN">Tennessee</option>
+                                  <option value="TX">Texas</option>
+                                  <option value="UT">Utah</option>
+                                  <option value="VT">Vermont</option>
+                                  <option value="VA">Virginia</option>
+                                  <option value="WA">Washington</option>
+                                  <option value="WV">West Virginia</option>
+                                  <option value="WI">Wisconsin</option>
+                                  <option value="WY">Wyoming</option>
+                                </select>
+                                <i class="arrow double"></i>
+                              </label>
+                            </div>
+                            <!-- end .colm6 section -->
+                          </div>
+
+                          </div>
+
+                    </section>
+
+                       <!-- Wizard step 3 -->
+                    <h4 class="wizard-section-title">
+                       3. CHECKOUT DETAILS</h4>
+
+        
+                    <section class="wizard-section">
+
+                       <div class="panel-body p25">
+                          <div class="section-divider mt20 mb40">
+                            <span>Add the Merchant's Checkout Details</span>
+                          </div>
+                          <!-- .section-divider -->
+
+                           <div class="section row">
+                                <label for="names" class="field-label col-md-3">Shopping Cart</label>
+                                <div class="col-md-9">
+                                    <label class="field select">
+                                    <select id="language" name="language">
+                                      <option value="">Select a shopping cart</option>
+                                      <option value="EN">First Data</option>
+                                      <option value="FR">Moneris</option>
+                                      <option value="SP">Chase Paymentech</option>
+                                    </select>
+                                    <i class="arrow double"></i>
+                                  </label>
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+                             <div class="section row">
+                                <label for="names" class="field-label col-md-3">
+                                  Gateway </label>
+
+                                <div class="col-md-9">
+                                  <label for="comment" class="field prepend-icon">
+                                    <textarea class="gui-textarea" id="comment" name="comment" placeholder="Gateway Info"></textarea>
+                                    <label for="comment" class="field-icon">
+                                      <i class="fa fa-comments"></i>
+                                    </label>
+                                    <span class="input-footer">
+                                      <strong>Tip:</strong>We need some additional info..</span>
+                                  </label>
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="section row">
+                                <label for="names" class="field-label col-md-3">
+                                  Processor</label>
+                                <div class="col-md-9">
+                                    <label class="field select">
+                                    <select id="language" name="language">
+                                      <option value="">Select a Processor</option>
+                                      <option value="EN">First Data</option>
+                                      <option value="FR">Moneris</option>
+                                      <option value="SP">Chase Paymentech</option>
+                                    </select>
+                                    <i class="arrow double"></i>
+                                  </label>
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+
+                           
+                    </section>
+                    
+                  </div>
+                  <!-- End: Wizard -->
+
+                </form>
+                <!-- End Account2 Form -->
+
+            </div>
+
+          </div>
+        </div>
+        <!-- end: .tray-center -->
+
+        <!-- begin: .tray-right -->
+        
+        <!-- end: .tray-right -->
+
+      </section>
+
+
+
+
+
+    </section>
+
+   
+
+  </div>
+  <!-- End: Main -->
+
+<style>
+  /*page demo styles*/
+  .wizard .steps .fa,
+  .wizard .steps .glyphicon,
+  .wizard .steps .glyphicon {
+    display: none;
+  }
+
+  /*dropzone demo css*/
+  .dz-demo .dz-message {
+    opacity: 0 !important;
+  }
+  .dropzone .dz-preview.example-preview .dz-success-mark,
+  .dropzone-previews .dz-preview.example-preview .dz-success-mark {
+    opacity: 1;
+  }
+  .dropzone .dz-preview.example-preview .dz-error-mark,
+  .dropzone-previews .dz-preview.example-preview .dz-error-mark {
+    opacity: 0;
+  }
+  </style>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Page Plugins -->
+  <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+  <script src="assets/admin-tools/admin-forms/js/jquery.steps.min.js"></script>
+
+    <!-- Bootstrap Tour Plugin -->
+  <script src="vendor/plugins/bstour/bootstrap-tour.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS     
+    Demo.init();
+
+    // Form Wizard 
+    var form = $("#form-wizard");
+    form.validate({
+      errorPlacement: function errorPlacement(error, element) {
+        element.before(error);
+      },
+      rules: {
+        confirm: {
+          equalTo: "#password"
+        }
+      }
+    });
+    form.children(".wizard").steps({
+      headerTag: ".wizard-section-title",
+      bodyTag: ".wizard-section",
+      onStepChanging: function(event, currentIndex, newIndex) {
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+      },
+      onFinishing: function(event, currentIndex) {
+        form.validate().settings.ignore = ":disabled";
+        return form.valid();
+      },
+      onFinished: function(event, currentIndex) {
+        alert("Submitted!");
+      }
+    });
+
+    // Demo Wizard Functionality
+    var formWizard = $('.wizard');
+    var formSteps = formWizard.find('.steps');
+
+    $('.wizard-options .holder-style').on('click', function(e) {
+      e.preventDefault();
+
+      var stepStyle = $(this).data('steps-style');
+
+      var stepRight = $('.holder-style[data-steps-style="steps-right"');
+      var stepLeft = $('.holder-style[data-steps-style="steps-left"');
+      var stepJustified = $('.holder-style[data-steps-style="steps-justified"');
+
+      if (stepStyle === "steps-left") {
+        stepRight.removeClass('holder-active');
+        stepJustified.removeClass('holder-active');
+        formWizard.removeClass('steps-right steps-justified');
+      }
+      if (stepStyle === "steps-right") {
+        stepLeft.removeClass('holder-active');
+        stepJustified.removeClass('holder-active');
+        formWizard.removeClass('steps-left steps-justified');
+      }
+      if (stepStyle === "steps-justified") {
+        stepLeft.removeClass('holder-active');
+        stepRight.removeClass('holder-active');
+        formWizard.removeClass('steps-left steps-right');
+      }
+
+      // Assign new style 
+      if ($(this).hasClass('holder-active')) {
+        formWizard.removeClass(stepStyle);
+      } else {
+        formWizard.addClass(stepStyle);
+      }
+
+      // Assign new active holder
+      $(this).toggleClass('holder-active');
+    });
+
+	$(document).ready(function(){
+	    $("#hide").click(function(){
+	        $("p").hide();
+	    });
+	    $("#show").click(function(){
+	        $("p").show();
+	    });
+	});
+
+   // Init Select2 - Basic Single
+    $(".select2-single").select2();
+
+    // Init Select2 - Basic Multiple
+    $(".select2-multiple").select2({
+      placeholder: "Select a state",
+       allowClear: true
+    });
+
+    // Init Select2 - Contextuals (via html classes)
+    $(".select2-primary").select2(); // select2 contextual - primary
+    $(".select2-success").select2(); // select2 contextual - success
+    $(".select2-info").select2();    // select2 contextual - info
+    $(".select2-warning").select2(); // select2 contextual - warning  
+
+    // Init Bootstrap Maxlength Plugin
+    $('input[maxlength]').maxlength({
+      threshold: 15,
+      placement: "right"
+    });
+
+    // Dual List Plugin Init
+    var demo1 = $('.demo1').bootstrapDualListbox({
+      nonSelectedListLabel: 'Options',
+      selectedListLabel: 'Selected',
+      preserveSelectionOnMove: 'moved',
+      moveOnSelect: true,
+      nonSelectedFilter: 'ion ([7-9]|[1][0-2])'
+    });
+
+    $("#demoform").submit(function() {
+      alert("Options Selected: " + $('.demo1').val());
+      return false;
+    });
+
+    // Init Twitter Typeahead.js
+    var substringMatcher = function(strs) {
+      return function findMatches(q, cb) {
+        var matches, substrRegex;
+
+        // an array that will be populated with substring matches
+        matches = [];
+
+        // regex used to determine if a string contains the substring `q`
+        substrRegex = new RegExp(q, 'i');
+
+        // iterate through the pool of strings and for any string that
+        // contains the substring `q`, add it to the `matches` array
+        $.each(strs, function(i, str) {
+          if (substrRegex.test(str)) {
+            // the typeahead jQuery plugin expects suggestions to a
+            // JavaScript object, refer to typeahead docs for more info
+            matches.push({
+              value: str
+            });
+          }
+        });
+
+        cb(matches);
+      };
+    };
+
+    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ];
+
+    // Init Typeahead Plugin with state aray
+    $('.typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    }, {
+      name: 'states',
+      displayKey: 'value',
+      source: substringMatcher(states)
+    });
+
+    // DateRange plugin options
+    var rangeOptions = {
+      ranges: {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+        'Last 7 Days': [moment().subtract('days', 6), moment()],
+        'Last 30 Days': [moment().subtract('days', 29), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+      },
+      startDate: moment().subtract('days', 29),
+      endDate: moment()
+    }
+
+    // Init DateRange plugin
+    $('#daterangepicker1').daterangepicker();
+
+    // Init DateRange plugin
+    $('#daterangepicker2').daterangepicker(
+      rangeOptions,
+      function(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      }
+    );
+
+    // Init DateRange plugin
+    $('#inline-daterange').daterangepicker(
+      rangeOptions,
+      function(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      }
+    );
+
+    // Init DateTimepicker - fields
+    $('#datetimepicker1').datetimepicker();
+    $('#datetimepicker2').datetimepicker();
+
+    // Init DateTimepicker - inline + range detection
+    $('#datetimepicker3').datetimepicker({
+      defaultDate: "9/4/2014",
+      inline: true,
+    });
+
+    // Init DateTimepicker - fields + Date disabled (only time picker)
+    $('#datetimepicker5').datetimepicker({
+      defaultDate: "9/25/2014",
+      pickDate: false,
+    });
+    // Init DateTimepicker - fields + Date disabled (only time picker)
+    $('#datetimepicker6').datetimepicker({
+      defaultDate: "9/25/2014",
+      pickDate: false,
+    });
+    // Init DateTimepicker - inline + Date disabled (only time picker)
+    $('#datetimepicker7').datetimepicker({
+      defaultDate: "9/25/2014",
+      pickDate: false,
+      inline: true
+    });
+
+    // Init Colorpicker plugin
+    $('#demo_apidemo').colorpicker({
+      color: bgPrimary
+    });
+    $('.demo-auto').colorpicker();
+
+    // Init jQuery Tags Manager 
+    $(".tm-input").tagsManager({
+      tagsContainer: '.tags',
+      prefilled: ["Miley Cyrus", "Apple", "A Long Tag", "Na uh"],
+      tagClass: 'tm-tag-info',
+    });
+
+    // Init Boostrap Multiselects
+    $('#multiselect1').multiselect();
+    $('#multiselect2').multiselect({
+      includeSelectAllOption: true
+    });
+    $('#multiselect3').multiselect();
+    $('#multiselect4').multiselect({
+      enableFiltering: true,
+    });
+    $('#multiselect5').multiselect({
+      buttonClass: 'multiselect dropdown-toggle btn btn-default btn-primary'
+    });
+    $('#multiselect6').multiselect({
+      buttonClass: 'multiselect dropdown-toggle btn btn-default btn-info'
+    });
+    $('#multiselect7').multiselect({
+      buttonClass: 'multiselect dropdown-toggle btn btn-default btn-success'
+    });
+    $('#multiselect8').multiselect({
+      buttonClass: 'multiselect dropdown-toggle btn btn-default btn-warning'
+    });
+
+    // Init jQuery spinner init - default
+    $("#spinner1").spinner();
+
+    // Init jQuery spinner init - currency 
+    $("#spinner2").spinner({
+      min: 5,
+      max: 2500,
+      step: 25,
+      start: 1000,
+      //numberFormat: "C"
+    });
+
+    // Init jQuery spinner init - decimal  
+    $("#spinner3").spinner({
+      step: 0.01,
+      numberFormat: "n"
+    });
+
+    // jQuery Time Spinner settings
+    $.widget("ui.timespinner", $.ui.spinner, {
+      options: {
+        // seconds
+        step: 60 * 1000,
+        // hours
+        page: 60
+      },
+      _parse: function(value) {
+        if (typeof value === "string") {
+          // already a timestamp
+          if (Number(value) == value) {
+            return Number(value);
+          }
+          return +Globalize.parseDate(value);
+        }
+        return value;
+      },
+
+      _format: function(value) {
+        return Globalize.format(new Date(value), "t");
+      }
+    });
+
+    // Init jQuery Time Spinner
+    $("#spinner4").timespinner();
+
+    // Init jQuery Masked inputs
+    $('.date').mask('99/99/9999');
+    $('.time').mask('99:99:99');
+    $('.date_time').mask('99/99/9999 99:99:99');
+    $('.zip').mask('99999-999');
+    $('.phone').mask('(999) 999-9999');
+    $('.phoneext').mask("(999) 999-9999 x99999");
+    $(".money").mask("999,999,999.999");
+    $(".product").mask("999.999.999.999");
+    $(".tin").mask("99-9999999");
+    $(".ssn").mask("999-99-9999");
+    $(".ip").mask("9ZZ.9ZZ.9ZZ.9ZZ");
+    $(".eyescript").mask("~9.99 ~9.99 999");
+    $(".custom").mask("9.99.999.9999");
+
+     /* @custom validation method (smartCaptcha) 
+    ------------------------------------------------------------------ */
+
+    $.validator.methods.smartCaptcha = function(value, element, param) {
+      return value == param;
+    };
+
+    $("#admin-form").validate({
+
+      /* @validation states + elements 
+      ------------------------------------------- */
+
+      errorClass: "state-error",
+      validClass: "state-success",
+      errorElement: "em",
+
+      /* @validation rules 
+      ------------------------------------------ */
+
+      rules: {
+        firstname: {
+          required: true
+        },
+        lastname: {
+          required: true
+        },
+        useremail: {
+          required: true,
+          email: true
+        },
+        website: {
+          required: true,
+          url: true
+        },
+        language: {
+          required: true
+        },
+        upload1: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
+        },
+        mobileos: {
+          required: true
+        },
+        comment: {
+          required: true,
+          minlength: 30
+        },
+        mobile_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        home_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        password: {
+          required: true,
+          minlength: 6,
+          maxlength: 16
+        },
+        repeatPassword: {
+          required: true,
+          minlength: 6,
+          maxlength: 16,
+          equalTo: '#password'
+        },
+        gender: {
+          required: true
+        },
+        languages: {
+          required: true
+        },
+        verification: {
+          required: true,
+          smartCaptcha: 19
+        },
+        applicant_age: {
+          required: true,
+          min: 16
+        },
+        licence_no: {
+          required: function(element) {
+            return $("#applicant_age").val() > 19;
+          }
+        },
+        child_name: {
+          required: "#parents:checked"
+        }
+
+      },
+
+      /* @validation error messages 
+      ---------------------------------------------- */
+
+      messages: {
+        firstname: {
+          required: 'Enter first name'
+        },
+        lastname: {
+          required: 'Enter last name'
+        },
+        useremail: {
+          required: 'Enter email address',
+          email: 'Enter a VALID email address'
+        },
+        website: {
+          required: 'Enter your website URL',
+          url: 'URL should start with - http://www'
+        },
+        language: {
+          required: 'Choose a language'
+        },
+        upload1: {
+          required: 'Please browse a file',
+          extension: 'File format not supported'
+        },
+        mobileos: {
+          required: 'Please select a mobile platform'
+        },
+        comment: {
+          required: 'Oops you forgot to comment',
+          minlength: 'Enter at least 30 characters or more'
+        },
+        mobile_phone: {
+          require_from_group: 'Fill at least a mobile contact'
+        },
+        home_phone: {
+          require_from_group: 'Fill at least a home contact'
+        },
+        password: {
+          required: 'Please enter a password'
+        },
+        repeatPassword: {
+          required: 'Please repeat the above password',
+          equalTo: 'Password mismatch detected'
+        },
+        gender: {
+          required: 'Please choose specie'
+        },
+        languages: {
+          required: 'Select laguages spoken'
+        },
+        verification: {
+          required: 'Please enter verification code',
+          smartCaptcha: 'Oops - enter a correct verification code'
+        },
+        applicant_age: {
+          required: 'Enter applicant age',
+          min: 'Must be 16 years and above'
+        },
+        licence_no: {
+          required: 'Enter licence number'
+        },
+        child_name: {
+          required: 'Please enter your childs name'
+        }
+
+      },
+
+      /* @validation highlighting + error placement  
+      ---------------------------------------------------- */
+
+      highlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+      },
+      errorPlacement: function(error, element) {
+        if (element.is(":radio") || element.is(":checkbox")) {
+          element.closest('.option-group').after(error);
+        } else {
+          error.insertAfter(element.parent());
+        }
+      }
+
+    });
+
+
+    // Cache several DOM elements
+    var pageHeader = $('.content-header').find('b');
+    var adminForm = $('.admin-form');
+    var options = adminForm.find('.option');
+    var switches = adminForm.find('.switch');
+    var buttons = adminForm.find('.button');
+    var Panel = adminForm.find('.panel');
+
+    // Form Skin Switcher
+    $('#skin-switcher a').on('click', function() {
+      var btnData = $(this).data('form-skin');
+
+      $('#skin-switcher a').removeClass('item-active');
+      $(this).addClass('item-active')
+
+      adminForm.each(function(i, e) {
+        var skins = 'theme-primary theme-info theme-success theme-warning theme-danger theme-alert theme-system theme-dark'
+        var panelSkins = 'panel-primary panel-info panel-success panel-warning panel-danger panel-alert panel-system panel-dark'
+        $(e).removeClass(skins).addClass('theme-' + btnData);
+        Panel.removeClass(panelSkins).addClass('panel-' + btnData);
+        pageHeader.removeClass().addClass('text-' + btnData);
+      });
+
+      $(options).each(function(i, e) {
+        if ($(e).hasClass('block')) {
+          $(e).removeClass().addClass('block mt15 option option-' + btnData);
+        } else {
+          $(e).removeClass().addClass('option option-' + btnData);
+        }
+      });
+
+      // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+      $('body').find('.ui-slider').each(function(i, e) {
+        $(e).addClass('slider-primary');
+      });
+
+      $(switches).each(function(i, ele) {
+        if ($(ele).hasClass('switch-round')) {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-round switch-' + btnData);
+          } else {
+            $(ele).removeClass().addClass('switch switch-round switch-' + btnData);
+          }
+        } else {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-' + btnData);
+          } else {
+            $(ele).removeClass().addClass('switch switch-' + btnData);
+          }
+        }
+
+      });
+      buttons.removeClass().addClass('button btn-' + btnData);
+    });
+
+    setTimeout(function() {
+      adminForm.addClass('theme-primary');
+      Panel.addClass('panel-primary');
+      pageHeader.addClass('text-primary');
+
+      $(options).each(function(i, e) {
+        if ($(e).hasClass('block')) {
+          $(e).removeClass().addClass('block mt15 option option-primary');
+        } else {
+          $(e).removeClass().addClass('option option-primary');
+        }
+      });
+
+      // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+      $('body').find('.ui-slider').each(function(i, e) {
+        $(e).addClass('slider-primary');
+      });
+
+      $(switches).each(function(i, ele) {
+        if ($(ele).hasClass('switch-round')) {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-round switch-primary');
+          } else {
+            $(ele).removeClass().addClass('switch switch-round switch-primary');
+          }
+        } else {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-primary');
+          } else {
+            $(ele).removeClass().addClass('switch switch-primary');
+          }
+        }
+      });
+      buttons.removeClass().addClass('button btn-primary');
+    }, 800);
+
+    // Dropzone autoattaches to "dropzone" class.
+    // Configure Dropzone options
+    Dropzone.options.dropZone = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 0, // MB
+
+      addRemoveLinks: true,
+      dictDefaultMessage: '<i class="fa fa-cloud-upload"></i> \
+         <span class="main-text"><b>Drop Files</b> to upload</span> <br /> \
+         <span class="sub-text">(or click)</span> \
+        ',
+      dictResponseError: 'Server not Configured'
+    };
+
+    Dropzone.options.dropZone2 = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 0, // MB
+
+      addRemoveLinks: true,
+      dictDefaultMessage: '<i class="fa fa-cloud-upload"></i> \
+         <span class="main-text"><b>Drop Files</b> to upload</span> <br /> \
+         <span class="sub-text">(or click)</span> \
+        ',
+      dictResponseError: 'Server not Configured'
+    };
+
+    // DEMO CODE - creates mock uploads upon pageload
+    setTimeout(function() {
+      var Drop = $('#dropZone2');
+      Drop.addClass('dz-started dz-demo');
+
+      setTimeout(function() {
+        $('.example-preview').each(function(i, e) {
+          var This = $(e);
+
+          var thumbOut = setTimeout(function() {
+            Drop.append(This);
+            This.addClass('animated fadeInRight').removeClass('hidden');
+          }, i * 135);
+
+        });
+      }, 750);
+
+    }, 800);
+
+    // Demo code 
+    $('.example-preview').on('click', 'a.dz-remove', function() {
+      $(this).parent('.example-preview').remove();
+    });
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
+
+
