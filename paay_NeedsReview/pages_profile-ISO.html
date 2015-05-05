@@ -22,6 +22,13 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
 
+  <style>
+   .panel-title {
+    font-weight: 800;
+    font-size: 14px;
+   }
+   </style>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -47,7 +54,7 @@
       </ul>
       <form class="navbar-form navbar-left navbar-search" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+          <input type="text" class="form-control" value="Search..." value="Search...">
         </div>
       </form>
 
@@ -195,11 +202,12 @@
 
     </aside>
 
+
+
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper">
 
-     
-
+    
       <!-- Begin: Content -->
       <section id="content" class="animated fadeIn">
 
@@ -208,145 +216,548 @@
             <div class="media clearfix">
               <div class="media-left pr30">
                 <a href="#">
-                  <img class="media-object mw100" src="assets/img/avatars/placeholder_merchant.png" alt="...">
+                  <img class="media-object mw100" src="assets/img/avatars/value_merchant.png" alt="...">
                 </a>
               </div>                      
               <div class="media-body va-m">
-                <h2 class="media-heading">ISO Name
-                  <small> - Profile</small>
+                <h2 class="media-heading">Merchant Name
+                  <!--<small> - Profile</small>-->
                 </h2>
-                <p class="lead">Customer_ID</p>
+                <p class="lead">MID</p>
                 
               </div>
             </div>
         </div>
 
+       <!-- begin: .tray-center -->
+        <div class="tray tray-center ">
 
+          <div class="mw800 center-block ">
 
-        <div class="row">
-          <!--Start: Customer Details -->
-             <div class="col-md-10">
-              <div class="panel">
-                <div class="panel-heading panel-visible">
-                  <span class="panel-title">ISO Details</span>
-                  <div class="widget-menu pull-right mr10">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
-                      <ul class="dropdown-menu checkbox-persist pull-right text-left" role="menu">
-                        <li>
-                          <a><i class="fa fa-user"></i> View Profile </a>
-                        </li>
-                        <li>
-                          <a><i class="fa fa-envelope-o"></i> Message </a>
-                        </li>
-                      </ul>
+            <!-- Store Information -->
+            <div class="panel  top mb35">
+              <div class="panel-heading">
+                <span class="panel-title ">Merchant Information</span>
+              </div>
+              <div class="panel-body ">
+                <div class="admin-form">
+                  <div class="section row mb10">
+                    <label for="business-name" class="field-label col-md-3 text-center">Merchant Name:</label>
+                    <div class="col-md-9">
+                      <label for="business-name" class="field prepend-icon">
+                        <input type="text" name="business-name" id="business-name" class="gui-input" value="AdminDesigns">
+                        <label for="business-name" class="field-icon">
+                          <i class="fa fa-home"></i>
+                        </label>
+                      </label>
                     </div>
                   </div>
-                </div>
-                <div class="panel-body">
-                  <div class="col-md-2 text-right">
-                    <p>ID: </p>
-                    <p>Created: </p>
-                    <p>Email: </p>
-                    <p>PhoneNumber: </p>
-                    <p>Shipping Address: </p>
-                    <p>Shipping Address: </p>
-                    <p>City: </p>
-                    <p>State: </p>
-                    <p>ZIP:</p>
+                  <div class="section row mb10">
+                    <label for="business-phone" class="field-label col-md-3 text-center">Merchant Phone:</label>
+                    <div class="col-md-9">
+                      <label for="business-phone" class="ffield prepend-icon">
+                        <input type="text" name="business-phone" id="business-phone" class="gui-input" value="888-888-8888">
+                        <label for="business-phone" class="field-icon">
+                          <i class="fa fa-phone"></i>
+                        </label>
+                      </label>
+                    </div>
                   </div>
-                   <div class="col-md-6">
-                    <p>cus_67Tqr3u0p20EMp</p>
-                    <p>Apr 24, 2015</p>
-                    <p>jack@jack.com</p>
-                    <p>111-111-1111</p>
-                    <p>1111 Battle Creek</p>
-                    <p>APT / BLDG / ETC</p>
-                    <p>Seattle</p>
-                    <p>WA</p>
-                    <p>75025</p>
+                  <div class="section row mb10">
+                    <label for="business-phone" class="field-label col-md-3 text-center">Merchant Email:</label>
+                    <div class="col-md-9">
+                      <label for="email" class="field prepend-icon">
+                        <input type="email" name="email" id="email" class="gui-input" value="Email address">
+                        <label for="email" class="field-icon">
+                          <i class="fa fa-envelope"></i>
+                        </label>
+                      </label>
+                    </div>
                   </div>
+
+                  <hr class="short alt">
+
+                   <div class="section">
+                    <label for="lastaddr" class="field prepend-icon">
+                      <input type="text" name="lastaddr" id="lastaddr" class="gui-input" value="Street address">
+                      <label for="lastaddr" class="field-icon">
+                        <i class="fa fa-map-marker"></i>
+                      </label>
+                    </label>
+                  </div>
+                  <!-- end section -->
+
+                  <div class="section">
+                    <label for="lastaddr" class="field prepend-icon">
+                      <input type="text" name="lastaddr" id="lastaddr" class="gui-input" value="Apt / Bldg">
+                      <label for="lastaddr" class="field-icon">
+                        <i class="fa fa-map-marker"></i>
+                      </label>
+                    </label>
+                  </div>
+                  <!-- end section -->
+
+                  <div class="section">
+                    <label class="field select">
+                      <select id="location" name="location">
+                        <option value="">Select country...</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan Republic</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BR">Brazil</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CA">Canada</option>
+                        <option value="CV">Cape Verde</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="C2">China Worldwide</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="CD">Democratic Republic of the Congo</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FK">Falkland Islands</option>
+                        <option value="FO">Faroe Islands</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GF">French Guiana</option>
+                        <option value="PF">French Polynesia</option>
+                        <option value="GA">Gabon Republic</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR">Greece</option>
+                        <option value="GL">Greenland</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea Bissau</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LS">Lesotho</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH">Marshall Islands</option>
+                        <option value="MQ">Martinique</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="MX">Mexico</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="MS">Montserrat</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="AN">Netherlands Antilles</option>
+                        <option value="NC">New Caledonia</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Niger</option>
+                        <option value="NU">Niue</option>
+                        <option value="NF">Norfolk Island</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PW">Palau</option>
+                        <option value="PA">Panama</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PN">Pitcairn Islands</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="QA">Qatar</option>
+                        <option value="CG">Republic of the Congo</option>
+                        <option value="RE">Reunion</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="KN">Saint Kitts and Nevis Anguilla</option>
+                        <option value="PM">Saint Pierre and Miquelon</option>
+                        <option value="VC">Saint Vincent and Grenadines</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="ST">São Tomé and Príncipe</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leone</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SB">Solomon Islands</option>
+                        <option value="SO">Somalia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="KR">South Korea</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SH">St. Helena</option>
+                        <option value="LC">St. Lucia</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                        <option value="SZ">Swaziland</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TG">Togo</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TM">Turkmenistan</option>
+                        <option value="TC">Turks and Caicos Islands</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Vatican City State</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="VG">Virgin Islands (British)</option>
+                        <option value="WF">Wallis and Futuna Islands</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                      </select>
+                      <i class="arrow double"></i>
+                    </label>
+                  </div>
+                  <!-- end section -->
+
+                  <div class="section row mbn">
+                    <div class="col-md-3">
+                      <label for="zip" class="field prepend-icon">
+                        <input type="text" name="zip" id="zip" class="gui-input" value="Zip">
+                        <label for="zip" class="field-icon">
+                          <i class="fa fa-certificate"></i>
+                        </label>
+                      </label>
+                    </div>
+                    <!-- end section -->
+
+                    <div class="col-md-4">
+                      <label for="city" class="field prepend-icon">
+                        <input type="text" name="city" id="city" class="gui-input" value="City">
+                        <label for="city" class="field-icon">
+                          <i class="fa fa-building-o"></i>
+                        </label>
+                      </label>
+                    </div>
+                    <!-- end section -->
+
+                    <div class="col-md-5">
+                      <label for="states" class="field select">
+                        <select id="states" name="states">
+                          <option value="">Choose state</option>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                          <option value="CT">Connecticut</option>
+                          <option value="DE">Delaware</option>
+                          <option value="DC">District Of Columbia</option>
+                          <option value="FL">Florida</option>
+                          <option value="GA">Georgia</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="ID">Idaho</option>
+                          <option value="IL">Illinois</option>
+                          <option value="IN">Indiana</option>
+                          <option value="IA">Iowa</option>
+                          <option value="KS">Kansas</option>
+                          <option value="KY">Kentucky</option>
+                          <option value="LA">Louisiana</option>
+                          <option value="ME">Maine</option>
+                          <option value="MD">Maryland</option>
+                          <option value="MA">Massachusetts</option>
+                          <option value="MI">Michigan</option>
+                          <option value="MN">Minnesota</option>
+                          <option value="MS">Mississippi</option>
+                          <option value="MO">Missouri</option>
+                          <option value="MT">Montana</option>
+                          <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                          <option value="NH">New Hampshire</option>
+                          <option value="NJ">New Jersey</option>
+                          <option value="NM">New Mexico</option>
+                          <option value="NY">New York</option>
+                          <option value="NC">North Carolina</option>
+                          <option value="ND">North Dakota</option>
+                          <option value="OH">Ohio</option>
+                          <option value="OK">Oklahoma</option>
+                          <option value="OR">Oregon</option>
+                          <option value="PA">Pennsylvania</option>
+                          <option value="RI">Rhode Island</option>
+                          <option value="SC">South Carolina</option>
+                          <option value="SD">South Dakota</option>
+                          <option value="TN">Tennessee</option>
+                          <option value="TX">Texas</option>
+                          <option value="UT">Utah</option>
+                          <option value="VT">Vermont</option>
+                          <option value="VA">Virginia</option>
+                          <option value="WA">Washington</option>
+                          <option value="WV">West Virginia</option>
+                          <option value="WI">Wisconsin</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label>
+                    </div>
+                    <!-- end section -->
+
+                  </div>
+                  <!-- end section row -->
+
                 </div>
               </div>
-              <!--end: Merchant Details -->
-              <div class="panel">
-                <div class="panel-heading">
-                  <span class="panel-icon">
-                    <i class="fa fa-pencil"></i>
-                  </span>
-                  <span class="panel-title">Contact Details</span>
-                </div>
-                <div class="panel-body pb5">
-
-                  <h6>Experience</h6>
-
-                  <h4>Facebook Internship</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 - 2012
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Education</h6>
-
-                  <h4>Bachelor of Science, PhD</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Accomplishments</h6>
-
-                  <h4>Successful Business</h4>
-                  <p class="text-muted pb10"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-                </div>
-              </div>
-              <!--end: Checkout Details -->
-               <div class="panel">
-                <div class="panel-heading">
-                  <span class="panel-icon">
-                    <i class="fa fa-pencil"></i>
-                  </span>
-                  <span class="panel-title">Billing Details</span>
-                </div>
-                <div class="panel-body pb5">
-
-                  <h6>Experience</h6>
-
-                  <h4>Facebook Internship</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 - 2012
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Education</h6>
-
-                  <h4>Bachelor of Science, PhD</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Accomplishments</h6>
-
-                  <h4>Successful Business</h4>
-                  <p class="text-muted pb10"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-                </div>
-              </div>
-              <!--end: Transaction Details -->
-
-
             </div>
 
+
+            <!-- Store Owner Details -->
+            <div class="panel  top mt20 mb35">
+              <div class="panel-heading ">
+                <span class="panel-title">Checkout Details</span>
+              </div>
+              <div class="panel-body ">
+                <div class="admin-form">
+              <div class="section row">
+                        <label for="names" class="field-label col-md-3">Shopping Cart</label>
+                        <div class="col-md-9">
+                            <label class="field select">
+                            <select id="language" name="language">
+                              <option value="">Select a shopping cart</option>
+                              <option value="EN">First Data</option>
+                              <option value="FR">Moneris</option>
+                              <option value="SP">Chase Paymentech</option>
+                            </select>
+                            <i class="arrow double"></i>
+                          </label>
+                        </div>
+                    </div>
+                    <!-- end section -->
+
+                      <div class="section row">
+                        <label for="names" class="field-label col-md-3">Gateway</label>
+                        <div class="col-md-9">
+                            <label class="field select">
+                            <select id="language" name="language">
+                              <option value="">Select a Gateway </option>
+                              <option value="EN">1</option>
+                              <option value="FR">2</option>
+                              <option value="SP">3</option>
+                            </select>
+                            <i class="arrow double"></i>
+                          </label>
+                        </div>
+                    </div>
+                    <!-- end section -->
+
+                     <div class="section row">
+                        <label for="names" class="field-label col-md-3">
+                          Gateway </label>
+
+                        <div class="col-md-9">
+                          <label for="comment" class="field prepend-icon">
+                            <textarea class="gui-textarea" id="comment" name="comment" value="Gateway Info"></textarea>
+                            <label for="comment" class="field-icon">
+                              <i class="fa fa-comments"></i>
+                            </label>
+                            <span class="input-footer">
+                              <strong>Tip:</strong>We need some additional info..</span>
+                          </label>
+                        </div>
+                    </div>
+                    <!-- end section -->
+
+                    <div class="section row">
+                        <label for="names" class="field-label col-md-3">
+                          Processor</label>
+                        <div class="col-md-9">
+                            <label class="field select">
+                            <select id="language" name="language">
+                              <option value="">Select a Processor</option>
+                              <option value="EN">First Data</option>
+                              <option value="FR">Moneris</option>
+                              <option value="SP">Chase Paymentech</option>
+                            </select>
+                            <i class="arrow double"></i>
+                          </label>
+                        </div>
+                    </div>
+                    <!-- end section -->
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Store Settings -->
+            <div class="panel top mb35">
+              <div class="panel-heading">
+                <span class="panel-title">Transaction Details</span>
+              </div>
+              <div class="panel-body">
+                <div class="admin-form">
+
+                  <div class="section row mb10">
+                    <label for="names" class="field-label col-md-3 text-center">Store Timezone:</label>
+                    <div class="col-md-9">
+                      <label class="field select">
+                        <select id="set-location" name="set-location">
+                          <option value="0" selected="selected">(GMT-8h) US/Pacific</option>
+                          <option value="1">(GMT-11h) Pacific/Samoa</option>
+                          <option value="2">(GMT-10h) Pacific/Johnston</option>
+                          <option value="3">(GMT-8h) Canada/Pacific</option>
+                          <option value="4">(GMT+10h) Pacific/Truk</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="section row mb10">
+                    <label for="store-currency" class="field-label col-md-3 text-center">Store Currency:</label>
+                    <div class="col-md-9">
+                      <label for="store-currency" class="field prepend-icon">
+                        <input type="text" name="store-currency" id="store-currency" class="gui-input" value="" value="United States Dollar">
+                        <label for="store-currency" class="field-icon">
+                          <i class="fa fa-usd"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="section row mb10">
+                    <label for="store-units" class="field-label col-md-3 text-center">Store Unit System:</label>
+                    <div class="col-md-9">
+                      <label for="store-units" class="field prepend-icon">
+                        <input type="text" name="store-units" id="store-units" class="gui-input" value="" value="Metric System">
+                        <label for="store-units" class="field-icon">
+                          <i class="fa fa-exchange"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="section row mb10">
+                    <label for="store-weight" class="field-label col-md-3 text-center">Store Weight Unit:</label>
+                    <div class="col-md-9">
+                      <label for="store-weight" class="field prepend-icon">
+                        <input type="text" name="store-weight" id="store-weight" class="gui-input" value="" value="Pound(lb)">
+                        <label for="store-weight" class="field-icon">
+                          <i class="fa fa-anchor"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="section row mb10">
+                    <label for="store-desc" class="field-label col-md-3 text-center">Store Description:</label>
+                    <div class="col-md-9">
+                      <label class="field prepend-icon">
+                        <textarea class="gui-textarea" id="store-desc" name="store-desc" value="Store Description and Purposes"></textarea>
+                        <label for="store-desc" class="field-icon">
+                          <i class="fa fa-edit"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+           <button type="button" class="btn btn-danger btn-block">Delete Merchant</button>
+            </div>
+
+           
+                  <!-- end section -->
+
+                </div>
+              </div>
+            </div>
+            
           </div>
+
+        </div>
+        <!-- end: .tray-center -->
 
 
           
@@ -402,5 +813,8 @@
 </body>
 
 </html>
+
+
+
 
 

@@ -238,48 +238,7 @@
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper">
 
-      <!-- Start: Topbar-Dropdown -->
-      <div id="topbar-dropmenu">
-        <div class="topbar-menu row">
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon glyphicon glyphicon-inbox"></span>
-              <p class="metro-title">Messages</p>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon glyphicon glyphicon-user"></span>
-              <p class="metro-title">Users</p>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon glyphicon glyphicon-headphones"></span>
-              <p class="metro-title">Support</p>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon fa fa-gears"></span>
-              <p class="metro-title">Settings</p>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon glyphicon glyphicon-facetime-video"></span>
-              <p class="metro-title">Videos</p>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile">
-              <span class="metro-icon glyphicon glyphicon-picture"></span>
-              <p class="metro-title">Pictures</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- End: Topbar-Dropdown -->
+
 
     
 
@@ -287,10 +246,31 @@
  <!-- Begin: Content -->
       <section id="content" class="table-layout animated fadeIn">
 
+
+
+
        
 
         <!-- begin: .tray-center -->
         <div class="tray tray-center">
+
+           <!-- Begin .page-heading -->
+        <div class="page-heading">
+            <div class="media clearfix">
+              <div class="media-left pr30">
+                <a href="#">
+                  <img class="media-object mw100" src="assets/img/avatars/placeholder_merchant.png" alt="...">
+                </a>
+              </div>                      
+              <div class="media-body va-m">
+                <h2 class="media-heading">ISO Name
+                  <small> - Profile</small>
+                </h2>
+                <p class="lead">Customer_ID</p>
+                
+              </div>
+            </div>
+        </div>
 
           <!-- Begin: Admin Panel Wrapper -->
           <div class="admin-panels mw900 center-block" style="padding-bottom: 125px;">
@@ -301,9 +281,68 @@
                 <div class="col-md-12 admin-grid animated-delay" data-animate='["400","fadeIn"]'>
 
                   <!-- transparent panel - used for creating titles in admin grids -->
-                  <div class="panel panel-transparent" id="pt0">
-                    <h4 class="micro-header">A Plugin Header</h4>
+                  <div class="panel panel-transparent" id="p3">
+                       <!-- Store Owner Details -->
+                    <div class="panel panel-warning panel-border top mt20 mb35">
+                      <div class="panel-heading">
+                        <span class="panel-title">Owner Details</span>
+                      </div>
+                      <div class="panel-body">
+                        <div class="admin-form">
+                          <div class="section row mb10">
+                            <label for="account-name" class="field-label col-md-3 text-center">Account Name:</label>
+                            <div class="col-md-9">
+                              <label for="account-name" class="field prepend-icon">
+                                <input type="text" name="account-name" id="account-name" class="gui-input" value="OwnerAccountName">
+                                <label for="account-name" class="field-icon">
+                                  <i class="fa fa-home"></i>
+                                </label>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="section row mb10">
+                            <label for="account-email" class="field-label col-md-3 text-center">Account Email:</label>
+                            <div class="col-md-9">
+                              <label for="account-email" class="field prepend-icon">
+                                <input type="email" name="account-email" id="account-email" class="gui-input" value="owner@store.com">
+                                <label for="account-email" class="field-icon">
+                                  <i class="fa fa-envelope-o"></i>
+                                </label>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="section row mb10">
+                            <label for="account-phone" class="field-label col-md-3 text-center">Account Phone:</label>
+                            <div class="col-md-9">
+                              <label for="account-phone" class="field prepend-icon">
+                                <input type="text" name="account-phone" id="account-phone" class="gui-input" value="888-888-8888" placeholder="">
+                                <label for="account-phone" class="field-icon">
+                                  <i class="fa fa-phone"></i>
+                                </label>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="section row mb10">
+                            <label for="store-timezone" class="field-label col-md-3 text-center">Store Timezone:</label>
+                            <div class="col-md-9">
+                              <label class="field select">
+                                <select id="store-timezone" name="store-timezone">
+                                  <option value="0" selected="selected">(GMT-8h) US/Pacific</option>
+                                  <option value="1">(GMT-11h) Pacific/Samoa</option>
+                                  <option value="2">(GMT-10h) Pacific/Johnston</option>
+                                  <option value="3">(GMT-8h) Canada/Pacific</option>
+                                  <option value="4">(GMT+10h) Pacific/Truk</option>
+                                </select>
+                                <i class="arrow double"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+
 
                   <!-- Basic AdminPanel - All features disabled except color picker -->
                   <div class="panel sort-disable mb50" id="p0" data-panel-title="false" data-panel-fullscreen="false" data-panel-remove="false" data-panel-collapse="false" data-panel-fullscreen="false">
@@ -392,9 +431,6 @@
         <aside class="tray tray-right tray320" data-tray-height="match">
 
           <div class="animated-delay" data-animate='["200","fadeIn"]'>
-
-            <h4> Paay Plugins</h4>
-
             <div id="nav-spy">
               <ul class="nav tray-nav tray-nav-border" data-nav-animate="zoomIn" data-smoothscroll="-125" data-spy="affix" data-offset-top="240">
                 <li class="active">
@@ -407,6 +443,10 @@
                 </li>
                 <li>
                   <a href="#p2">
+                    <span class="fa fa-compress fa-lg"></span>Transaction Details</a>
+                </li>
+                <li>
+                  <a href="#p3">
                     <span class="fa fa-compress fa-lg"></span>Transaction Details</a>
                 </li>
 
@@ -461,135 +501,6 @@
 
     // Init Theme Core    
     Core.init();
-
-    // Init Demo JS     
-    Demo.init();
-
-    // Form Wizard 
-    var form = $("#form-wizard");
-    form.validate({
-      errorPlacement: function errorPlacement(error, element) {
-        element.before(error);
-      },
-      rules: {
-        confirm: {
-          equalTo: "#password"
-        }
-      }
-    });
-    form.children(".wizard").steps({
-      headerTag: ".wizard-section-title",
-      bodyTag: ".wizard-section",
-      onStepChanging: function(event, currentIndex, newIndex) {
-        form.validate().settings.ignore = ":disabled,:hidden";
-        return form.valid();
-      },
-      onFinishing: function(event, currentIndex) {
-        form.validate().settings.ignore = ":disabled";
-        return form.valid();
-      },
-      onFinished: function(event, currentIndex) {
-        alert("Submitted!");
-      }
-    });
-
-    // Demo Wizard Functionality
-    var formWizard = $('.wizard');
-    var formSteps = formWizard.find('.steps');
-
-    $('.wizard-options .holder-style').on('click', function(e) {
-      e.preventDefault();
-
-      var stepStyle = $(this).data('steps-style');
-
-      var stepRight = $('.holder-style[data-steps-style="steps-right"');
-      var stepLeft = $('.holder-style[data-steps-style="steps-left"');
-      var stepJustified = $('.holder-style[data-steps-style="steps-justified"');
-
-      if (stepStyle === "steps-left") {
-        stepRight.removeClass('holder-active');
-        stepJustified.removeClass('holder-active');
-        formWizard.removeClass('steps-right steps-justified');
-      }
-      if (stepStyle === "steps-right") {
-        stepLeft.removeClass('holder-active');
-        stepJustified.removeClass('holder-active');
-        formWizard.removeClass('steps-left steps-justified');
-      }
-      if (stepStyle === "steps-justified") {
-        stepLeft.removeClass('holder-active');
-        stepRight.removeClass('holder-active');
-        formWizard.removeClass('steps-left steps-right');
-      }
-
-      // Assign new style 
-      if ($(this).hasClass('holder-active')) {
-        formWizard.removeClass(stepStyle);
-      } else {
-        formWizard.addClass(stepStyle);
-      }
-
-      // Assign new active holder
-      $(this).toggleClass('holder-active');
-    });
-
-    // Define Bootstrap Tour steps
-        var tour = new Tour({
-          backdrop: false, // can mask content in a modal
-          storage: false, // can use localstorage
-          onEnd: function(tour) { // On Tour Complete
-            alert('You have completed the tour. This is an "onEnd" callback');
-          },
-          steps: [{
-            element: "#tour-item1",
-            title: "Click 'Next' to continue",
-            content: "You can tour any element which has a valid selector",
-            placement: 'top'
-          }, {
-            element: "#tour-item2",
-            title: "Navigate forward or backwards!",
-            content: "This is step 2. I'm a google map",
-            placement: 'top'
-          }, {
-            element: "#tour-item3",
-            title: "Tour moves the page for you",
-            content: "It will also scroll using an easing animation",
-            placement: 'top'
-          }, {
-            element: "#tour-item4",
-            title: "Optional Modal Mode",
-            content: "Visit any step with or without a convenient modal",
-            placement: 'top',
-            backdrop: true
-          }, {
-            element: "#tour-item1",
-            title: "Left Aligned Popup",
-            content: "Simply configure the step with placement: 'left'",
-            placement: 'left',
-            backdrop: true
-          }, {
-            element: "#tour-item1",
-            title: "Bottom Aligned Popup",
-            content: "Simply configure the step with placement: 'bottom'",
-            placement: 'bottom',
-            backdrop: true
-          }, {
-            element: "#tour-item5",
-            title: "Right Aligned Popup",
-            content: "Simply configure the step with placement: 'right'",
-            placement: 'right',
-            backdrop: true
-          }]
-        });
-
-        // Init the tour
-        tour.init();
-
-        // Start tour on click
-        $('#tour_start').on('click', function() {
-          tour.restart();
-        });
-
 
 
 
