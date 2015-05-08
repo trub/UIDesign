@@ -203,35 +203,521 @@
       <!-- Begin: Content -->
       <section id="content" class="animated fadeIn">
 
-        <!-- Begin .page-heading -->
-        <div class="page-heading">
-            <div class="media clearfix">
-              <div class="media-left pr30">
-                <a href="#">
-                  <img class="media-object mw100" src="assets/img/avatars/placeholder_merchant.png" alt="...">
-                </a>
-              </div>                      
-              <div class="media-body va-m">
-                <h2 class="media-heading">Merchant Name
-                  <small> - Profile</small>
-                </h2>
-                <p class="lead">Customer_ID</p>
-                
-              </div>
+        
+
+       <div class="row mb20">              
+          <div class="col-md-8 col-md-offset-2">
+            <!-- Begin .page-heading -->
+            <div class="page-heading" style="margin:0px;">
+                <div class="row">
+                  <div class="col-md-2">
+                    <a href="#">
+                      <img class="media-object mw100" src="assets/img/avatars/placeholder_profile.png" alt="...">
+                    </a>
+                  </div>                      
+                  <div class="col-md-4">
+                    <h2 class="media-heading">USERNAME
+                    </h2>
+                    <p >MID</p>
+                  </div>
+                  <div class="col-md-1 col-md-offset-5 pl15">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button> 
+                   </div>
+                  </div> 
+                  
+                </div>
             </div>
+             
+          </div>
         </div>
+        <!--END: merchant profile card -->
 
 
 
         <div class="row">
-          <!--Start: Customer Details -->
-             <div class="col-md-10">
+          <!--Start: Merchant Details -->
+            <div class="col-md-8 col-md-offset-2">
               <div class="panel">
                 <div class="panel-heading panel-visible">
-                  <span class="panel-title">Merchant Details</span>
+                  <span class="panel-title pl20">Merchant Details</span>
                   <div class="widget-menu pull-right mr10">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body" style="line-height:3em;">
+                  <div class="row">
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Username:</p>
+                      <p>Password: </p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>MERCHANT USERNAME</p>
+                      <p>*********</p>
+                    </div>
+                  </div><!--end: row -->
+                  <hr class="short br-lighter">
+                  <div class="row">
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Contact name:</p>
+                      <p>Email: </p>
+                      <p>PhoneNumber: </p>
+                      <p>Shipping Address: </p>
+                      <p>Shipping Address: </p>
+                      <p>City: </p>
+                      <p>State: </p>
+                      <p>ZIP:</p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>Michael Jordan</p>
+                      <p>jack@jack.com</p>
+                      <p>111-111-1111</p>
+                      <p>1111 Battle Creek</p>
+                      <p>APT / BLDG / ETC</p>
+                      <p>Seattle</p>
+                      <p>WA</p>
+                      <p>75025</p>
+                    </div>
+                  </div><!--end: row -->
+                </div>
+              </div>
+              <!--end: Merchant Details -->
+            </div>
+          </div><!--end row-->
+
+          <div class="row">
+          <!--Start: Checkout Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Checkout Details</span>
+                  <div class="widget-menu pull-right mr10">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body" style="line-height:3em;">
+                  <div class="row">
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Shopping Cart: </p>
+                      <p>Gateway: </p>
+                      <p>Gateway Info: </p>
+                      <p>Processor:</p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>First Data</p>
+                      <p>First Data</p>
+                      <p style="font-style:italic; color: gray;">No description available</p>
+                      <p>First Data</p>
+                    </div>
+                  </div><!--end: row -->
+                </div>
+              </div>
+              <!--end: Merchant Details -->
+            </div>
+          </div><!--end row-->
+
+          <div class="row">
+          <!--Start: Transaction Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Transaction Details</span>
+                  <div class="widget-menu pull-right mr10">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
+                    
+                    </div>
+                  </div>
+                </div>
+              
+              <div class="panel panel-visible" id="spy3">
+                <div>
+                  <table class="table table-hover" id="datatable3" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th>Transactions (#)</th>
+                        <th>Transactions ($)</th>
+                        <th>Avgerage per Transaction ($)</th>
+                        <th>Enrolled date</th>
+                        <th>Total Paid from Fixed Rate</th>
+                        <th>Balance Paid</th>
+                        <th>Pending Balance</th>
+                        <th>Total Balance</th>
+        
+                      </tr>
+                    </thead>
+  
+                    <tbody>
+                      <tr>
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                      </tr>
+                      <tr>
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>61</td>
+                        <td>2012/12/02</td>
+                        <td>$372,000</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>23</td>
+                        <td>2008/12/13</td>
+                        <td>$103,600</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>22</td>
+                        <td>2013/03/03</td>
+                        <td>$342,000</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>43</td>
+                        <td>2012/12/18</td>
+                        <td>$313,500</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>19</td>
+                        <td>2010/03/17</td>
+                        <td>$385,750</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>66</td>
+                        <td>2012/11/27</td>
+                        <td>$198,500</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                        <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>64</td>
+                        <td>2010/06/09</td>
+                        <td>$725,000</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>59</td>
+                        <td>2009/04/10</td>
+                        <td>$237,500</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>41</td>
+                        <td>2012/10/13</td>
+                        <td>$132,000</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>$132,000</td>
+                        <td>35</td>
+                        <td>2012/09/26</td>
+                        <td>$217,500</td>  
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+
+                      </tr>
+                      <tr>
+                        
+                         <td><a href="pages_profile-Merchant.html" >11</a></td>
+
+                        <td>New York</td>
+                        <td>30</td>
+                        <td>2011/09/03</td>
+                        <td>$345,000</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                             
+
+                </div>
+              </div>
+              <!--end: Merchant Details -->
+            </div>
+          </div><!--end row-->
+
+           <div class="row">              
+            <div class="col-md-2 col-md-offset-8">
+               <button id="delete-button" class="btn btn-danger btn-block">Delete Merchant</button>
+            </div>
+          </div><!-- end row -->
+
+
+      <div class="row mb20">              
+          <div class="col-md-8 col-md-offset-2">
+            <!-- Begin .page-heading -->
+            <div class="page-heading" style="margin:0px;">
+                <div class="row">
+                  <div class="col-md-2">
+                    <a href="#">
+                      <img class="media-object mw100" src="assets/img/avatars/placeholder_profile.png" alt="...">
+                    </a>
+                  </div>                      
+                  <div class="col-md-4">
+                    <h2 class="media-heading">ISONAME
+                    </h2>
+                    <p>Customer_Number</p>
+                  </div>
+                  <div class="col-md-1 col-md-offset-5 pl15">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button> 
+                   </div>
+                  </div> 
+                  
+                </div>
+            </div>
+             
+          </div>
+        </div>
+        <!--END: ISO profile card -->
+
+
+        <div class="row">
+          <!--Start: Customer Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Processor Details</span>
+                </div>
+                <div class="panel-group accordion" id="accordion">
+                  <div class="panel">
+                    <div class="panel-heading" style="background:none;">
+                       <div class="widget-menu pull-right mr10">
+                        <div class="btn-group" style="line-height: 3em;">
+                          <span class="fs11 mr5"></span>Edit</button>
+                          <span class="fs11 mr5"></span>Delete</button>
+                        </div>
+                      </div>
+                      <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord1" aria-expanded="false">
+                        Processor
+                      </a>
+                    </div>
+
+                   <div id="accord1" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-3 pr30 text-right">
+                            <p>BIN VISA:</p>
+                            <p>BIN MASTERCARD: </p>
+                          </div>
+                           <div class="col-md-5" style="color:black;">
+                            <p>***-*****-9999</p>
+                            <p>***-*****-9999</p>
+                          </div>
+                        </div><!--end: row -->
+                      </div>
+                    </div>
+                    <!-- END: processor -->
+                    <div class="panel-heading" style="background:none;">
+                       <div class="widget-menu pull-right mr10">
+                        <div class="btn-group">
+                          <span class="fs11 mr5"></span>Edit</button>
+                          <span class="fs11 mr5"></span>Delete</button>
+                        </div>
+                      </div>
+                      <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord2" aria-expanded="false">
+                        Processor
+                      </a>
+                    </div>
+                   <div id="accord2" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
+                      <div class="panel-body"><div class="row">
+                          <div class="col-md-3 pr30 text-right">
+                            <p>BIN VISA:</p>
+                            <p>BIN MASTERCARD: </p>
+                          </div>
+                           <div class="col-md-5" style="color:black;">
+                            <p>***-*****-9999</p>
+                            <p>***-*****-9999</p>
+                          </div>
+                        </div><!--end: row --></div>
+                    </div>
+                    <!-- END: processor -->
+                     <div class="panel-heading" style="background:none;">
+                       <div class="widget-menu pull-right mr10">
+                        <div class="btn-group">
+                          <span class="fs11 mr5"></span>Edit</button>
+                          <span class="fs11 mr5"></span>Delete</button>
+                        </div>
+                      </div>
+                      <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord3" aria-expanded="false">
+                        Processor
+                      </a>
+                    </div>
+                   <div id="accord3" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
+                      <div class="panel-body"><div class="row">
+                          <div class="col-md-3 pr30 text-right">
+                            <p>BIN VISA:</p>
+                            <p>BIN MASTERCARD: </p>
+                          </div>
+                           <div class="col-md-5" style="color:black;">
+                            <p>***-*****-9999</p>
+                            <p>***-*****-9999</p>
+                          </div>
+                        </div><!--end: row --></div>
+                    </div>
+                    <!-- END: processor -->
+
+                    
+                  </div>
+                </div>
+              </div>
+              <!--end: Merchant Details -->
+            </div>
+          </div><!--end row-->
+
+           <div class="row">
+          <!--Start: Merchant Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Merchant Details</span>
+                  <div class="widget-menu pull-right mr10">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body" style="line-height:3em;">
+                  <div class="row">
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Username:</p>
+                      <p>Password: </p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>ISONAME</p>
+                      <p>*********</p>
+                    </div>
+                  </div><!--end: row -->
+                  <hr class="short br-lighter">
+                  <div class="row">
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Contact name:</p>
+                      <p>Email: </p>
+                      <p>PhoneNumber: </p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>John Adams</p>
+                      <p>jack@jack.com</p>
+                      <p>111-111-1111</p>
+                    </div>
+                  </div><!--end: row -->
+                </div>
+              </div>
+              <!--end: Merchant Details -->
+            </div>
+          </div><!--end row-->
+
+
+        <div class="row">
+          <!--Start: Billing Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Billing Details</span>
+                  <div class="widget-menu pull-right mr10">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
                         <span class="fa fa-gear fs11 mr5"></span>Edit</button>
                       <ul class="dropdown-menu checkbox-persist pull-right text-left" role="menu">
                         <li>
@@ -244,112 +730,43 @@
                     </div>
                   </div>
                 </div>
-                <div class="panel-body">
-                  <div class="col-md-2 text-right">
-                    <p>ID: </p>
-                    <p>Created: </p>
-                    <p>Email: </p>
-                    <p>PhoneNumber: </p>
-                    <p>Shipping Address: </p>
-                    <p>Shipping Address: </p>
-                    <p>City: </p>
-                    <p>State: </p>
-                    <p>ZIP:</p>
+                <div class="panel-body" style="line-height:3em;">
+                  <div class="row" >
+                    <div class="col-md-3 pr30 text-right">
+                      <p>Contact name:</p>
+                      <p>Email: </p>
+                      <p>PhoneNumber: </p>
+                      <p>Shipping Address: </p>
+                      <p>Shipping Address: </p>
+                      <p>City: </p>
+                      <p>State: </p>
+                      <p>ZIP:</p>
+                    </div>
+                     <div class="col-md-5" style="color:black;">
+                      <p>Michael Jordan</p>
+                      <p>jack@jack.com</p>
+                      <p>111-111-1111</p>
+                      <p>1111 Battle Creek</p>
+                      <p>APT / BLDG / ETC</p>
+                      <p>Seattle</p>
+                      <p>WA</p>
+                      <p>75025</p>
+                    </div>
                   </div>
-                   <div class="col-md-6">
-                    <p>cus_67Tqr3u0p20EMp</p>
-                    <p>Apr 24, 2015</p>
-                    <p>jack@jack.com</p>
-                    <p>111-111-1111</p>
-                    <p>1111 Battle Creek</p>
-                    <p>APT / BLDG / ETC</p>
-                    <p>Seattle</p>
-                    <p>WA</p>
-                    <p>75025</p>
-                  </div>
                 </div>
               </div>
-              <!--end: Merchant Details -->
-              <div class="panel">
-                <div class="panel-heading">
-                  <span class="panel-icon">
-                    <i class="fa fa-pencil"></i>
-                  </span>
-                  <span class="panel-title">Checkout Details</span>
-                </div>
-                <div class="panel-body pb5">
-
-                  <h6>Experience</h6>
-
-                  <h4>Facebook Internship</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 - 2012
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Education</h6>
-
-                  <h4>Bachelor of Science, PhD</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Accomplishments</h6>
-
-                  <h4>Successful Business</h4>
-                  <p class="text-muted pb10"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-                </div>
-              </div>
-              <!--end: Checkout Details -->
-               <div class="panel">
-                <div class="panel-heading">
-                  <span class="panel-icon">
-                    <i class="fa fa-pencil"></i>
-                  </span>
-                  <span class="panel-title">Transaction Details</span>
-                </div>
-                <div class="panel-body pb5">
-
-                  <h6>Experience</h6>
-
-                  <h4>Facebook Internship</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 - 2012
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Education</h6>
-
-                  <h4>Bachelor of Science, PhD</h4>
-                  <p class="text-muted"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-
-                  <hr class="short br-lighter">
-
-                  <h6>Accomplishments</h6>
-
-                  <h4>Successful Business</h4>
-                  <p class="text-muted pb10"> University of Missouri, Columbia
-                    <br> Student Health Center, June 2010 through Aug 2011
-                  </p>
-                </div>
-              </div>
-              <!--end: Transaction Details -->
-
+              <!--end: Billing Details -->
             </div>
-                         
+          </div><!--end row-->
+                
+          <div class="row">              
+            <div class="col-md-2 col-md-offset-8">
+               <button id="delete-button" class="btn btn-danger btn-block">Delete ISO</button>
+            </div>
+          </div><!-- end row -->
 
-        <div class="col-md-3">
-           <button type="button" class="btn btn-danger btn-block">Delete Merchant</button>
         </div>
-          </div>
+
 
 
           
@@ -360,6 +777,25 @@
 
 
     </section>
+
+    <!-- EDIT MERCHANT DETAILS Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Merchant Details</h4>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
     
 
@@ -381,12 +817,47 @@
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
+   <!-- Datatables -->
+  <script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+
+  <!-- Datatables ColReorder addon -->
+  <script src="vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+
+  <!-- Datatables Bootstrap Modifications  -->
+  <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
 
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
   <script src="assets/js/demo/demo.js"></script>
   <script src="assets/js/main.js"></script>
   <script type="text/javascript">
+
+$('#datatable3').dataTable({
+      "aoColumnDefs": [{
+        'bSortable': false
+      }],
+      "oLanguage": {
+        "oPaginate": {
+          "sPrevious": "",
+          "sNext": ""
+        }
+      },
+      "iDisplayLength": 10,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"]
+      ],
+
+    });
+
+
+
+$('#delete-button').on('click',function() {
+    bootbox.confirm("Are you sure?", function() {
+      // do something
+    });
+});
   jQuery(document).ready(function() {
 
     "use strict";
