@@ -369,27 +369,19 @@
                                 <div class="option-group field section">
                                   <label class="block mt15 option option-success">
                                     <input type="checkbox" name="checked" value="checked" checked="">
-                                    <span class="checkbox"></span>Processor 1</label>
+                                    <span class="checkbox" id="toggle"></span>Processor 1</label>
                                   <label class="block mt15 option option-success">
                                     <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox"></span>Processor 1</label>
-                                  <label class="block mt15 option option-success">
-                                    <input type="checkbox" name="mobileos" value="CH">
-                                    <span class="checkbox"></span>Processor 1</label>
+                                    <span class="checkbox" id="toggle"></span>Processor 1</label> 
                                  
                                 </div>
                               </div>
                               <div class="col-md-4">
                                 <div class="option-group field section">
                                   <label class="block mt15 option option-success">
-                                    <input type="checkbox" name="checked" value="checked" checked="">
+                                    <input type="checkbox" name="checked" value="checked"  checked="">
                                     <span class="checkbox"></span>Processor 2</label>
-                                  <label class="block mt15 option option-success">
-                                    <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox"></span>Processor 1</label>
-                                  <label class="block mt15 option option-success">
-                                    <input type="checkbox" name="mobileos" value="CH">
-                                    <span class="checkbox"></span>Processor 1</label>
+
                                   
                                 </div>
                               </div>
@@ -397,15 +389,17 @@
                           </div>
 
 
+
+
                           <!-- Start: Processor info section -->
-                          <div class="section row">
+                          <div class="section row .toggle" >
                             <div class="section-divider mt25 mb40">
                               <span>Processor 1 </span>
                             </div>
 
                           </div>
 
-                           <div class="section row">
+                           <div class="section row .toggle">
                               <label for="names" class="field-label col-md-3">BIN Visa</label>
                               <div class="col-md-9">
                                 <label for="names" class="field prepend-icon">
@@ -418,7 +412,7 @@
                               <!-- end section -->
                             </div>
 
-                          <div class="section row">
+                          <div class="section row .toggle">
                               <label for="names" class="field-label col-md-3">BIN Mastercard</label>
                               <div class="col-md-9">
                                 <label for="names" class="field prepend-icon">
@@ -1184,6 +1178,13 @@
 
     // Init Theme Core    
     Core.init();
+
+    $(document).ready(function(){
+    $("#toggle").click(function(){
+        $(".processor").toggle();
+    });
+    });
+  
 
 
     // Form Wizard 
