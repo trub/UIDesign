@@ -243,82 +243,263 @@
               <div class="panel">
                 <div class="panel-heading panel-visible">
                   <span class="panel-title pl20">Processor Details</span>
+
+                  <div class="widget-menu pull-right mr10">
+                    <div class="btn-group">
+                      <input type="submit" class="finish stepy-finish btn btn-xs btn-danger" value="Finish Creating Iso">
+
+                    </div>
+                  </div>
                 </div>
+
                 <div class="panel-group accordion" id="accordion">
                   <div class="panel">
                     <div class="panel-heading" style="background:none;">
                        <div class="widget-menu pull-right mr10">
                         <div class="btn-group" style="line-height: 3em;">
+                          <span class="label label-warning">Incomplete</span>
                           <span class="fs11 mr5"></span>Edit</button>
                           <span class="fs11 mr5"></span>Delete</button>
                         </div>
                       </div>
-                      <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord1" aria-expanded="false">
-                        Processor
+                      <a class="accordion-toggle accordion-icon link-unstyled pr35 " data-toggle="collapse" data-parent="#accordion" href="#accord1" aria-expanded="true">
+                        First Data                       
+
                       </a>
                     </div>
 
-                   <div id="accord1" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
+                    <div id="accord1" class="panel-collapse collapse in" aria-expanded="true">
                       <div class="panel-body">
-                        <div class="row">
-                          <div class="col-md-3 pr30 text-right">
-                            <p>BIN VISA:</p>
-                            <p>BIN MASTERCARD: </p>
-                          </div>
-                           <div class="col-md-5" style="color:black;">
-                            <p>***-*****-9999</p>
-                            <p>***-*****-9999</p>
-                          </div>
-                        </div><!--end: row -->
+                        <table class="table table-striped table-bordered table-hover table-iso-acquires" id="new_iso_form_acquires_table">
+                <thead>
+                    <tr class="table-header">
+                        <td>Field</td>
+                        <td>MasterCard</td>
+                        <td>Visa</td>
+                    </tr>
+                </thead>
+                <tbody data-acquire-name="first_data">
+                        <tr>
+                        <td>BIN</td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardBin" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardBin]" data-confirm-label="BIN MasterCard First Data" class="acquire_name-first_data acquire-bin gui-input" value="123123"></td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaBin" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaBin]" data-confirm-label="BIN Visa First Data" class="acquire_name-first_data acquire-bin gui-input" value="123123"></td>
+                    </tr>
+                    <tr>
+                        <td>Certificate name</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][certificateName]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][certificateName]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate password</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][password]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][password]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate key file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key_uploader" placeholder="Please Select A File">  -->
+
+ </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_key_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_key_uploader" placeholder="Please Select A File"> --></td> 
+                    </tr>
+                    <tr>
+                        <td>Certificate file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate_uploader" placeholder="Please Select A File"> --></td> 
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificate_uploader" placeholder="Please Select A File"> -->
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate rootca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_rootca_uploader').value = this.value;" class="gui-file">
+                        <!--  <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_rootca_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate subca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca_uploader').value = this.value;" class="gui-file">
+                        <!--  <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                        </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_subca_uploader').value = this.value;" class="gui-file">
+                        <!--<input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                    </tr>
+                </tbody>
+                
+                
+            </table>
                       </div>
                     </div>
+
+
+
                     <!-- END: processor -->
                     <div class="panel-heading" style="background:none;">
                        <div class="widget-menu pull-right mr10">
                         <div class="btn-group">
+                          <span class="label label-success">Complete</span>
                           <span class="fs11 mr5"></span>Edit</button>
                           <span class="fs11 mr5"></span>Delete</button>
                         </div>
                       </div>
                       <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord2" aria-expanded="false">
-                        Processor
-                      </a>
+                        Global 
+                      </a>  
+
                     </div>
                    <div id="accord2" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
-                      <div class="panel-body"><div class="row">
-                          <div class="col-md-3 pr30 text-right">
-                            <p>BIN VISA:</p>
-                            <p>BIN MASTERCARD: </p>
-                          </div>
-                           <div class="col-md-5" style="color:black;">
-                            <p>***-*****-9999</p>
-                            <p>***-*****-9999</p>
-                          </div>
-                        </div><!--end: row --></div>
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-iso-acquires" id="new_iso_form_acquires_table">
+                <thead>
+                    <tr class="table-header">
+                        <td>Field</td>
+                        <td>MasterCard</td>
+                        <td>Visa</td>
+                    </tr>
+                </thead>
+                
+                <tbody data-acquire-name="global">
+                  <tr>
+                        <td>BIN</td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardBin" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardBin]" data-confirm-label="BIN MasterCard Global" class="acquire_name-global acquire-bin gui-input"></td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaBin" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaBin]" data-confirm-label="BIN Visa Global" class="acquire_name-global acquire-bin gui-input"></td>
+                    </tr>
+                    <tr>
+                        <td>Certificate name</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][certificateName]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][certificateName]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate password</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][password]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][password]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate key file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_key_uploader').value = this.value;" class="gui-file">
+                         <!--<input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_key_uploader" placeholder="Please Select A File"> -->
+                       </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_key_uploader').value = this.value;" class="gui-file">
+                          <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_key_uploader" placeholder="Please Select A File"> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                         <!--<input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_certificate_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_certificate_uploader" placeholder="Please Select A File"> -->
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate rootca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_rootca_uploader').value = this.value;" class="gui-file">
+    <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_rootca_uploader" placeholder="Please Select A File"></td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_rootca_uploader').value = this.value;" class="gui-file">
+                         <!--  <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_rootca_uploader" placeholder="Please Select A File"> -->
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate subca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireGlobal][masterCardCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_subca_uploader').value = this.value;" class="gui-file">
+                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_masterCardCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                         </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireGlobal][visaCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_subca_uploader').value = this.value;" class="gui-file">
+                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireGlobal_visaCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                         </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+                         
+                        </div>
                     </div>
                     <!-- END: processor -->
                      <div class="panel-heading" style="background:none;">
                        <div class="widget-menu pull-right mr10">
                         <div class="btn-group">
+                          <span class="label label-success">Complete</span>
                           <span class="fs11 mr5"></span>Edit</button>
                           <span class="fs11 mr5"></span>Delete</button>
                         </div>
                       </div>
                       <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord3" aria-expanded="false">
-                        Processor
+                        Chase
                       </a>
                     </div>
                    <div id="accord3" class="panel-collapse collapse" style="height: 0px;" aria-expanded="false">
-                      <div class="panel-body"><div class="row">
-                          <div class="col-md-3 pr30 text-right">
-                            <p>BIN VISA:</p>
-                            <p>BIN MASTERCARD: </p>
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-iso-acquires" id="new_iso_form_acquires_table">
+                <thead>
+                    <tr class="table-header">
+                        <td>Field</td>
+                        <td>MasterCard</td>
+                        <td>Visa</td>
+                    </tr>
+                </thead>
+                
+                
+                <tbody data-acquire-name="chase">
+                    <tr>
+                        <td>BIN</td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardBin" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardBin]" data-confirm-label="BIN MasterCard Chase" class="acquire_name-chase acquire-bin gui-input"></td>
+                        <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireChase_visaBin" name="paay_iso_form_iso_edit[acquires][acquireChase][visaBin]" data-confirm-label="BIN Visa Chase" class="acquire_name-chase acquire-bin gui-input"></td>
+                    </tr>
+                    <tr>
+                        <td>Certificate name</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][certificateName]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][certificateName]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate password</td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][password]" class="gui-input">                                                            </td>
+                        <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][password]" class="gui-input">                                                            </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate key file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_key_uploader').value = this.value;" class="gui-file">
+                          <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_key_uploader" placeholder="Please Select A File"> -->
+    </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_key_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_key_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_certificate_uploader" placeholder="Please Select A File"> -->
+                        </td> 
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_certificate_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_certificate_uploader" placeholder="Please Select A File"> -->
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>Certificate rootca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_rootca_uploader').value = this.value;" class="gui-file">
+                       <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_rootca_uploader" placeholder="Please Select A File"> -->
+                       </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_rootca_uploader').value = this.value;" class="gui-file">
+                       <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_rootca_uploader" placeholder="Please Select A File"> -->
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>Certificate subca file</td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireChase][masterCardCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_subca_uploader').value = this.value;" class="gui-file">
+                        <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_masterCardCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                      </td>
+                        <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireChase][visaCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_subca_uploader').value = this.value;" class="gui-file">
+                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireChase_visaCertificate_subca_uploader" placeholder="Please Select A File"> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
                           </div>
-                           <div class="col-md-5" style="color:black;">
-                            <p>***-*****-9999</p>
-                            <p>***-*****-9999</p>
-                          </div>
-                        </div><!--end: row --></div>
                     </div>
                     <!-- END: processor -->
 
@@ -405,15 +586,19 @@
                       <p>% Per Trans Fee: </p>
                       <p>Date Enrolled:</p>
                       <p>Contract Expiration:</p>
+                      <p>Contract Agreement: </p>
 
                     </div>
-                     <div class="col-md-5" style="color:black;">
+                     <div class="col-md-6" style="color:black;">
                       <p>Michael Jordan</p>
                       <p>$1.2</p>
                       <p>$1.2</p>
                       <p>1.2</p>
                       <p>01/22/2015</p>
                       <p>01/22/2016</p>
+                      <p> 
+                        <input type="file" class="gui-file" name="file2" id="file2" onchange="document.getElementById('uploader2').value = this.value;"> </p>
+
 
                     </div>
                   </div>
@@ -423,7 +608,9 @@
             </div>
           </div><!--end row-->
 
-            <div class="row">
+
+
+          <div class="row">
           <!--Start: Billing Details -->
             <div class="col-md-8 col-md-offset-2">
               <div class="panel">
@@ -440,7 +627,7 @@
                         </div>
                       </div>
                       <a class="accordion-toggle accordion-icon link-unstyled pr35 collapsed" data-toggle="collapse" data-parent="#accordion" href="#accord5" aria-expanded="false">
-                        Bank Name  -  *****1144
+                        *****1144
                       </a>
                     </div>
 
@@ -448,22 +635,20 @@
                       <div class="panel-body" style="line-height:3em;">
                          <div class="row">
                             <div class="col-md-3 pr30 text-right">
-                            <p>Partner Bank:</p>
                             <p>Routing Number:</p>
-                            <p>Account Number:</p>
+                            <p>Bank Account Number:</p>
                             </div>
                              <div class="col-md-5" style="color:black;">
                                <p>048808884</p>
-                              <p>Bancorp</p>
                               <p>1113881144 </p>
                             </div>
                           </div><!--end: row -->
                           <hr class="short br-lighter">
                         <div class="row" >
                           <div class="col-md-3 pr30 text-right">
-                            <p>Contact name: </p>
+                            <p>Contact Name: </p>
                             <p>Email: </p>
-                            <p>PhoneNumber: </p>
+                            <p>Phone Number: </p>
                             <p>Shipping Address: </p>
                             <p>Shipping Address: </p>
                             <p>City: </p>
@@ -491,10 +676,31 @@
               <!--end: billing Details -->
             </div>
           </div><!--end row-->
+
+          <div class="row">
+          <!--Start: Contract Details -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="panel">
+                <div class="panel-heading panel-visible">
+                  <span class="panel-title pl20">Contract Details</span>
+                </div>
+                <div class="panel-body" style="line-height:1em;">
+
+                    <div class="col-md-12">
+                        <input type="file" class="gui-file" name="file2" id="file2" onchange="document.getElementById('uploader2').value = this.value;">
+
+                    </div>
+
+                </div>
+              </div>
+              <!--end: Contract Details -->
+            </div>
+          </div><!--end row-->
+
                 
           <div class="row">              
             <div class="col-md-2 col-md-offset-8">
-               <button id="delete-button" class="btn btn-danger btn-block">Delete ISO</button>
+                <input type="submit" class="finish stepy-finish btn btn-block btn-danger" value="Finish Creating Iso">
             </div>
           </div><!-- end row -->
 
