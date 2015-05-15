@@ -135,10 +135,11 @@
         </header>
         <!-- End: Sidebar Header -->
 
-       <!-- Start: Sidebar Menu -->
+       
+        <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
           <li class="sidebar-label pt20">GENERAL</li>
-          <li >
+          <li class="active" >
             <a href="dashboard.html">
               <span class="glyphicon glyphicon-home"></span>
               <span class="sidebar-title">Dashboard</span>
@@ -146,7 +147,7 @@
           </li>
            <li>
             <a href="pages_profile-ISO.html">
-              <span class="fa fa-user"></span>
+              <span class="fa fa-money"></span>
               <span class="sidebar-title">Account</span>
             </a>
           </li>
@@ -154,7 +155,7 @@
           </li>
           <li>
             <a class="accordion-toggle " href="#">
-              <span class="fa fa-money"></span>
+              <span class="fa fa-user"></span>
               <span class="sidebar-title">ISOS</span>
               <span class="caret"></span>
             </a>
@@ -174,39 +175,22 @@
             </ul>
           </li>     
           <li>
-            <a class="accordion-toggle menu-open " href="#">
-              <span class="fa fa-shopping-cart"></span>
-              <span class="sidebar-title">Merchants</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li >
-                <a href="pages_Merchants-SUPERADMIN.html">
-                  <span class="fa fa-desktop"></span> Merchants List </a>
-              </li>
-              <li class="active" >
-                <a href="pages_addMerchant.html">
-                  <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
-              </li>
-            </ul>
-          </li>   
-          <li>
             <a class="accordion-toggle " href="#">
               <span class="fa fa-user"></span>
-              <span class="sidebar-title">Users </span>
+              <span class="sidebar-title">Merchants</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
                 <a href="pages_Merchants-SUPERADMIN.html">
-                  <span class="fa fa-desktop"></span> Users List </a>
+                  <span class="fa fa-desktop"></span> Merchants </a>
               </li>
               <li  >
                 <a href="pages_addMerchant.html">
-                  <span class="glyphicon glyphicon-check"></span> Add a User </a>
+                  <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
               </li>
             </ul>
-          </li>       
+          </li>     
           <li class="sidebar-label pt15"> Tools</li>
           <li>
             <a href="admin_plugins-paay.html">
@@ -219,14 +203,15 @@
         </ul>
         <!-- End: Sidebar Menu -->
 
-	      <!-- Start: Sidebar Collapse Button -->
-	      <div class="sidebar-toggle-mini">
-	        <a href="#">
+
+        <!-- Start: Sidebar Collapse Button -->
+        <div class="sidebar-toggle-mini">
+          <a href="#">
             Logout
-	          <span class="fa fa-sign-out"></span>
-	        </a>
-	      </div>
-	      <!-- End: Sidebar Collapse Button -->
+            <span class="fa fa-sign-out"></span>
+          </a>
+        </div>
+        <!-- End: Sidebar Collapse Button -->
 
       </div>
       <!-- End: Sidebar Left Content -->
@@ -237,24 +222,95 @@
     <section id="content_wrapper">
 
 
+
       <!-- Begin: Content -->
       <section id="content" class="animated fadeIn">
+        <div style="max-width: 1000px; margin: 0 auto;">
 
-          <!-- Initial Content
-          ========================================================================
-          NOTE: show this div, once user onclicks button, hide this and show the form wizard -->
-
-        	<div class="alert alert-default light text-center alert-dismissable mb30">
-        	  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        	  <!--<span class="glyphicon glyphicon-user fs40"></span> -->
-            <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
-        	  <h2 class="mt5">MERCHANTS</h2>
-        	  <p class="mb10">You haven't added any Merchants to your ISO account. <a href="#">Learn more</a> <br></p>
-        	   <p>
-        	    <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="pages_addMerchant_after.html">Create your first Merchant</a>
-        	  </p>
-        	</div>
+            <!-- Dashboard Tiles -->
+            <div class="row mb10" id="spy7">
+                  <div class="col-sm-4 col-md-3">
+                    <div class="bs-component">
+                      <div class="panel panel-tile text-center br-a br-light">
+                        <div class="panel-body">
+                          <h1 class="fs45 mbn">0</h1>
+                          <h6>Merchants</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="bs-component">
+                      <div class="panel panel-tile text-center br-a br-light">
+                        <div class="panel-body ">
+                          <h1 class="fs45 mbn">0</h1>
+                          <h6 >Transactions</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="bs-component">
+                      <div class="panel panel-tile text-center br-a br-light">
+                        <div class="panel-body">
+                          <h1 class="fs45 mbn">$0.00</h1>
+                          <h6>Transaction Volume (USD)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="bs-component">
+                      <div class="panel panel-tile text-center br-a br-light">
+                        <div class="panel-body ">
+                          <h1 class="fs45 mbn">0</h1>
+                          <h6 >Pending</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end tiles -->
         
+
+                <div class="row">
+
+                              
+                              
+                      <div class="col-md-6">
+                          <div class="alert alert-default light text-center alert-dismissable mb30">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                              <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
+                              <h2 class="mt5">ISOS</h2>
+                              <p class="mb10">
+                                  Create a new Independent Sales Organization recepient account.
+                                  <br>
+                              </p>
+                              <p>
+                                  <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="/iso/new">
+                                      Create ISO
+                                  </a>
+                              </p>
+                          </div>
+                      </div>
+                              
+                      <div class="col-md-6">
+                          <div class="alert alert-default light text-center alert-dismissable mb30">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                              <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
+                              <h2 class="mt5">Merchants</h2>
+                              <p class="mb10">
+                                  Add a Merchant to an ISO account.
+                                              <br>
+                              </p>
+                              <p>
+                                  <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="/merchant/new">Create Merchant</a>
+                              </p>
+                          </div>
+                      </div>
+    
+           
+
+          </div><!-- end max-width 1000px -->
 
       </section>
       <!-- End: Content -->
@@ -301,86 +357,18 @@
 
     // Init Theme Core    
     Core.init();
+    
+   
 
-    // Init Demo JS     
-    Demo.init();
 
-    // Form Wizard 
-    var form = $("#form-wizard");
-    form.validate({
-      errorPlacement: function errorPlacement(error, element) {
-        element.before(error);
-      },
-      rules: {
-        confirm: {
-          equalTo: "#password"
-        }
-      }
-    });
-    form.children(".wizard").steps({
-      headerTag: ".wizard-section-title",
-      bodyTag: ".wizard-section",
-      onStepChanging: function(event, currentIndex, newIndex) {
-        form.validate().settings.ignore = ":disabled,:hidden";
-        return form.valid();
-      },
-      onFinishing: function(event, currentIndex) {
-        form.validate().settings.ignore = ":disabled";
-        return form.valid();
-      },
-      onFinished: function(event, currentIndex) {
-        alert("Submitted!");
-      }
-    });
-
-    // Demo Wizard Functionality
-    var formWizard = $('.wizard');
-    var formSteps = formWizard.find('.steps');
-
-    $('.wizard-options .holder-style').on('click', function(e) {
-      e.preventDefault();
-
-      var stepStyle = $(this).data('steps-style');
-
-      var stepRight = $('.holder-style[data-steps-style="steps-right"');
-      var stepLeft = $('.holder-style[data-steps-style="steps-left"');
-      var stepJustified = $('.holder-style[data-steps-style="steps-justified"');
-
-      if (stepStyle === "steps-left") {
-        stepRight.removeClass('holder-active');
-        stepJustified.removeClass('holder-active');
-        formWizard.removeClass('steps-right steps-justified');
-      }
-      if (stepStyle === "steps-right") {
-        stepLeft.removeClass('holder-active');
-        stepJustified.removeClass('holder-active');
-        formWizard.removeClass('steps-left steps-justified');
-      }
-      if (stepStyle === "steps-justified") {
-        stepLeft.removeClass('holder-active');
-        stepRight.removeClass('holder-active');
-        formWizard.removeClass('steps-left steps-right');
-      }
-
-      // Assign new style 
-      if ($(this).hasClass('holder-active')) {
-        formWizard.removeClass(stepStyle);
-      } else {
-        formWizard.addClass(stepStyle);
-      }
-
-      // Assign new active holder
-      $(this).toggleClass('holder-active');
-    });
-
-	$(document).ready(function(){
-	    $("#hide").click(function(){
-	        $("p").hide();
-	    });
-	    $("#show").click(function(){
-	        $("p").show();
-	    });
-	});
+  $(document).ready(function(){
+      $("#hide").click(function(){
+          $("p").hide();
+      });
+      $("#show").click(function(){
+          $("p").show();
+      });
+  });
 
   });
   </script>
