@@ -262,7 +262,8 @@
                   </div>
                   <div class="col-md-1 col-md-offset-5 pl15">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="tooltip"data-placement="right" title="When a user clicks edit. They should see input
+                      fields inline">
                         <span class="fa fa-gear fs11 mr5"></span>Edit</button> 
                    </div>
                   </div> 
@@ -284,7 +285,7 @@
 
                   <div class="widget-menu pull-right mr10">
                     <div class="btn-group">
-                      <input type="submit" class="finish stepy-finish btn btn-xs btn-danger" value="Finish Creating Iso">
+                      <input type="submit" class="finish stepy-finish btn btn-xs btn-danger" value="Finish Creating ISO">
 
                     </div>
                   </div>
@@ -323,17 +324,17 @@
                         <td>                                    <input type="number" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaBin" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaBin]" data-confirm-label="BIN Visa First Data" class="acquire_name-first_data acquire-bin gui-input" value="123123"></td>
                     </tr>
                     <tr>
-                        <td>Certificate name</td>
+                        <td>Certificate Name</td>
                         <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][certificateName]" class="gui-input">                                                            </td>
                         <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificateName" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][certificateName]" class="gui-input">                                                            </td>
                     </tr>
                     <tr>
-                        <td>Certificate password</td>
+                        <td>Certificate Password</td>
                         <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][password]" class="gui-input">                                                            </td>
                         <td>                                    <input type="text" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_password" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][password]" class="gui-input">                                                            </td>
                     </tr>
                     <tr>
-                        <td>Certificate key file</td>
+                        <td>Certificate Key File</td>
                         <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][key]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key_uploader').value = this.value;" class="gui-file">
                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_key_uploader" placeholder="Please Select A File">  -->
 
@@ -342,7 +343,7 @@
                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_key_uploader" placeholder="Please Select A File"> --></td> 
                     </tr>
                     <tr>
-                        <td>Certificate file</td>
+                        <td>Certificate File</td>
                         <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate_uploader').value = this.value;" class="gui-file">
                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_certificate_uploader" placeholder="Please Select A File"> --></td> 
                         <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificate" name="paay_iso_form_iso_edit[acquires][acquireFirstData][visaCertificate][certificate]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_visaCertificate_certificate_uploader').value = this.value;" class="gui-file">
@@ -350,7 +351,7 @@
                          </td>
                     </tr>
                     <tr>
-                        <td>Certificate rootca file</td>
+                        <td>Certificate Rootca File</td>
                         <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][rootca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca_uploader').value = this.value;" class="gui-file">
                         <!-- <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_rootca_uploader" placeholder="Please Select A File"> -->
                       </td>
@@ -359,7 +360,7 @@
                       </td>
                     </tr>
                     <tr>
-                        <td>Certificate subca file</td>
+                        <td>Certificate Subca File</td>
                         <td>                    <input type="file" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca" name="paay_iso_form_iso_edit[acquires][acquireFirstData][masterCardCertificate][subca]" onchange="document.getElementById('paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca_uploader').value = this.value;" class="gui-file">
                         <!--  <input type="text" class="gui-input" id="paay_iso_form_iso_edit_acquires_acquireFirstData_masterCardCertificate_subca_uploader" placeholder="Please Select A File"> -->
                         </td>
@@ -557,9 +558,9 @@
                   <span class="panel-title pl20">Contact Details</span>
                   <div class="widget-menu pull-right mr10">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
-                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
-                    
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="tooltip"data-placement="right" title="When a user clicks edit. They should see input
+                      fields inline">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button> 
                     </div>
                   </div>
                 </div>
@@ -602,8 +603,9 @@
                   <span class="panel-title pl20">Sales Details</span>
                   <div class="widget-menu pull-right mr10">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-xs btn-default " data-toggle="modal" data-target="#myModal">
-                        <span class="fa fa-gear fs11 mr5"></span>Edit</button>
+                      <button type="button" class="btn btn-xs btn-default " data-toggle="tooltip"data-placement="right" title="When a user clicks edit. They should see input
+                      fields inline">
+                        <span class="fa fa-gear fs11 mr5"></span>Edit</button> 
                       <ul class="dropdown-menu checkbox-persist pull-right text-left" role="menu">
                         <li>
                           <a><i class="fa fa-user"></i> View Profile </a>
