@@ -176,11 +176,10 @@
           </div>
         </header>
         <!-- End: Sidebar Header -->
-
-        <!-- Start: Sidebar Menu -->
+ <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
           <li class="sidebar-label pt20">GENERAL</li>
-          <li>
+          <li >
             <a href="dashboard.html">
               <span class="glyphicon glyphicon-home"></span>
               <span class="sidebar-title">Dashboard</span>
@@ -193,19 +192,40 @@
             </a>
           </li>
           <li class="sidebar-label pt15">USERS</li>
-          
+          </li>
+          <li>
+            <a class="accordion-toggle" href="#">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">ISOS</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li >
+                <a href="pages_ISO-table-users.html">
+                  <span class="fa fa-desktop"></span> ISO List </a>
+              </li>
+              <li >
+                <a href="pages_ISO-table-transactions.html">
+                  <span class="fa fa-desktop"></span> Transactions </a>
+              </li>
+              <li >
+                <a href="pages_addISO.html">
+                  <span class="glyphicon glyphicon-check"></span> Add an ISO </a>
+              </li>
+            </ul>
+          </li>     
           <li>
             <a class="accordion-toggle" href="#">
               <span class="fa fa-user"></span>
               <span class="sidebar-title">Merchants</span>
               <span class="caret"></span>
             </a>
-            <ul class="nav sub-nav" style="">
-              <li class="active" 3="">
-                <a href="pages_Merchants.html">
+            <ul class="nav sub-nav">
+              <li >
+                <a href="pages_Merchants-SUPERADMIN.html">
                   <span class="fa fa-desktop"></span> Merchants </a>
               </li>
-              <li>
+              <li >
                 <a href="pages_addMerchant.html">
                   <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
               </li>
@@ -213,10 +233,11 @@
           </li>     
           <li class="sidebar-label pt15"> Tools</li>
           <li class="active">
-            <a class="accordion-toggle" href="#">
+            <a href="admin_plugins-paay.html">
               <span class="fa fa-gears"></span>
               <span class="sidebar-title"> Plugins</span>
             </a>
+
           </li>
           
         </ul>
