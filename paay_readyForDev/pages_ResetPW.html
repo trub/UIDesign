@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>Paay - A Responsive HTML5 Admin UI Framework</title>
+  <meta name="keywords" content="Paay" />
+  <meta name="description" content="Paay ">
+  <meta name="author" content="Paay">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="blank-page">
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top bg-light">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <b>PAAY</b>ADMIN
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+      </ul>
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John Smith
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+            <li class="dropdown-header clearfix">   
+              <div class="pull-right mr10">
+                <select id="user-role">
+                  <optgroup label="Logged in As:">
+                    <option value="1-1">Iso</option>
+                    <option value="1-2">Merchant</option>
+                    <option value="1-3" selected="selected">Admin</option>
+                  </optgroup>
+                </select>
+              </div>
+
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-envelope"></span> Messages
+                <span class="label label-warning">2</span>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-power-off"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+        <!-- Start: Sidebar Header -->
+        <header class="sidebar-header">
+          <div class="user-menu">
+            <div class="row text-center mbn">
+              <div class="col-xs-4">
+                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="Dashboard">
+                  <span class="glyphicon glyphicon-home"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_messages.html" class="text-info" data-toggle="tooltip" data-placement="top" title="Messages">
+                  <span class="glyphicon glyphicon-inbox"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-alert" data-toggle="tooltip" data-placement="top" title="Tasks">
+                  <span class="glyphicon glyphicon-bell"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_timeline.html" class="text-system" data-toggle="tooltip" data-placement="top" title="Activity">
+                  <span class="fa fa-desktop"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-danger" data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="fa fa-gears"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_gallery.html" class="text-warning" data-toggle="tooltip" data-placement="top" title="Cron Jobs">
+                  <span class="fa fa-flask"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- End: Sidebar Header -->
+
+       
+        <!-- Start: Sidebar Menu -->
+        <ul class="nav sidebar-menu">
+          <li class="sidebar-label pt20">GENERAL</li>
+          <li class="active" >
+            <a href="dashboard.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Dashboard</span>
+            </a>
+          </li>
+           <li>
+            <a href="pages_profile-ISO.html">
+              <span class="fa fa-money"></span>
+              <span class="sidebar-title">Account</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt15">USERS</li>
+          </li>
+          <li>
+            <a class="accordion-toggle " href="#">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">ISOS</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="pages_ISO-table-users.html">
+                  <span class="fa fa-desktop"></span> ISO List </a>
+              </li>
+              <li >
+                <a href="pages_ISO-table-transactions.html">
+                  <span class="fa fa-desktop"></span> Transactions </a>
+              </li>
+              <li >
+                <a href="pages_addISO.html">
+                  <span class="glyphicon glyphicon-check"></span> Add an ISO </a>
+              </li>
+            </ul>
+          </li>     
+          <li>
+            <a class="accordion-toggle " href="#">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">Merchants</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="pages_Merchants-SUPERADMIN.html">
+                  <span class="fa fa-desktop"></span> Merchants </a>
+              </li>
+              <li  >
+                <a href="pages_addMerchant.html">
+                  <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
+              </li>
+            </ul>
+          </li>     
+          <li class="sidebar-label pt15"> Tools</li>
+          <li>
+            <a href="admin_plugins-paay.html">
+              <span class="fa fa-gears"></span>
+              <span class="sidebar-title"> Plugins</span>
+            </a>
+
+          </li>
+          
+        </ul>
+        <!-- End: Sidebar Menu -->
+
+
+        <!-- Start: Sidebar Collapse Button -->
+        <div class="sidebar-toggle-mini">
+          <a href="#">
+            Logout
+            <span class="fa fa-sign-out"></span>
+          </a>
+        </div>
+        <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+
+
+     <section id="content">
+
+        <!-- begin: .tray-center -->
+        <div class="mw700 center-block">
+
+            <!-- Store Owner Details -->
+            <div class="panel panel-success panel-border top mt20 mb35">
+              <div class="panel-heading">
+                <span class="panel-title">Reset Password</span>
+              </div>
+
+              <div class="admin-form ">
+                  <div class="panel-body  bg-light">
+                    <form method="post" action="/" id="admin-form" novalidate="novalidate">
+                      <div class="section row">
+                        <label for="account-name" class="field-label col-md-3 text-center">Current Password:</label>
+                        <div class="col-md-6">
+                          <label for="account-name" class="field prepend-icon">
+                            <input type="password" name="account-name" id="account-name" class="gui-input"  aria-invalid="false">
+                            <label for="account-name" class="field-icon">
+                              <i class="fa fa-lock"></i>
+                            </label>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- end row -->
+                      <div class="section row">
+                        <label for="account-name" class="field-label col-md-3 text-center">New Password:</label>
+                        <div class="col-md-6">         
+                            <label for="password" class="field prepend-icon">
+                            <input type="password" name="password" id="password" class="gui-input" >
+                            <label for="password" class="field-icon">
+                              <i class="fa fa-lock"></i>
+                            </label>
+                          </label>            
+                        </div>
+                    </div>
+                     <!-- end row -->
+                     <div class="section row">
+                        <label for="account-name" class="field-label col-md-3 text-center">Confirm Password:</label>
+                      <div class="col-md-6">
+                        <label for="repeatPassword" class="field prepend-icon">
+                        <input type="password" name="repeatPassword" id="repeatPassword" class="gui-input">
+                        <label for="repeatPassword" class="field-icon">
+                          <i class="fa fa-unlock-alt"></i>
+                        </label>
+                      </label>
+                      </div>
+                    </div>
+
+            </div>
+                  <!-- end .form-body section -->
+                  <div class="panel-footer text-right">
+                    <button type="submit" class="button btn-success">Reset Password</button>
+                    <button type="reset" class="button btn-default"> Cancel </button>
+                  </div>
+                  
+                  <!-- end .form-footer section -->
+                </form>
+
+          </div>
+            </div>
+
+            <!-- Store Information -->
+            
+
+            
+            
+
+            
+            
+
+            
+            
+            
+          </div>
+        <!-- end: .tray-center -->
+
+        <!-- begin: .tray-right -->
+        
+        <!-- end: .tray-right -->
+
+      </section>
+
+
+
+    </section>
+
+    
+
+  </div>
+  <!-- End: Main -->
+
+<style>
+  /*page demo styles*/
+  .wizard .steps .fa,
+  .wizard .steps .glyphicon,
+  .wizard .steps .glyphicon {
+    display: none;
+  }
+  </style>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Page Plugins -->
+  <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+  <script src="assets/admin-tools/admin-forms/js/jquery.steps.min.js"></script>
+
+    <!-- Bootstrap Tour Plugin -->
+  <script src="vendor/plugins/bstour/bootstrap-tour.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+    
+ 
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS     
+    Demo.init();
+
+    /* @custom validation method (smartCaptcha) 
+    ------------------------------------------------------------------ */
+
+    $.validator.methods.smartCaptcha = function(value, element, param) {
+      return value == param;
+    };
+
+    $("#admin-form").validate({
+
+      /* @validation states + elements 
+      ------------------------------------------- */
+
+      errorClass: "state-error",
+      validClass: "state-success",
+      errorElement: "em",
+
+      /* @validation rules 
+      ------------------------------------------ */
+
+      rules: {
+        firstname: {
+          required: true
+        },
+        lastname: {
+          required: true
+        },
+        useremail: {
+          required: true,
+          email: true
+        },
+        website: {
+          required: true,
+          url: true
+        },
+        language: {
+          required: true
+        },
+        upload1: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
+        },
+        mobileos: {
+          required: true
+        },
+        comment: {
+          required: true,
+          minlength: 30
+        },
+        mobile_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        home_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        password: {
+          required: true,
+          minlength: 6,
+          maxlength: 16
+        },
+        repeatPassword: {
+          required: true,
+          minlength: 6,
+          maxlength: 16,
+          equalTo: '#password'
+        },
+        gender: {
+          required: true
+        },
+        languages: {
+          required: true
+        },
+        verification: {
+          required: true,
+          smartCaptcha: 19
+        },
+        applicant_age: {
+          required: true,
+          min: 16
+        },
+        licence_no: {
+          required: function(element) {
+            return $("#applicant_age").val() > 19;
+          }
+        },
+        child_name: {
+          required: "#parents:checked"
+        }
+
+      },
+
+      /* @validation error messages 
+      ---------------------------------------------- */
+
+      messages: {
+        firstname: {
+          required: 'Enter first name'
+        },
+        lastname: {
+          required: 'Enter last name'
+        },
+        useremail: {
+          required: 'Enter email address',
+          email: 'Enter a VALID email address'
+        },
+        website: {
+          required: 'Enter your website URL',
+          url: 'URL should start with - http://www'
+        },
+        language: {
+          required: 'Choose a language'
+        },
+        upload1: {
+          required: 'Please browse a file',
+          extension: 'File format not supported'
+        },
+        mobileos: {
+          required: 'Please select a mobile platform'
+        },
+        comment: {
+          required: 'Oops you forgot to comment',
+          minlength: 'Enter at least 30 characters or more'
+        },
+        mobile_phone: {
+          require_from_group: 'Fill at least a mobile contact'
+        },
+        home_phone: {
+          require_from_group: 'Fill at least a home contact'
+        },
+        password: {
+          required: 'Please enter a password'
+        },
+        repeatPassword: {
+          required: 'Please repeat the above password',
+          equalTo: 'Password mismatch detected'
+        },
+        gender: {
+          required: 'Please choose specie'
+        },
+        languages: {
+          required: 'Select laguages spoken'
+        },
+        verification: {
+          required: 'Please enter verification code',
+          smartCaptcha: 'Oops - enter a correct verification code'
+        },
+        applicant_age: {
+          required: 'Enter applicant age',
+          min: 'Must be 16 years and above'
+        },
+        licence_no: {
+          required: 'Enter licence number'
+        },
+        child_name: {
+          required: 'Please enter your childs name'
+        }
+
+      },
+
+      /* @validation highlighting + error placement  
+      ---------------------------------------------------- */
+
+      highlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+      },
+      errorPlacement: function(error, element) {
+        if (element.is(":radio") || element.is(":checkbox")) {
+          element.closest('.option-group').after(error);
+        } else {
+          error.insertAfter(element.parent());
+        }
+      }
+
+    });
+
+
+    // Cache several DOM elements
+    var pageHeader = $('.content-header').find('b');
+    var adminForm = $('.admin-form');
+    var options = adminForm.find('.option');
+    var switches = adminForm.find('.switch');
+    var buttons = adminForm.find('.button');
+    var Panel = adminForm.find('.panel');
+
+    // Form Skin Switcher
+    $('#skin-switcher a').on('click', function() {
+      var btnData = $(this).data('form-skin');
+
+      $('#skin-switcher a').removeClass('item-active');
+      $(this).addClass('item-active')
+
+      adminForm.each(function(i, e) {
+        var skins = 'theme-primary theme-info theme-success theme-warning theme-danger theme-alert theme-system theme-dark'
+        var panelSkins = 'panel-primary panel-info panel-success panel-warning panel-danger panel-alert panel-system panel-dark'
+        $(e).removeClass(skins).addClass('theme-' + btnData);
+        Panel.removeClass(panelSkins).addClass('panel-' + btnData);
+        pageHeader.removeClass().addClass('text-' + btnData);
+      });
+
+      $(options).each(function(i, e) {
+        if ($(e).hasClass('block')) {
+          $(e).removeClass().addClass('block mt15 option option-' + btnData);
+        } else {
+          $(e).removeClass().addClass('option option-' + btnData);
+        }
+      });
+
+      // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+      $('body').find('.ui-slider').each(function(i, e) {
+        $(e).addClass('slider-primary');
+      });
+
+      $(switches).each(function(i, ele) {
+        if ($(ele).hasClass('switch-round')) {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-round switch-' + btnData);
+          } else {
+            $(ele).removeClass().addClass('switch switch-round switch-' + btnData);
+          }
+        } else {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-' + btnData);
+          } else {
+            $(ele).removeClass().addClass('switch switch-' + btnData);
+          }
+        }
+
+      });
+      buttons.removeClass().addClass('button btn-' + btnData);
+    });
+
+    setTimeout(function() {
+      adminForm.addClass('theme-primary');
+      Panel.addClass('panel-primary');
+      pageHeader.addClass('text-primary');
+
+      $(options).each(function(i, e) {
+        if ($(e).hasClass('block')) {
+          $(e).removeClass().addClass('block mt15 option option-primary');
+        } else {
+          $(e).removeClass().addClass('option option-primary');
+        }
+      });
+
+      // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+      $('body').find('.ui-slider').each(function(i, e) {
+        $(e).addClass('slider-primary');
+      });
+
+      $(switches).each(function(i, ele) {
+        if ($(ele).hasClass('switch-round')) {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-round switch-primary');
+          } else {
+            $(ele).removeClass().addClass('switch switch-round switch-primary');
+          }
+        } else {
+          if ($(ele).hasClass('block')) {
+            $(ele).removeClass().addClass('block mt15 switch switch-primary');
+          } else {
+            $(ele).removeClass().addClass('switch switch-primary');
+          }
+        }
+      });
+    }, 800);
+
+
+
+  });
+  
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
+
+
