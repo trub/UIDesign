@@ -57,17 +57,6 @@
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
-            <li class="dropdown-header clearfix">   
-              <div class="pull-right mr10">
-                <select id="user-role">
-                  <optgroup label="Logged in As:">
-                    <option value="1-1">Iso</option>
-                    <option value="1-2">Merchant</option>
-                    <option value="1-3" selected="selected">Admin</option>
-                  </optgroup>
-                </select>
-              </div>
-            </li>
             <li class="list-group-item">
               <a href="pages_ResetPW.html" class="animated animated-short fadeInUp">
                 <span class="fa fa-gear"></span> Account Settings </a>
@@ -147,11 +136,11 @@
             </a>
             <ul class="nav sub-nav">
               <li>
-                <a href="pages_Merchants-SUPERADMIN.html">
+                 <a href="pages_USERS-table.html">
                   <span class="fa fa-desktop"></span> Users List </a>
               </li>
               <li  >
-                <a href="pages_addMerchant.html">
+                <a href="#">
                   <span class="glyphicon glyphicon-check"></span> Add a User </a>
               </li>
             </ul>
@@ -165,7 +154,7 @@
           </li>
           <li class="sidebar-label pt20">Account</li>
            <li>
-            <a href="pages_profile-ISO.html">
+            <a href="pages_profile-Merchant.html">
               <span class="fa fa-user"></span>
               <span class="sidebar-title">Settings</span>
             </a>
@@ -211,7 +200,7 @@
                       <div class="panel panel-tile text-center br-a br-light">
                         <div class="panel-body">
                           <h1 class="fs45 mbn">0</h1>
-                          <h6>Users</h6>
+                          <h6>Merchants</h6>
                         </div>
                       </div>
                     </div>
@@ -251,18 +240,36 @@
 
                 <div class="row">
 
-                                  
-                      <div class="col-md-12">
+                              
+                              
+                      <div class="col-md-6">
                           <div class="alert alert-default light text-center alert-dismissable mb30">
                               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                               <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
-                              <h2 class="mt5">Users</h2>
+                              <h2 class="mt5">ISOS</h2>
                               <p class="mb10">
-                                  Add a User.
+                                  Create a new ISO account.
+                                  <br>
+                              </p>
+                              <p>
+                                  <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="pages_addISO_after.html">
+                                      Create ISO
+                                  </a>
+                              </p>
+                          </div>
+                      </div>
+                              
+                      <div class="col-md-6">
+                          <div class="alert alert-default light text-center alert-dismissable mb30">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                              <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
+                              <h2 class="mt5">Merchants</h2>
+                              <p class="mb10">
+                                  Add a Merchant to an ISO account.
                                               <br>
                               </p>
                               <p>
-                                  <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="pages_addMerchant_after.html">Create User</a>
+                                  <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="pages_addMerchant_after.html">Create Merchant</a>
                               </p>
                           </div>
                       </div>
