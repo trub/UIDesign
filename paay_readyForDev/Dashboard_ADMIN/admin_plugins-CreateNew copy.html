@@ -270,6 +270,28 @@
       <!-- Begin: Content -->
       <section id="content" class="table-layout">
 
+           <!-- begin: .tray-left -->
+        <aside class="tray tray-left tray240" data-tray-height="match">
+
+           <div>
+            <h4 class="mt5 mb20"> Plugins</h4>
+            <button type="button" class="btn btn-xs btn-default btn-gradient mr5" style=" float: right; margin-top: -36px; ">
+                <i class="fa fa-plus-square pr5"></i> New Plugin</button>
+          </div>
+
+          <!-- NOTE: there is a weird bug in the less.  At the comment { begin: .tray-left } When i changed the class tray290 to tray 240 it resizes the navigation sidebar containing the following woocommerce links. However, it does not maintain this width once you on.scroll. However, if you keep it as the original class which was tray290 and scroll there are no problems. I don't have time to debug this so I've slapped a style="width:240px;" on the <ul> list below. -->
+
+          <div id="nav-spy">
+            <ul class="nav tray-nav tray-nav-border" style="width:240px;" data-smoothscroll="-145" data-spy="affix" data-offset-top="200">
+              <li class="active">
+                <a href="#spy1">
+                  Start Here</a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+        <!-- end: .tray-left -->
 
         <!-- begin: .tray-center -->
         <div class="tray tray-center">
