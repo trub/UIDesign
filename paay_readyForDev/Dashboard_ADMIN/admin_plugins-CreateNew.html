@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+  <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="admin-layout-page">
+
+   <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top bg-light">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <b>PAAY</b>ADMIN
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+      </ul>
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/placeholder.png" alt="avatar" class="mw30 br64 mr15"> 
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+            <li class="list-group-item">
+              <a href="pages_ResetPW.html" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-power-off"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+        <!-- Start: Sidebar Header -->
+        <header class="sidebar-header">
+          <div class="user-menu">
+            <div class="row text-center mbn">
+              <div class="col-xs-4">
+                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="Dashboard">
+                  <span class="glyphicon glyphicon-home"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_messages.html" class="text-info" data-toggle="tooltip" data-placement="top" title="Messages">
+                  <span class="glyphicon glyphicon-inbox"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-alert" data-toggle="tooltip" data-placement="top" title="Tasks">
+                  <span class="glyphicon glyphicon-bell"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_timeline.html" class="text-system" data-toggle="tooltip" data-placement="top" title="Activity">
+                  <span class="fa fa-desktop"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-danger" data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="fa fa-gears"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_gallery.html" class="text-warning" data-toggle="tooltip" data-placement="top" title="Cron Jobs">
+                  <span class="fa fa-flask"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- End: Sidebar Header -->
+
+       
+        <!-- Start: Sidebar Menu -->
+        <ul class="nav sidebar-menu">
+          <li >
+            <a href="dashboard.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt15">USERS</li>
+          </li>
+          <li>
+            <a class="accordion-toggle " href="#">
+              <span class="fa fa-money"></span>
+              <span class="sidebar-title">ISOS</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="pages_ISO-table-users.html">
+                  <span class="fa fa-desktop"></span> ISO List </a>
+              </li>
+              <li >
+                <a href="pages_ISO-table-transactions.html">
+                  <span class="fa fa-desktop"></span> Transactions </a>
+              </li>
+              <li >
+                <a href="pages_addISO.html">
+                  <span class="glyphicon glyphicon-check"></span> Add an ISO </a>
+              </li>
+            </ul>
+          </li>     
+          <li>
+            <a class="accordion-toggle " href="#">
+              <span class="fa fa-shopping-cart"></span>
+              <span class="sidebar-title">Merchants</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="pages_Merchants-SUPERADMIN.html">
+                  <span class="fa fa-desktop"></span> Merchants List </a>
+              </li>
+              <li  >
+                <a href="pages_addMerchant.html">
+                  <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
+              </li>
+            </ul>
+          </li>   
+          <li>
+            <a class="accordion-toggle " href="#">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">Users </span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                 <a href="pages_USERS-table.html">
+                  <span class="fa fa-desktop"></span> Users List </a>
+              </li>
+              <li  >
+                <a href="#">
+                  <span class="glyphicon glyphicon-check"></span> Add a User </a>
+              </li>
+            </ul>
+          </li>       
+          <li class="sidebar-label pt15"> Tools</li>
+          <li class="active">
+            <a href="admin_plugins-paay.html">
+              <span class="fa fa-gears"></span>
+              <span class="sidebar-title"> Plugins</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt20">Account</li>
+           <li>
+            <a href="pages_ResetPW.html">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">Settings</span>
+            </a>
+          </li>
+         <li >
+            <a href="dashboard.html">
+              <span class="fa fa-question"></span>
+              <span class="sidebar-title">Help</span>
+            </a>
+          </li>
+           
+        </ul>
+        <!-- End: Sidebar Menu -->
+
+	      <!-- Start: Sidebar Collapse Button -->
+	      <div class="sidebar-toggle-mini">
+	        <a href="#">
+	          <span class="fa fa-sign-out"></span>
+	        </a>
+	      </div>
+	      <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+
+    <section id="content_wrapper">
+
+      <!-- Start: Topbar-Dropdown -->
+      <div id="topbar-dropmenu">
+        <div class="topbar-menu row">
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-inbox"></span>
+              <p class="metro-title">Messages</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-user"></span>
+              <p class="metro-title">Users</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-headphones"></span>
+              <p class="metro-title">Support</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon fa fa-gears"></span>
+              <p class="metro-title">Settings</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-facetime-video"></span>
+              <p class="metro-title">Videos</p>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-2">
+            <a href="#" class="metro-tile">
+              <span class="metro-icon glyphicon glyphicon-picture"></span>
+              <p class="metro-title">Pictures</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End: Topbar-Dropdown -->
+
+  
+
+      <!-- Begin: Content -->
+      <section id="content" class="table-layout">
+
+           <!-- begin: .tray-left -->
+        <aside class="tray tray-left tray240" data-tray-height="match">
+
+           <div>
+            <h4 class="mt5 mb20"> Plugins</h4>
+            <button type="button" class="btn btn-xs btn-default btn-gradient mr5" style=" float: right; margin-top: -36px; ">
+                <i class="fa fa-plus-square pr5"></i> New Plugin</button>
+          </div>
+
+          <!-- NOTE: there is a weird bug in the less.  At the comment { begin: .tray-left } When i changed the class tray290 to tray 240 it resizes the navigation sidebar containing the following woocommerce links. However, it does not maintain this width once you on.scroll. However, if you keep it as the original class which was tray290 and scroll there are no problems. I don't have time to debug this so I've slapped a style="width:240px;" on the <ul> list below. -->
+
+          <div id="nav-spy">
+            <ul class="nav tray-nav tray-nav-border" style="width:240px;" data-smoothscroll="-145" data-spy="affix" data-offset-top="200">
+              <li class="active">
+                <a href="#spy1">
+                  Start Here</a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+        <!-- end: .tray-left -->
+
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center">
+          <div class="">
+
+            <!-- Begin: Content Header -->
+            
+
+            <div class="tab-content mw900 center-block center-children">
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              
+              
+
+              
+              <div class="admin-form theme-success tab-pane mw800 active" id="survey1" role="tabpanel">
+                <div class="panel panel-success heading-border">
+                  <div class="panel-heading">
+                    <span class="panel-title">
+                      Create New Plugin</span>
+                  </div>
+                  <!-- end .form-header section -->
+
+                  <form method="post" action="/" id="form-survey1">
+                    <div class="panel-body p25">
+                      
+
+
+                      <!-- .section-divider -->
+
+                      <div class="section row">
+                        <div class="col-md-12">
+                          
+                          <!-- end section -->
+
+                          <div class="section">
+                            
+                            <label for="othernames" class="field prepend-icon">
+                              <input type="text" name="othernames" id="othernames" class="gui-input" placeholder="Plugin Title">
+                              
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+
+                        
+                        <!-- end .colm section -->
+
+                      </div>
+
+<div class="section row">
+                        <div class="col-md-12">
+                          
+                          <!-- end section -->
+
+                          <div class="section">
+                          <label class="field prepend-icon file">
+                            <span class="button btn-primary">Choose File</span>
+                            <input type="file" class="gui-file" name="file2" id="file2" onchange="document.getElementById('uploader2').value = this.value;">
+                            <input type="text" class="gui-input" id="uploader2" placeholder="Please Select A File">
+                            <label class="field-icon">
+                              <i class="fa fa-upload"></i>
+                            </label>
+                          </label>
+  </div>
+                          <!-- end section -->
+
+                          
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+
+                        
+                        <!-- end .colm section -->
+
+                      </div>
+
+
+                      <!-- end .section row section -->
+
+                      <div class="section-divider mv40">
+                        <span>Select a category</span>
+                      </div>
+                      <!-- .section-divider -->
+
+                      <div class="section row">
+                        <div class="col-md-4">
+                          <label class="option block">
+                            <input type="checkbox" name="service" value="marketing">
+                            <span class="checkbox"></span>Select All</label>
+                          <label class="option block mt10">
+                            <input type="checkbox" name="service" value="motion">
+                            <span class="checkbox"></span>Presta Shop</label>
+                          <label class="option block mt10">
+                            <input type="checkbox" name="service" value="videos">
+                            <span class="checkbox"></span>Spree</label>
+                        </div>
+                        <!-- end .colm section -->
+
+                        <div class="col-md-4">
+                          <label class="option block">
+                            <input type="checkbox" name="service" value="webdesign">
+                            <span class="checkbox"></span>Woocommerce</label>
+                          <label class="option block mt10">
+                            <input type="checkbox" name="service" value="webhosting">
+                            <span class="checkbox"></span>Open Cart</label>
+                          
+                        </div>
+                        <!-- end .colm section -->
+
+                        <div class="col-md-4">
+                          <label class="option block">
+                            <input type="checkbox" name="service" value="apps">
+                            <span class="checkbox"></span>Zen Cart</label>
+                          <label class="option block mt10">
+                            <input type="checkbox" name="service" value="info">
+                            <span class="checkbox"></span>Presta Shop</label>
+                          
+                        </div>
+                        <!-- end .colm section -->
+
+                      </div>
+                      <!-- end .section row section -->
+
+                      
+                      
+
+                      
+                      
+
+                    </div>
+                    <!-- end .form-body section -->
+                    <div class="panel-footer">
+                      
+<button type="submit" class="button btn-default">Cancel</button>
+                    <button type="submit" class="button btn-success">Submit</button></div>
+                    <!-- end .form-footer section -->
+                  </form>
+                </div>
+                <!-- end .admin-form section -->
+              </div>
+              <!-- end: .admin-form -->
+
+              <!-- Project Quote -->
+              <div class="admin-form theme-warning tab-pane" id="quote1" role="tabpanel">
+                <div class="panel panel-warning heading-border">
+                  <div class="panel-heading">
+                    <span class="panel-title">
+                      <i class="fa fa-tachometer"></i>Project quote</span>
+                  </div>
+                  <!-- end .form-header section -->
+
+                  <form method="post" action="/" id="form-quote1">
+                    <div class="panel-body p25">
+                      <div class="section row">
+                        <div class="col-md-4">
+                          <div class="section">
+                            <label for="fullname" class="field-label">Full name</label>
+                            <label for="fullname" class="field">
+                              <input type="text" name="fullname" id="fullname" class="gui-input">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="company" class="field-label">Company name</label>
+                            <label for="company" class="field">
+                              <input type="text" name="company" id="company" class="gui-input">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="email" class="field-label">Email address</label>
+                            <label for="email" class="field">
+                              <input type="email" name="email" id="email" class="gui-input">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+
+                        <div class="col-md-4">
+                          <div class="section">
+                            <label for="projectname" class="field-label">Project name</label>
+                            <label for="projectname" class="field">
+                              <input type="text" name="projectname" id="projectname" class="gui-input">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="website" class="field-label">Current website url</label>
+                            <label for="website" class="field">
+                              <input type="url" name="website" id="website" class="gui-input">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="likewebsite" class="field-label">Websites you like</label>
+                            <label for="likewebsite" class="field">
+                              <input type="text" name="likewebsite" id="likewebsite" class="gui-input" placeholder="Seperate with comas">
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+
+                        <div class="col-md-4">
+                          <div class="section">
+                            <label for="budget" class="field-label">Project budget</label>
+                            <label class="field select">
+                              <select id="budget" name="budget">
+                                <option value="">Select budget...</option>
+                                <option value="500-1000">$500 - $1000</option>
+                                <option value="1000-2000">$1000 - $2000</option>
+                                <option value="2000-4000">$2000 - $4000</option>
+                                <option value="5000+">$5000+</option>
+                              </select>
+                              <i class="arrow double"></i>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="timeframe" class="field-label">Project time frame</label>
+                            <label class="field select">
+                              <select id="timeframe" name="timeframe">
+                                <option value="">Select time frame...</option>
+                                <option value="1week">1 Week</option>
+                                <option value="2week">2 Weeks</option>
+                                <option value="3week">3 Weeks</option>
+                                <option value="4week">4 Weeks</option>
+                              </select>
+                              <i class="arrow double"></i>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="services" class="field-label">Services required</label>
+                            <label class="field select">
+                              <select id="services" name="services">
+                                <option value="">Choose a service...</option>
+                                <option value="webdesign">Web design</option>
+                                <option value="wordpress">Wordpress</option>
+                                <option value="identity">Corporate identity</option>
+                                <option value="cms">Custom CMS</option>
+                              </select>
+                              <i class="arrow double"></i>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+
+                      </div>
+                      <!-- end .section row section -->
+
+                      <div class="section row">
+                        <div class="col-md-8">
+                          <div class="section">
+                            <label for="details" class="field-label">Project details</label>
+                            <label for="details" class="field">
+                              <textarea class="gui-textarea" id="details" name="details"></textarea>
+                              <span class="input-footer">
+                                <strong>Hint:</strong>A maxmum of 3000 words.</span>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+                        <div class="col-md-4">
+                          <div class="mb10">
+                            <label class="field-label">Services required</label>
+                          </div>
+                          <div class="section">
+                            <label class="option block mb10">
+                              <input type="checkbox" name="webdesign">
+                              <span class="checkbox"></span>Webdesign &amp; Info</label>
+                            <label class="option block mb10">
+                              <input type="checkbox" name="wordpress">
+                              <span class="checkbox"></span>Wordpress Setup</label>
+                            <label class="option block mb10">
+                              <input type="checkbox" name="identity">
+                              <span class="checkbox"></span>Corporate Branding</label>
+                            <label class="option block">
+                              <input type="checkbox" name="html">
+                              <span class="checkbox"></span>HTML5 &amp; CSS3</label>
+                          </div>
+                          <!-- end section -->
+
+                        </div>
+                        <!-- end .colm section -->
+                      </div>
+                      <!-- end .section row section -->
+
+                    </div>
+                    <!-- end .form-body section -->
+                    <div class="panel-footer">
+                      <button type="submit" class="button btn-primary">Receive Quote</button>
+                    </div>
+                    <!-- end .form-footer section -->
+                  </form>
+                </div>
+                <!-- end .admin-form section -->
+              </div>
+              <!-- end: .admin-form -->
+
+            </div>
+
+          </div>
+        </div>
+        <!-- end: .tray-center -->
+
+        <!-- begin: .tray-right -->
+        
+        <!-- end: .tray-right -->
+
+      </section>
+      <!-- End: Content -->
+
+    </section>
+
+  
+
+  </div>
+  <!-- End: Main -->
+
+  <style>
+  /* demo page styles */
+  .admin-form .panel.heading-border:before,
+  .admin-form .panel .heading-border:before {
+    transition: all 0.7s ease;
+  }
+  </style>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+    // Demo code - active navigation btns
+    $('.animation-nav').click(function() {
+      $('.animation-nav').removeClass('btn-primary').addClass('btn-default');
+      $(this).addClass('btn-primary');
+    });
+
+    // Form switcher nav
+    var formSwitches = $('.admin-form-list a');
+    formSwitches.on('click', function() {
+      formSwitches.removeClass('item-active');
+      $(this).addClass('item-active')
+
+      if ($(this).attr('href') === "#contact3") {
+        setTimeout(function() {
+          initialize();
+        }, 100);
+      }
+
+    });
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
