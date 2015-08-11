@@ -11,10 +11,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600'>
+
+  <!-- Stateface CSS(font) -->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/stateface/stateface.css">
 
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -27,152 +33,9 @@
 
 </head>
 
-<body class="widgets-tile-page" data-spy="scroll" data-target="#nav-spy" data-offset="155">
+<body class="widgets-data-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
 
-  <!-- Start: Theme Preview Pane -->
-  <div id="skin-toolbox">
-    <div class="panel">
-      <div class="panel-heading">
-        <span class="panel-icon">
-          <i class="fa fa-gear text-primary"></i>
-        </span>
-        <span class="panel-title"> Theme Options</span>
-      </div>
-      <div class="panel-body pn">
 
-        <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
-          <li class="active">
-            <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
-          </li>
-          <li>
-            <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
-          </li>
-          <li>
-            <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
-          </li>
-        </ul>
-
-        <div class="tab-content p20 ptn pb15">
-          <div role="tabpanel" class="tab-pane active" id="toolbox-header">
-            <form id="toolbox-header-skin">
-              <h4 class="mv20">Header Skins</h4>
-
-              <div class="skin-toolbox-swatches">
-                <div class="checkbox-custom checkbox-disabled fill mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin8" checked value="bg-light">
-                  <label for="headerSkin8">Light</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-primary mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
-                  <label for="headerSkin1">Primary</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-info mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
-                  <label for="headerSkin3">Info</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-warning mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
-                  <label for="headerSkin4">Warning</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-danger mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
-                  <label for="headerSkin5">Danger</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-alert mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
-                  <label for="headerSkin6">Alert</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-system mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
-                  <label for="headerSkin7">System</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-success mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
-                  <label for="headerSkin2">Success</label>
-                </div>
-                <div class="checkbox-custom fill mb5">
-                  <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
-                  <label for="headerSkin9">Dark</label>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
-            <form id="toolbox-sidebar-skin">
-
-              <h4 class="mv20">Sidebar Skins</h4>
-              <div class="skin-toolbox-swatches">
-                <div class="checkbox-custom fill mb5">
-                  <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
-                  <label for="sidebarSkin3">Dark</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-disabled mb5">
-                  <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
-                  <label for="sidebarSkin1">Light</label>
-                </div>
-                <div class="checkbox-custom fill checkbox-light mb5">
-                  <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
-                  <label for="sidebarSkin2">Lighter</label>
-                </div>
-
-              </div>
-
-            </form>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="toolbox-settings">
-            <form id="toolbox-settings-misc">
-              <h4 class="mv20 mtn">Layout Options</h4>
-              <div class="form-group">
-                <div class="checkbox-custom fill mb5">
-                  <input type="checkbox" checked="" id="header-option">
-                  <label for="header-option">Fixed Header</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="checkbox-custom fill mb5">
-                  <input type="checkbox" checked="" id="sidebar-option">
-                  <label for="sidebar-option">Fixed Sidebar</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="checkbox-custom fill mb5">
-                  <input type="checkbox" id="breadcrumb-option">
-                  <label for="breadcrumb-option">Fixed Breadcrumbs</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="checkbox-custom fill mb5">
-                  <input type="checkbox" id="breadcrumb-hidden">
-                  <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
-                </div>
-              </div>
-              <h4 class="mv20">Layout Options</h4>
-              <div class="form-group">
-                <div class="radio-custom mb5">
-                  <input type="radio" id="fullwidth-option" checked name="layout-option">
-                  <label for="fullwidth-option">Fullwidth Layout</label>
-                </div>
-              </div>
-              <div class="form-group mb20">
-                <div class="radio-custom radio-disabled mb5">
-                  <input type="radio" id="boxed-option" name="layout-option" disabled>
-                  <label for="boxed-option">Boxed Layout
-                    <b class="text-muted">(Coming Soon)</b>
-                  </label>
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </div>
-        <div class="form-group mn br-t p15">
-          <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- End: Theme Preview Pane -->
 
   <!-- Start: Main -->
   <div id="main">
@@ -232,7 +95,8 @@
               <div class="media-body">
                 <h5 class="media-heading mv5">Article
                   <small> - 08/16/22</small>
-                </h5> Last Updated 36 days ago by
+                </h5>
+                Last Updated 36 days ago by
                 <a class="text-system" href="#"> Max </a>
               </div>
             </li>
@@ -461,7 +325,7 @@
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
-              <li class="active">
+              <li>
                 <a href="widgets_tile.html">
                   <span class="fa fa-cube"></span> Tile Widgets</a>
               </li>
@@ -473,7 +337,7 @@
                 <a href="widgets_scroller.html">
                   <span class="fa fa-columns"></span> Scroller Widgets </a>
               </li>
-              <li>
+              <li class="active">
                 <a href="widgets_data.html">
                   <span class="fa fa-dot-circle-o"></span> Admin Widgets </a>
               </li>
@@ -710,7 +574,9 @@
                 </a>
                 <ul class="nav sub-nav">
                   <li>
-                    <a href="landing-page/landing1/index.html" target="_blank"> Landing Page </a>
+                    <a href="landing-page/landing1/index.html" target="_blank"> Landing Page
+                      <span class="label label-xs bg-primary">New</span>
+                    </a>
                   </li>
                   <li>
                     <a href="pages_login.html" target="_blank"> Login </a>
@@ -951,22 +817,6 @@
           </ol>
         </div>
         <div class="topbar-right">
-          <div class="ib topbar-dropdown">
-            <label for="topbar-multiple" class="control-label pr10 fs11 text-muted">Reporting Period</label>
-            <select id="topbar-multiple" class="hidden">
-              <optgroup label="Filter By:">
-                <option value="1-1">Last 30 Days</option>
-                <option value="1-2" selected="selected">Last 60 Days</option>
-                <option value="1-3">Last Year</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="ml15 ib va-m" id="toggle_sidemenu_r">
-            <a href="#" class="pl5">
-              <i class="fa fa-sign-in fs22 text-primary"></i>
-              <span class="badge badge-hero badge-danger">3</span>
-            </a>
-          </div>
         </div>
       </header>
       <!-- End: Topbar -->
@@ -978,34 +828,14 @@
         <aside class="tray tray-left tray200" data-tray-height="match">
 
           <div id="nav-spy">
-            <ul class="nav tray-nav tray-nav-border" data-smoothscroll="-145" data-spy="affix" data-offset-top="200">
+            <ul class="nav tray-nav tray-nav-border"data-smoothscroll="-145" data-spy="affix" data-offset-top="200">
               <li class="active">
                 <a href="#spy1">
-                  Widget Set 1</a>
+                  Small Data Widgets</a>
               </li>
               <li>
                 <a href="#spy2">
-                  Widget Set 2</a>
-              </li>
-              <li>
-                <a href="#spy3">
-                  Widget Set 3</a>
-              </li>
-              <li>
-                <a href="#spy4">
-                  Widget Set 4</a>
-              </li>
-              <li>
-                <a href="#spy5">
-                  Widget Set 5</a>
-              </li>
-              <li>
-                <a href="#spy6">
-                  Widget Set 6</a>
-              </li>
-              <li>
-                <a href="#spy7">
-                  Widget Set 7</a>
+                  Fullwidth Data Widgets</a>
               </li>
             </ul>
           </div>
@@ -1013,52 +843,67 @@
         </aside>
         <!-- end: .tray-left -->
 
-        <!-- begin: .tray-center -->
+       <!-- begin: .tray-center -->
         <div class="tray tray-center" style="background:white;">
 
           <div class="page-tabs" style="background:white;">
             <h2>Test Woocommerce 1.0.0</h2>
             <ul class="nav nav-tabs">
+              <li>
+                <a href="HOWTO_overview.html">Overview</a>
+              </li>
+              <li>
+                <a href="HOWTO_instructions.html">Instructions</a>
+              </li>
+              <li>
+                <a href="HOWTO_watchVideo.html">Watch Video</a>
+              </li>
               <li class="active">
-                <a href="widgets_tile.html">Overview</a>
-              </li>
-              <li>
-                <a href="widgets_panel.html">Instructions</a>
-              </li>
-              <li>
-                <a href="widgets_scroller.html">Watch Video</a>
-              </li>
-              <li>
-                <a href="widgets_data.html">Get Help</a>
+                <a href="HOWTO_getHelp.html">Get Help</a>
               </li>
             </ul>
           </div>
 
           <div>
+          <!-- admin/data widgets -->
+          <div class="admin-panels" style="max-width: 1200px;">
 
-            <!-- Dashboard Tiles -->
-            <div class="row mb10" id="spy1">
-              <div class="col-sm-6 col-md-7">
-                <h3>This is a header</h3>
-                <p>This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy.
-</p>
-<h3>This is a header</h3>
-                <p>This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy.
-</p>
-<h3>This is a header</h3>
-                <p>This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy.
-</p>
-<h3>This is a header</h3>
-                <p>This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy. This is body copy.
-</p>
+            <!-- medium info widgets -->
+            <div class="row" id="spy1">
+              <!-- Draft Widget -->
+              <div class="col-md-12">
+
+                <div class="panel panel-widget draft-widget">
+                  <div class="panel-heading">
+                    <span class="panel-icon">
+                      <i class="fa fa-pencil"></i>
+                    </span>
+                    <span class="panel-title"> Get Help</span>
+                  </div>
+                  <div class="panel-body p20">
+                    <div class="admin-form theme-primary">
+                      <div class="section mb20">
+                        <input type="text" id="draft-title" class="gui-input bg-light" placeholder="Title">
+                      </div>
+                      <div class="section">
+                        <label class="field">
+                          <textarea class="gui-textarea bg-light" id="comment" name="comment" placeholder="Message here..."></textarea>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer text-right">
+                    <button class="btn btn-primary btn-sm ph15" type="button">Send</button>
+                  </div>
+                </div>
+                
               </div>
-              <div class="col-sm-6 col-md-4 col-md-offset-1">
-                <h3>Screenshots</h3>
-                <img src="http://placehold.it/250x150" >
-                <img src="http://placehold.it/250x150" class="mt15">
-                <img src="http://placehold.it/250x150"  class="mt15">
-              </div>
+
+             
+             
+
             </div>
+            <!-- end: .row -->
 
           </div>
 
@@ -1071,7 +916,7 @@
     </section>
 
     <!-- Start: Right Sidebar -->
-    <aside id="sidebar_right" class="nano affix">
+    <aside id="sidebar_right" class="nano nano-primary">
 
       <!-- Start: Sidebar Right Content -->
       <div class="sidebar-right-content nano-content">
@@ -1148,8 +993,6 @@
               <h5 class="title-divider text-muted mt40 mb20"> Server Statistics
                 <span class="pull-right text-primary fw600">USA</span>
               </h5>
-
-
             </div>
             <div id="sidebar-right-tab2" class="tab-pane"></div>
             <div id="sidebar-right-tab3" class="tab-pane"></div>
@@ -1170,10 +1013,28 @@
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
+  <!-- Sparkline Plugin-->
+  <script src="vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+  <!-- HighCharts Plugin -->
+  <script src="vendor/plugins/highcharts/highcharts.js"></script>
+
+  <!-- Simple Circles Plugin -->
+  <script src="vendor/plugins/circles/circles.js"></script>
+
+  <!-- Jvectormap JS -->
+  <script src="vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+
+  <!-- Jvectormap Map -->
+  <script src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
+
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
   <script src="assets/js/demo/demo.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Demo Widget Javascript -->
+  <script src="assets/js/demo/widgets.js"></script>
   <script type="text/javascript">
   jQuery(document).ready(function() {
 
@@ -1185,6 +1046,121 @@
     // Init Demo JS  
     Demo.init();
 
+    // Init Widget Demo JS
+    // demoWidgets.init();
+
+    // Because we are using Admin Panels we use the OnFinish 
+    // callback to activate the demoWidgets. It's smoother if
+    // when we let the panels be moved and organized before 
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      callback: function() {
+        bootbox.confirm('<h3>A Custom Callback!</h3>', function() {});
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps();
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+
+    // Widget VectorMap
+    function runVectorMaps() {
+
+      // Jvector Map Plugin
+      var runJvectorMap = function() {
+        // Data set
+        var mapData = [900, 700, 350, 500];
+        // Init Jvector Map
+        $('#WidgetMap').vectorMap({
+          map: 'us_lcc_en',
+          //regionsSelectable: true,
+          backgroundColor: 'transparent',
+          series: {
+            markers: [{
+              attribute: 'r',
+              scale: [3, 7],
+              values: mapData
+            }]
+          },
+          regionStyle: {
+            initial: {
+              fill: '#E5E5E5'
+            },
+            hover: {
+              "fill-opacity": 0.3
+            }
+          },
+          markers: [{
+            latLng: [37.78, -122.41],
+            name: 'San Francisco,CA'
+          }, {
+            latLng: [36.73, -103.98],
+            name: 'Texas,TX'
+          }, {
+            latLng: [38.62, -90.19],
+            name: 'St. Louis,MO'
+          }, {
+            latLng: [40.67, -73.94],
+            name: 'New York City,NY'
+          }],
+          markerStyle: {
+            initial: {
+              fill: '#a288d5',
+              stroke: '#b49ae0',
+              "fill-opacity": 1,
+              "stroke-width": 10,
+              "stroke-opacity": 0.3,
+              r: 3
+            },
+            hover: {
+              stroke: 'black',
+              "stroke-width": 2
+            },
+            selected: {
+              fill: 'blue'
+            },
+            selectedHover: {}
+          },
+        });
+        // Manual code to alter the Vector map plugin to 
+        // allow for individual coloring of countries
+        var states = ['US-CA', 'US-TX', 'US-MO',
+          'US-NY'
+        ];
+        var colors = [bgWarningLr, bgPrimaryLr, bgInfoLr, bgAlertLr];
+        var colors2 = [bgWarning, bgPrimary, bgInfo, bgAlert];
+        $.each(states, function(i, e) {
+          $("#WidgetMap path[data-code=" + e + "]").css({
+            fill: colors[i]
+          });
+        });
+        $('#WidgetMap').find('.jvectormap-marker')
+          .each(function(i, e) {
+            $(e).css({
+              fill: colors2[i],
+              stroke: colors2[i]
+            });
+          });
+      }
+
+      if ($('#WidgetMap').length) {
+        runJvectorMap();
+      }
+    }
 
   });
   </script>
