@@ -29,6 +29,36 @@
 <![endif]-->
 
 <style>
+#main:before {
+  background:white;
+}
+#content {
+  background:white;
+}
+
+.sb-l-o #content_wrapper {
+    margin-left: 180px;
+}
+#content_wrapper {
+    position: relative;
+    left: 0px;
+    margin-left: 180px !important;
+}
+
+#content a {
+  color:#99C349;
+}
+
+#content p {
+  color:#999;
+}
+
+#content .title {
+  font-weight:bold;
+  color:#555;
+}
+
+
 .navbar .nav > li > a {
     color: #FFF;}
 
@@ -39,20 +69,34 @@
 
 .box {
   background:white;
-  height:120px;
-  width:140px;
+  height:100px;
+  width:100px;
   border: 1px solid #99C349;
   border-radius: 6px;
+  margin-bottom:10px;
 }
 
 .box:hover{
   background:#99C349;
+  cursor:pointer;
 }
 
 .box img {
   margin: 0 auto;
-  padding:30px 40px;
+  padding:20px;
 }
+
+.notify:hover {
+  background: whitesmoke;
+}
+
+.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top: 3px solid #3E5727;;
+}
+
+.navbar .nav > li.dropdown.open .dropdown-menu:after {
+    border-bottom-color: #3E5727;
+  }
 
 </style>
 
@@ -67,21 +111,15 @@
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top" style="background:#99C349;">
       <div class="navbar-branding" style="background: #99C349;">
-        <a class="navbar-brand" href="dashboard.html">
-          <b>PAAY</b>ADMIN
-        </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        <a class="navbar-brand" href="dashboard.html">
+          <a class="media-left" href="#"> <img src="assets/img/logos/PAAYlogo.png" class="mw100 mt15" alt="avatar"> </a>
+        </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
       </ul>
-      <form class="navbar-form navbar-left navbar-search" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search..." value="Search...">
-        </div>
-      </form>
-
     <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown ">
+      <li class="dropdown" style="border-right:1px solid rgba(250, 250, 250, 0.17);">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
             <span class="glyphicon glyphicon-plus "></span>  Create New
           </a>
@@ -100,7 +138,50 @@
             </li>
           </ul>
         </li>
-        <li class="dropdown">
+      <li class="dropdown" style="border-right:1px solid rgba(250, 250, 250, 0.17);">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+            <i class=" glyphicon glyphicon-comment fs22 text-primary" style="color:white;"></i>
+              <span class="badge badge-danger badge-hero">3</span>
+          </a>
+          <ul class="dropdown-menu media-list w350 animated animated-shorter fadeIn" role="menu">
+            <li class="dropdown-header" style="color:green;">
+              <span class="dropdown-title"> Notifications</span>
+              <span class="label label-danger">3</span>
+            </li>
+            <li class="media notify">
+              <div class="media-left"> <i class=" fa fa-dollar fs24"></i>
+               </div>
+              <div class="media-body"> 
+                <h5 class="media-heading">Invoice Due
+                  <small class="text-muted">- 08/16/22</small>
+                </h5> Please pay your account invoice.
+                <a class="text-system" href="#"> Click here. </a>
+              </div>
+            </li>
+             <li class="media notify">
+              <div class="media-left"> <i class=" fa fa-dollar fs24"></i>
+               </div>
+              <div class="media-body">
+                <h5 class="media-heading">Invoice Due
+                  <small class="text-muted">- 08/08/22</small>
+                </h5> Please pay your account invoice.
+                <a class="text-system" href="#"> Click here. </a>
+              </div>
+            </li>     
+            <li class="media notify">
+              <div class="media-left"> <i class=" fa fa-dollar fs24"></i>
+               </div>
+              <div class="media-body">
+                <h5 class="media-heading">Invoice Due
+                  <small class="text-muted">- 08/01/22</small>
+                </h5> Please pay your account invoice.
+                <a class="text-system" href="#"> Click here. </a>
+              </div>
+            </li>     
+          </ul>
+        </li>
+        
+        <li class="dropdown" style="border-right:1px solid rgba(250, 250, 250, 0.17);">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John
             <span class="caret caret-tp hidden-xs"></span>
           </a>
@@ -149,7 +230,7 @@
     <!-- End: Header -->
 
     <!-- Start: Sidebar -->
-    <aside id="sidebar_left" class="nano nano-primary affix" style="background:#565656;">
+    <aside id="sidebar_left" class="nano nano-primary affix" style="background:#565656; width:180px;">
 
       <!-- Start: Sidebar Left Content -->
       <div class="sidebar-left-content nano-content">
@@ -302,7 +383,7 @@
     <section id="content_wrapper">
 
  <!-- Begin: Content -->
-      <section id="content" class="animated fadeIn" style="background:white;">
+      <section id="content" class="animated fadeIn">
         <div class="row mb40">
           <div class="col-md-7 col-md-offset-1">
             <h1 style="font-weight:300;">Explore PAAY</h1>
@@ -311,20 +392,55 @@
           </div>
         </div>
          <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-              <h4>Create Merchant Account</h4>
-              <p>Discover everything there is to know about PAAY, in one place.
-                  Built just for you. Relax and enjoy the journey</p>
+            <div class="col-md-3 col-md-offset-1">
+              <p class="title"> Create Merchant Account</p>
+              <p>This is your guide to establishing Merchant accounts so they can start using PAAY.</p>
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="box">
-                <img src="http://placehold.it/60x60">
+                <img src="http://placehold.it/60/99C349/000000">
               </div>
               <a href="#">Create Merchant</a>
             </div>
             <div class="col-md-2">
               <div class="box">
-                <img src="http://placehold.it/60x60">
+                <img src="http://placehold.it/60/99C349/000000">
+              </div>
+              <div >
+                <a href="#">Read How To</a>
+              </div>
+            </div>
+          </div>
+          
+           <!-- break -->
+          <br>
+          <br>
+           <!-- /break -->
+
+          <div class="row">
+            <div class="col-md-3 col-md-offset-1">
+              <p class="title"> Plugins</p>
+              <p>This is your guide to gettingstarted with integrating PAAY into your shopping cart.</p>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+              <div class="box">
+                <img src="http://placehold.it/60/99C349/000000">
+              </div>
+              <div>
+                <a href="#">View Plugins</a>
+              </div>
+            </div>
+             <div class="col-md-2">
+              <div class="box">
+                <img src="http://placehold.it/60/99C349/000000">
+              </div>
+              <div >
+                <a href="#">Read How To</a>
+              </div>
+            </div>
+              <div class="col-md-2">
+              <div class="box">
+                <img src="http://placehold.it/60/99C349/000000">
               </div>
               <div >
                 <a href="#">Read How To</a>
@@ -332,18 +448,22 @@
             </div>
           </div>
 
+          <!-- break -->
+          <br>
+          <br>
+           <!-- /break -->
+
           <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-              <h4>Plugins</h4>
-              <p>Discover everything there is to know about PAAY, in one place.
-                  Built just for you. Relax and enjoy the journey</p>
+            <div class="col-md-3 col-md-offset-1">
+            <p class="title"> My Account</p>
+              <p>Edit your settings, add a bank account or reach out to us for help.</p>
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="box">
                 <img src="http://placehold.it/60x60">
               </div>
               <div>
-                <a href="#">View Plugins</a>
+                <a href="#">Settings</a>
               </div>
             </div>
              <div class="col-md-2">
@@ -351,7 +471,7 @@
                 <img src="http://placehold.it/60x60">
               </div>
               <div >
-                <a href="#">Read How To</a>
+                <a href="#">Connect to Dwolla</a>
               </div>
             </div>
               <div class="col-md-2">
@@ -359,38 +479,7 @@
                 <img src="http://placehold.it/60x60">
               </div>
               <div >
-                <a href="#">Read How To</a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-              <h4>My Account</h4>
-              <p>Discover everything there is to know about PAAY, in one place.
-                  Built just for you. Relax and enjoy the journey</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <div class="box">
-                <img src="http://placehold.it/60x60">
-              </div>
-              <div>
-                <a href="#">View Plugins</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <div class="box">
-                <img src="http://placehold.it/60x60">
-              </div>
-              <div >
-                <a href="#">Read How To</a>
-              </div>
-            </div>
-              <div class="col-md-2">
-              <div class="box">
-                <img src="http://placehold.it/60x60">
-              </div>
-              <div >
-                <a href="#">Read How To</a>
+                <a href="#">Get Help</a>
               </div>
             </div>
           </div>
