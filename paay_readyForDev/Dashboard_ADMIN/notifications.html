@@ -47,12 +47,8 @@
 
 #content a {
   color:#99C349;
-  text-align: center;
 }
 
-.box:hover span  {
-  color:white;
-}
 
 #content p {
   color:#999;
@@ -108,7 +104,6 @@
   -webkit-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
   -moz-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
   box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
-  padding:23px;
 }
 
 .box:hover{
@@ -116,7 +111,11 @@
   cursor:pointer;
 }
 
-.
+.box img {
+  margin: 0 auto;
+  padding:20px;
+}
+
 .notify:hover {
   background: whitesmoke;
 }
@@ -136,7 +135,6 @@
     width: 50px;
   }
 
-  
 /*===============================================
    Notifications Widget
 =================================================*/
@@ -250,7 +248,7 @@ ol.timeline-list li.timeline-item .timeline-date {
               <span class="dropdown-title"> Notifications</span>
               <span class="label label-danger">3</span>
             </li>
-            
+
             <ol class="timeline-list">
                 <li class="timeline-item">
                   <div class="timeline-icon bg-success "><span class="fa fa-usd"></span>
@@ -271,11 +269,12 @@ ol.timeline-list li.timeline-item .timeline-date {
                   </div>
                 </li>
               </ol>
+
             </li>
-<li class="dropdown-header" style="/* color:green; */">
-              <a class="text-system " href="notifications.html" style="text-align:center; color:#52A5DC;
-">View all</a>
-              
+            <li class="dropdown-header" style="/* color:green; */">
+                          <a class="text-system " href="#" style="text-align:center; color:#52A5DC;
+            ">View all</a>
+                          
             </li>     
           </ul>
        
@@ -443,7 +442,7 @@ ol.timeline-list li.timeline-item .timeline-date {
             </ul>
           </li>       
            <li >
-            <a href="howTo_CreateMerchant.html">
+            <a href="admin_HowTo.html">
               <span class="fa fa-folder"></span>
               <span class="sidebar-title">How Tos</span>
             </a>
@@ -480,154 +479,59 @@ ol.timeline-list li.timeline-item .timeline-date {
 
  <!-- Begin: Content -->
       <section id="content" class="animated fadeIn">
-        <div class="row mb40">
-          <div class="col-md-7 col-md-offset-1">
-            <h1 style="font-weight:300;">Explore PAAY</h1>
-            <p>Discover everything there is to know about PAAY, in one place.
-                Built just for you. Relax and enjoy the journey</p>
+        <div class="row mb10">
+          <div class="col-md-8 col-md-offset-1">
+            <h2 style="font-weight:300;">Notifications</h2>
           </div>
         </div>
-         <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-              <p class="title"> Create Merchant Account</p>
-              <p>This is your guide to establishing Merchant accounts so they can start using PAAY.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="pages_addMerchant.html">
 
-              <div class="box">
-                <span class=" glyphicon glyphicon-user fs50 text-primary" style="color:#99C349;"></span>
-              </div>Create Merchant</a>
-            </div>
-            <div class="col-md-2">
-               <a href="howTo_CreateMerchant.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                <a href="#">Get Help</a>
-              </div>
-            </div>
-
-          </div>
-          
-           <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
-
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-              <p class="title"> Plugins</p>
-              <p>This is your guide to gettingstarted with integrating PAAY into your shopping cart.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="HowTo_installPlugins.html">
-              <div class="box">
-                <span class=" fa fa-gears fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                View Plugins</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="admin_plugins-paay.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Get Help</a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
-
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-            <p class="title"> My Account</p>
-              <p>Edit your settings, add a bank account or reach out to us for help.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="HowTo_dwolla.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-piggy-bank fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Connect to Dwolla</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="HowTo_dwolla.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <a href="https://dash-staging.paay.co/merchant/view">
-              <div class="box">
-                <span class=" glyphicon glyphicon-user fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Account Settings</a>
-              </div>
-            </div>
-
-          </div>
-           <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
           <div class="row ">
-            <div class="col-md-3 col-md-offset-1">
-            </div>
 
-            <div class="col-md-2 col-md-offset-1">
-              <a href="mailTo:feedback@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-pencil fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Provide feedback</a>
-              </div>
-            </div>
-                    <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Get Help</a>
-              </div>
-            </div>
-          </div>
-            
-          </div>
+                      <!-- Chat Widget -->
+
+                       <!-- Timline Widget -->
+                      <div class="col-md-8 col-md-offset-1">
+
+                        <div class="panel">
+
+                          <div >
+                              <ol class="timeline-list">
+                                <li class="timeline-item">
+                                  <div class="timeline-icon bg-success "><span class="fa fa-usd"></span>
+                                  </div>
+                                  <div class="timeline-desc"><b>Invoice Due:</b> 08/01/22 <a href="#">Please pay your account invoice.</a>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-icon bg-success "><span class="fa fa-usd"></span>
+                                  </div>
+                                  <div class="timeline-desc"><b>Invoice Due:</b> 08/01/22 <a href="#">Please pay your account invoice.</a>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-icon bg-success "><span class="fa fa-usd"></span>
+                                  </div>
+                                  <div class="timeline-desc"><b>Invoice Due:</b> 08/01/22 <a href="#">Please pay your account invoice.</a>
+                                  </div>
+                                </li>
+
+                                <li class="timeline-item">
+                                  <div class="timeline-icon bg-info light"><span class="fa fa-user"></span>
+                                  </div>
+                                  <div class="timeline-desc"><b>Dwolla Account information required:</b>  07/01/22 <a href="#">Please link your Dwolla account.</a>
+                                  </div>
+                                </li>
+                              
+                              </ol>
+                            </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+   
+
+   
 
       </section>
       <!-- End: Content -->

@@ -47,11 +47,6 @@
 
 #content a {
   color:#99C349;
-  text-align: center;
-}
-
-.box:hover span  {
-  color:white;
 }
 
 #content p {
@@ -108,7 +103,6 @@
   -webkit-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
   -moz-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
   box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
-  padding:23px;
 }
 
 .box:hover{
@@ -116,7 +110,11 @@
   cursor:pointer;
 }
 
-.
+.box img {
+  margin: 0 auto;
+  padding:20px;
+}
+
 .notify:hover {
   background: whitesmoke;
 }
@@ -135,6 +133,8 @@
   #toggle_sidemenu_l {
     width: 50px;
   }
+
+
 
   
 /*===============================================
@@ -198,6 +198,18 @@ ol.timeline-list li.timeline-item .timeline-date {
 .tray-right ol.timeline-list li.timeline-item {
   position: relative;
   padding: 15px 80px 15px 50px;
+}
+
+/* ============================
+    how to content styles
+===============================*/
+
+.tray200 {
+    width: 174px;
+}
+
+#content {
+ margin-left:-18px;
 }
 
 </style>
@@ -377,7 +389,7 @@ ol.timeline-list li.timeline-item .timeline-date {
        
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
-          <li class="active" >
+          <li>
             <a href="dashboard-REDESIGN.html">
               <span class="glyphicon glyphicon-home"></span>
               <span class="sidebar-title">Dashboard</span>
@@ -442,8 +454,8 @@ ol.timeline-list li.timeline-item .timeline-date {
               </li>
             </ul>
           </li>       
-           <li >
-            <a href="howTo_CreateMerchant.html">
+           <li  class="active" >
+            <a href="admin-HowTo.html">
               <span class="fa fa-folder"></span>
               <span class="sidebar-title">How Tos</span>
             </a>
@@ -478,156 +490,93 @@ ol.timeline-list li.timeline-item .timeline-date {
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper">
 
- <!-- Begin: Content -->
-      <section id="content" class="animated fadeIn">
-        <div class="row mb40">
-          <div class="col-md-7 col-md-offset-1">
-            <h1 style="font-weight:300;">Explore PAAY</h1>
-            <p>Discover everything there is to know about PAAY, in one place.
-                Built just for you. Relax and enjoy the journey</p>
+  <!-- Begin: Content -->
+      <section id="content" class="table-layout animated fadeIn">
+
+        <!-- begin: .tray-left -->
+        <aside class="tray tray-left tray200" data-tray-height="match">
+
+
+          <div id="nav-spy">
+            <ul class="nav tray-nav tray-nav-border" data-smoothscroll="-145" data-spy="affix" data-offset-top="200">
+              <li >
+                <a href="HowTo_CreateMerchant.html">
+                  Create Merchant</a>
+              </li>
+              <li>
+                <a href="HowTo_chargeCustomers.html">
+                  Charge customers</a>
+              </li>
+              <li class="active">
+                <a href="HowTo_installPlugins.html">
+                  Install Plugins</a>
+              </li>
+              <li>
+                <a href="HowTo_dwolla.html">
+                  Link to Dwolla</a>
+              </li>
+            </ul>
           </div>
+
+        </aside>
+        <!-- end: .tray-left -->
+
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center" style="background:white;">
+
+          <div class="page-tabs" style="background:white;">
+            <h2>How to create a merchant account</h2>
+          </div>
+
+          <div>
+
+            <!-- Dashboard Tiles -->
+
+            <!-- Dashboard Tiles #1 -->
+            <div class="row mb10" id="spy1">
+              <div class="col-sm-6 col-md-10 col-md-offset-1">
+                <h3>1. Click create a merchant</h3>
+                <p>This will take you to a wizard to create a merchant.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/i.png" style="width:700px; height:350px; box-shadow: 2px 2px 2px gray;">
+
+              <h3>2. Enter merchant infomation</h3>
+                <p>You will need merchant information to complete this section.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/ii.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+                <h3>3. Enter merchant contact infomation</h3>
+                <p>You will need merchant contact information to complete this section.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/iii.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+                <h3>4. Enter merchant financial infomation</h3>
+                <p> You will need merchant financial information in order to process payments section.
+                  Click complete and the merchant will be created! You can find the merchant account
+                  under your section titled <strong> Merchant > List </strong>.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/iv.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+              </div>
+            </div>
+            <!-- Dashboard Tiles #2 -->
+            <div class="row mb10" id="spy1">
+              <div class="col-sm-6 col-md-10 col-md-offset-1">
+                <h3>1. Click create a merchant</h3>
+                <p>This will take you to a wizard to create a merchant.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/i.png" style="width:700px; height:350px; box-shadow: 2px 2px 2px gray;">
+
+              <h3>2. Enter merchant infomation</h3>
+                <p>You will need merchant information to complete this section.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/ii.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+                <h3>3. Enter merchant contact infomation</h3>
+                <p>You will need merchant contact information to complete this section.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/iii.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+                <h3>4. Enter merchant financial infomation</h3>
+                <p> You will need merchant financial information in order to process payments section.
+                  Click complete and the merchant will be created! You can find the merchant account
+                  under your section titled <strong> Merchant > List </strong>.</p>
+                <img src = "assets/img/howTos/iso/newMerchant/iv.png" style="width:700px; height:300px; box-shadow: 2px 2px 2px gray;" class="mt15">
+              </div>
+            </div>
+
+          </div>
+
         </div>
-         <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-              <p class="title"> Create Merchant Account</p>
-              <p>This is your guide to establishing Merchant accounts so they can start using PAAY.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="pages_addMerchant.html">
-
-              <div class="box">
-                <span class=" glyphicon glyphicon-user fs50 text-primary" style="color:#99C349;"></span>
-              </div>Create Merchant</a>
-            </div>
-            <div class="col-md-2">
-               <a href="howTo_CreateMerchant.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                <a href="#">Get Help</a>
-              </div>
-            </div>
-
-          </div>
-          
-           <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
-
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-              <p class="title"> Plugins</p>
-              <p>This is your guide to gettingstarted with integrating PAAY into your shopping cart.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="HowTo_installPlugins.html">
-              <div class="box">
-                <span class=" fa fa-gears fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                View Plugins</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="admin_plugins-paay.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Get Help</a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
-
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-            <p class="title"> My Account</p>
-              <p>Edit your settings, add a bank account or reach out to us for help.</p>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-              <a href="HowTo_dwolla.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-piggy-bank fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Connect to Dwolla</a>
-              </div>
-            </div>
-             <div class="col-md-2">
-              <a href="HowTo_dwolla.html">
-              <div class="box">
-                <span class=" glyphicon glyphicon-duplicate fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Read How To</a>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <a href="https://dash-staging.paay.co/merchant/view">
-              <div class="box">
-                <span class=" glyphicon glyphicon-user fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div >
-                Account Settings</a>
-              </div>
-            </div>
-
-          </div>
-           <!-- break -->
-          <br>
-          <br>
-           <!-- /break -->
-          <div class="row ">
-            <div class="col-md-3 col-md-offset-1">
-            </div>
-
-            <div class="col-md-2 col-md-offset-1">
-              <a href="mailTo:feedback@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-pencil fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Provide feedback</a>
-              </div>
-            </div>
-                    <div class="col-md-2">
-              <a href="mailTo:help@paay.co">
-              <div class="box">
-                <span class=" glyphicon glyphicon-comment fs50 text-primary" style="color:#99C349;"></span>
-              </div>
-              <div>
-                Get Help</a>
-              </div>
-            </div>
-          </div>
-            
-          </div>
+        <!-- end: .tray-center -->
 
       </section>
       <!-- End: Content -->
