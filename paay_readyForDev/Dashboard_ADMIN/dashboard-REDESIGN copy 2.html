@@ -205,7 +205,7 @@
        
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
-          <li >
+          <li class="active" >
             <a href="dashboard-REDESIGN.html">
               <span class="glyphicon glyphicon-home"></span>
               <span class="sidebar-title">Dashboard</span>
@@ -233,7 +233,7 @@
             </ul>
           </li>     
           <li>
-            <a class="accordion-toggle menu-open " href="#">
+            <a class="accordion-toggle " href="#">
               <span class="fa fa-shopping-cart"></span>
               <span class="sidebar-title">Merchants</span>
               <span class="caret"></span>
@@ -243,7 +243,7 @@
                 <a href="pages_Merchants-SUPERADMIN.html">
                   <span class="fa fa-desktop"></span> Merchants List </a>
               </li>
-              <li  class="active"  >
+              <li  >
                 <a href="pages_addMerchant.html">
                   <span class="glyphicon glyphicon-check"></span> Add a Merchant </a>
               </li>
@@ -313,13 +313,14 @@
           ========================================================================
           NOTE: show this div, once user onclicks button, hide this and show the form wizard -->
 
-          <div class="big-box">
+          <div class="alert alert-default light text-center alert-dismissable mb30">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <!--<span class="glyphicon glyphicon-user fs40"></span> -->
             <img src="assets/img/avatars/placeholder_merchant.png" alt="Add a Merchant" height="100" width="170" class="mb20 mt10">
             <h2 class="mt5">MERCHANTS</h2>
-            <p class="mb10">You haven't added any Merchants to your ISO account.  <br></p>
+            <p class="mb10">You haven't added any Merchants to your ISO account. <a href="#">Learn more</a> <br></p>
              <p>
-              <a class="btn btn-lg btn-rounded btn-darkGreen mt10 mb20" href="pages_addMerchant_after.html">Create your first Merchant</a>
+              <a class="btn btn-lg btn-rounded btn-success mt10 mb20" href="pages_addMerchant_after.html">Create your first Merchant</a>
             </p>
           </div>
         
