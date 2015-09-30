@@ -221,6 +221,12 @@ ol.timeline-list li.timeline-item .timeline-date {
 #content {
  margin-left:-18px;
 }
+
+.resizeScreenshot {
+  width:700px; 
+  height:350px; 
+  box-shadow: 2px 2px 2px gray;
+}
 /*==================================================================
   Form Wrappers
 ===================================================================*/
