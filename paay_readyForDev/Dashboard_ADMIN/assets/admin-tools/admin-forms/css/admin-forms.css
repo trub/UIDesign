@@ -5,6 +5,10 @@ h2 {
   font-weight:100 ;
 }
 
+.tray-nav.tray-nav-border li.active:after {
+    background: #99C349;
+}
+
 #main:before {
   background:white;
 }
