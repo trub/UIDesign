@@ -82,6 +82,13 @@ NEW CSS
   cursor:pointer;
 }
 
+.box span {
+  color:#99C349;
+}
+.box span:hover {
+  color:white;
+}
+
 .box img {
   margin: 0 auto;
   padding:20px;
