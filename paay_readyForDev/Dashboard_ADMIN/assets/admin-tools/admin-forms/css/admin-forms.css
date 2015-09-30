@@ -1,3 +1,188 @@
+/*=================================================================
+NEW CSS
+=================================================================*/
+#main:before {
+  background:white;
+}
+#content {
+  background:white;
+}
+
+.sb-l-o #content_wrapper {
+    margin-left: 180px;
+}
+#content_wrapper {
+    position: relative;
+    left: 0px;
+    margin-left: 180px !important;
+}
+
+#content a {
+  color:#99C349;
+}
+
+#content p {
+  color:#999;
+}
+
+#content .title {
+  font-weight:bold;
+  color:#555;
+}
+.navbar-branding {
+  width:170px;
+}
+
+
+.navbar .nav > li > a {
+    color: #FFF;}
+
+.active{
+  background: white;
+  border-left:3px solid white;
+}
+
+
+.sidebar-menu > li a, .sidebar-menu > li > ul > li > a, .sidebar-menu li > a > span.caret  {
+    color: #A3A3A3;
+    font-size:12px;
+}
+.sidebar-menu > li.active > a {
+}
+
+.sidebar-menu > li a:hover, .sidebar-menu > li > ul > li > a:hover {
+  background:rgba(255, 255, 255, 0.85);
+}
+.sidebar-menu > li.active > a > span:nth-child(1) {
+    color:#99C349;
+}
+
+.sidebar-menu li > a.menu-open > span.caret {
+  color:white;
+}
+
+.sidebar-menu > li > ul {
+    background-color: #565656;
+}
+
+.box {
+  background:white;
+  height:100px;
+  width:100px;
+  border: 1px solid #99C349;
+  border-radius: 6px;
+  margin-bottom:10px;
+  -webkit-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
+  -moz-box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
+  box-shadow: -1px 9px 14px -6px rgba(128,126,128,0.77);
+}
+
+.box:hover{
+  background:#99C349;
+  cursor:pointer;
+}
+
+.box img {
+  margin: 0 auto;
+  padding:20px;
+}
+
+.notify:hover {
+  background: whitesmoke;
+}
+.text-system {
+  color: #99C349;
+}
+
+.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top: 3px solid #3E5727;;
+}
+
+.navbar .nav > li.dropdown.open .dropdown-menu:after {
+    border-bottom-color: #3E5727;
+  }
+
+  #toggle_sidemenu_l {
+    width: 50px;
+  }
+
+
+
+  
+/*===============================================
+   Notifications Widget
+=================================================*/
+ol.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: #AAA;
+}
+ol.timeline-list li.timeline-item {
+  position: relative;
+  padding: 15px 10px 15px 50px;
+}
+ol.timeline-list li.timeline-item:hover .timeline-icon,
+ol.timeline-list li.timeline-item:focus .timeline-icon {
+  opacity: 1;
+}
+ol.timeline-list li.timeline-item:after {
+  display:none;
+  /* background: #E8E8E8; */
+}
+
+ol.timeline-list li.timeline-item + .timeline-item {
+  border-top: 1px solid #E8E8E8;
+}
+ol.timeline-list li.timeline-item .timeline-desc {
+  letter-spacing: 0.2px;
+}
+ol.timeline-list li.timeline-item .timeline-desc b,
+ol.timeline-list li.timeline-item .timeline-desc strong {
+  color: #333;
+  font-weight: 600;
+}
+ol.timeline-list li.timeline-item .timeline-desc a {
+  padding: 0 2px;
+  color: #99C349;
+}
+ol.timeline-list li.timeline-item .timeline-icon {
+  opacity: 0.85;
+  z-index: 2;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: #BBB;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  color: #FFF;
+  text-align: center;
+  border-radius: 26px;
+  border: 2px solid #FFF;
+}
+ol.timeline-list li.timeline-item .timeline-date {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.tray-left ol.timeline-list li.timeline-item,
+.tray-right ol.timeline-list li.timeline-item {
+  position: relative;
+  padding: 15px 80px 15px 50px;
+}
+
+/* ============================
+    how to content styles
+===============================*/
+
+.tray200 {
+    width: 174px;
+}
+
+#content {
+ margin-left:-18px;
+}
 /*==================================================================
   Form Wrappers
 ===================================================================*/
@@ -4169,3 +4354,5 @@
 .admin-form.theme-dark .wizard .steps li.current a {
   background-color: #2c2f3c;
 }
+
+
