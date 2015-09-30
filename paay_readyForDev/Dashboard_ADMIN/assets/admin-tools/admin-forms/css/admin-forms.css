@@ -226,6 +226,7 @@ ol.timeline-list li.timeline-item .timeline-date {
   width:700px; 
   height:350px; 
   box-shadow: 2px 2px 2px gray;
+  border:1px solid rgba(128, 128, 128, 0.1);
 }
 /*==================================================================
   Form Wrappers
